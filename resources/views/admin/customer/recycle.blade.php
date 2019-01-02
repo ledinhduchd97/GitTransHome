@@ -143,7 +143,7 @@
                                 <p>{{$customer->address}}</p>
                             </td>
                             <td>
-                                <p>{{$customer->created_at}}</p>
+                                <p class="date">{{$customer->created_at}}</p>
                             </td>
                             <td>
                                 <p class="type line">{{ $customer->type }}</p>

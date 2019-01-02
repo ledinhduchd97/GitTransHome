@@ -513,6 +513,7 @@ button:focus {
 
 .add-customer--left__item:last-child {
   margin-top: 40px;
+  padding-bottom: 25px;
 }
 
 .add-customer--left__item:last-child a {
@@ -544,7 +545,7 @@ button:focus {
 }
 
 .add-customer--left__item .content input[type="date"] {
-  background: #fff url(images/calendar.png) 97% 50% no-repeat;
+  background: #fff url(images/calendar.png) 95% 50% no-repeat;
 }
 
 .add-customer--left__item .content input[type="date"]::-webkit-inner-spin-button {
@@ -605,7 +606,7 @@ button:focus {
 }
 
 .add-customer--left__content{
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   background-color: #fff;  
 }
 .danhsachtk__table .total{
@@ -1334,6 +1335,10 @@ input {
   margin: auto;
 }
 
+.table--base p.date {
+  min-width: 80px;
+}
+
 .table--base p.type {
   max-width: 15ch;
   display: inline-block;
@@ -1442,7 +1447,7 @@ input {
 }
 
 [type="date"] {
-  background:#fff url(images/calendar.png)  97% 50% no-repeat ;
+  background:#fff url(images/calendar.png)  90% 50% no-repeat ;
 }
 
 [type="date"]::-webkit-inner-spin-button {
@@ -1519,14 +1524,15 @@ input {
 }
 
 .customer_detail__contents {
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  padding-top: 25px;
   position: relative;
 }
 
 .customer_detail__contents::before {
   content: "";
   position: absolute;
-  top: -32px;
+  top: -2px;
   left: 0;
   background: #999;
   width: 100%;
