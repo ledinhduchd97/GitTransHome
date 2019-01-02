@@ -1,0 +1,10 @@
+{
+  "vars": {},
+  "css": [
+    "modals.less"
+  ],
+  "js": [
+    "modal.js"
+  ],
+  "customizerUrl": "<none>"
+}
