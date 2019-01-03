@@ -79,7 +79,7 @@
                                         </div> -->
                                         <div class="add-customer--left__item">
                                             <div class="text"><span>Client Type :</span></div>
-                                            <div class="content"><span>{{ $customer->type }}</span></div>
+                                            <div class="content"><span class="type2">{{ $customer->type }}</span></div>
                                             <div class="clear-fix"></div>
                                         </div>
                                         <!-- <div class="add-customer--left__item">
