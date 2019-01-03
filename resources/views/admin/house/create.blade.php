@@ -31,7 +31,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>House name :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="name"/>
+                                        <input class="border--base padding--base" type="text" value="" name="name" required />
                                         <div class="error-name">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -45,7 +45,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Code :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="code"/>
+                                        <input class="border--base padding--base" type="text" value="" name="code" required/>
                                         <div class="error-code">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -59,7 +59,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Note :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="note"/>
+                                        <input class="border--base padding--base" type="text" value="" name="note" required/>
                                         <div class="error-note">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -73,7 +73,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="phone"/>
+                                        <input class="border--base padding--base" type="text" value="" name="phone" required/>
                                         <div class="error-phone">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -87,7 +87,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Address :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="address"/>
+                                        <input class="border--base padding--base" type="text" value="" name="address" required/>
                                         <div class="error-address">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -101,7 +101,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Area :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="" name="area"/>
+                                        <input class="border--base padding--base" type="text" value="" name="area" required/>
                                         <div class="error-area">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -119,7 +119,7 @@
                                     <div class="text"><span>Number_bedroom :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" value=""
-                                               name="number_bedroom"/>
+                                               name="number_bedroom" required/>
                                         <div class="error-number_bedroom">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -134,7 +134,7 @@
                                     <div class="text"><span>Number_bathroom :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" value=""
-                                               name="number_bathroom"/>
+                                               name="number_bathroom" required/>
                                         <div class="error-number_bathroom">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -149,7 +149,7 @@
                                     <div class="text"><span>Living Area :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" value=""
-                                               name="site_area"/>
+                                               name="site_area" required/>
                                         <div class="error-site_area">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -164,7 +164,7 @@
                                     <div class="text"><span>Lot Size :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" value=""
-                                               name="area_gross_floor"/>
+                                               name="area_gross_floor" required/>
                                         <div class="error-area_gross_floor">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -200,7 +200,7 @@
                                     <div class="text"><span>Images Slide Page Home :</span></div>
                                     <div class="content">
                                         <img src="" alt="">
-                                        <input type="file" name="image_home" accept="image/*">
+                                        <input type="file" name="image_home" accept="image/*" required>
                                         <div class="error-image_home">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -216,7 +216,7 @@
                                     <div class="text"><span>Images Slide Page Detail :</span></div>
                                     <div class="content" id="content_image">
                                         <img src="" alt="">
-                                        <input type="file" name="image[]" accept="image/*">
+                                        <input type="file" name="image[]" accept="image/*" required>
                                     </div>
                                     <div class="error-image">
                                         @if(sizeof($errors) != 0)
@@ -235,7 +235,7 @@
                                     <div class="text"><span>Images Thumb :</span></div>
                                     <div class="content">
                                         <img src="" alt="">
-                                        <input type="file" name="image_thumb" accept="image/*">
+                                        <input type="file" name="image_thumb" accept="image/*" required>
                                         <div class="error-image_thumb">
                                         @if(sizeof($errors) != 0)
                                           @if($errors)
@@ -255,7 +255,7 @@
                                     <div class="text"><span>Video URL :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" id="file_youtube" type="url"
-                                               name="video" value=""/>
+                                               name="video" value="" required/>
                                         <div class="error-video">
                                         @if(sizeof($errors) != 0)
                                           @if($errors)
@@ -287,7 +287,7 @@
                                         <div class="text"><span>Brokerage Name :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value=""
-                                                   name="brokerage"/>
+                                                   name="brokerage" required/>
                                             <div class="error-brokerage">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -302,7 +302,7 @@
                                         <div class="text"><span>Agent :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value=""
-                                                   name="agent"/>
+                                                   name="agent" required/>
                                             <div class="error-agent">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -317,7 +317,7 @@
                                         <div class="text"><span>License :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value=""
-                                                   name="license"/>
+                                                   name="license" required/>
                                             <div class="error-license">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -331,7 +331,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>MLS Number :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text" value="" name="mls"/>
+                                            <input class="border--base padding--base" type="text" value="" name="mls" required/>
                                             <div class="error-mls">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -346,7 +346,7 @@
                                         <div class="text"><span>Zipcode :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value=""
-                                                   name="zipcode" required pattern="^[0-9]+$" title="zipcode is a number"/>
+                                                   name="zipcode" required pattern="^[0-9]+$" title="zipcode is a number" required/>
                                             <div class="error-zipcode">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -361,7 +361,7 @@
                                         <div class="text"><span>Year Built :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value=""
-                                                   name="builded_year"/>
+                                                   name="builded_year" required/>
                                             <div class="error-builded_year">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -423,7 +423,7 @@
             $("#content_image").append(`
                 <div class="slide_page_detail">
                 <img src="" alt="">
-                <input type="file" name="image[]" accept="image/*"><span class="remove_image" onclick="remove_image(this)"><i class="fa fa-trash"></i></<span>
+                <input type="file" name="image[]" accept="image/*" required><span class="remove_image" onclick="remove_image(this)"><i class="fa fa-trash"></i></<span>
                 </div>
             `);
             previewImage();
