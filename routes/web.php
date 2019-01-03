@@ -51,7 +51,6 @@ Route::group(['prefix' => 'admin','middleware' => ['checklogin']], function() {
   	Route::get('/customers/note','CustomerController@getNoteCustomer')->name('admin.customers.getnotecustomer');
 	Route::resource('customers', 'CustomerController', ['as' => 'admin']);
 	//Customer Task
-	// Route::get('/customers/search/tasktodo',"CustomerTaskToDoController@search")->name('admin.customers.tasktodo.search');
 	Route::resource("customerTasks", "CustomerTaskToDoController", ['as' => 'admin']);
 	//Customer Note
 	Route::post('customernote/search',"CustomerNoteController@search")->name('admin.customernote.search');

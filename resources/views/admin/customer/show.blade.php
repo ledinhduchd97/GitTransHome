@@ -98,7 +98,7 @@
                                             <div class="clear-fix"></div>
                                         </div>
                                     </div>
-                                    <d<div class="disable customer_detail__content" id="note" style="display: none;">
+                                    <div class="disable customer_detail__content" id="note" style="display: none;">
                                         <div class="note__top">
                                             <div class="tk-top tk-top-wrap">
                                                 <div class="tk-top__top">
@@ -270,7 +270,7 @@
                                                 @endforeach
                                             </table>
                                         </div>
-                                        <div class="customer_list__bottom table-bot" style="float: right;">
+                                        <div class="customer_list__bottom table-bot" style="float: right; display:none">
                                             <div class="paging text-right">
                                                 {{ $tasks->links('vendor.pagination.bootstrap-4', ['paginator' => $tasks]) }}
                                             </div>
