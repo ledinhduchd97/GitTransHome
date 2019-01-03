@@ -200,7 +200,10 @@ button:focus {
 .form--base .content input[type="date"]::-webkit-calendar-picker-indicator, .form--base .content input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-
+input[type="datetime-local"]::-webkit-clear-button{
+  display: none;
+  -webkit-appearance: none; 
+}
 .form--base .content input[type=number]::-webkit-inner-spin-button, .form--base .content input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -1335,9 +1338,9 @@ input {
   margin: auto;
 }
 
-.table--base p.date {
+/* .table--base p.date {
   min-width: 80px;
-}
+} */
 
 .table--base p.type {
   max-width: 15ch;

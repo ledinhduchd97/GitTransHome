@@ -232,7 +232,7 @@
                                                         <p>{{ $task->update }}</p>
                                                     </td>
                                                     <td>
-                                                        <p class="type1">{{ $task->type }}</p>
+                                                        <p class="type">{{ $task->type }}</p>
                                                     </td>
                                                     <td>
                                                         <p class="date">{{ $task->deadline }}</p>
