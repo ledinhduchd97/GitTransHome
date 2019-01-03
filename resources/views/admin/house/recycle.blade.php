@@ -21,7 +21,7 @@
         <div class="house-top house-top-wrap">
             <div class="house-top__top">
                 <div class="house-top__top--left fleft col-50">
-                    <h2 class="house-top__title">House in Recycle</h2><a class="add-new"
+                    <h2 class="house-top__title">House in Recycle Bin</h2><a class="add-new"
                                                                          href="{{route('admin.house.create')}}">Add
                         New</a>
                 </div>
