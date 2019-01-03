@@ -263,7 +263,7 @@
                             $(".content-note").append(`
                                 <tr class="row">
                                     <td class="col-md-3">
-                                        `+data[index].id+`
+                                        `+(index+1)+`
                                     </td>
                                     <td class="col-md-9">
                                         `+data[index].content+`

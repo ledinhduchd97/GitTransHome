@@ -14,6 +14,7 @@ class TasktodoController extends Controller
      */
     public function index(Request $request)
     {
+        // dd(gettype($request->status));
         $tasks = Tasktodo::latest();
         $recycle = Tasktodo::onlyTrashed()->count();
         $view = Tasktodo::all()->count();
@@ -25,9 +26,12 @@ class TasktodoController extends Controller
             $tasks = $tasks->withTitleOrName($key,false);
         }
         // dd($tasks);
-        if($request->status) {
-            $tasks = $tasks->withStatus($sta);
+        if(isset($request->status)) {
+            // $tasks = $tasks->withStatus($sta);
+            // dd($request);
+            $tasks = $tasks->where('status',$request->status);
         }
+        // dd($tasks);
         if($date_from && $date_to) {
             $from = date("Y-m-d", strtotime($date_from));
             $to = date("Y-m-d", strtotime($date_to));

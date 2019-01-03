@@ -178,10 +178,10 @@
                                                         <div class="tk-top__options">
                                                             <form action="{{ route('admin.customers.show', ['id' => $customer->id]) }}">
                                                                 <div class="col2 fleft">
-                                                                    <input class="customer_search padding--base border--base" id="customer_search" type="search" name="customer_search" placeholder="Search keywords ..."/>
+                                                                    <input class="customer_search padding--base border--base keyword-search-task" id="customer_search" type="search" name="customer_search" placeholder="Search keywords ..."/>
                                                                 </div>
                                                                 <div class="col2 fleft">
-                                                                    <select class="customer-status padding--base border--base" id="customer-status" name="status">
+                                                                    <select class="customer-status padding--base border--base status-search-task" id="customer-status" name="status">
                                                                         <option value="">--- Status ---</option>
                                                                         <option value="0">Done</option>
                                                                         <option value="1">Waiting</option>
@@ -190,19 +190,19 @@
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__from-date date--wrap"><span>Start day</span>
                                                                         <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="startDay" type="date" name="date_from"/>
+                                                                            <input class="padding--base border--base padding--date start-search-task" id="startDay" type="date" name="date_from"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__to-date date--wrap"><span>Finish day</span>
                                                                         <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="endDay" type="date" name="date_to"/>
+                                                                            <input class="padding--base border--base padding--date end-search-task" id="endDay" type="date" name="date_to"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col1 fleft">
-                                                                    <button class="btn-filter btn--base padding--base border--base" type="submit">Filter</button>
+                                                                    <button class="btn-filter btn--base padding--base border--base" id="btn-search-task" type="submit">Filter</button>
                                                                 </div>
                                                                 <div class="clear-fix"></div>
                                                             </form>

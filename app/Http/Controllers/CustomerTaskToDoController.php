@@ -113,24 +113,27 @@ class CustomerTaskToDoController extends Controller
         session()->flash('success', 'Delete success');
         return back();
     }
-    public function search(Request $request)
-    {
-        $tasks = (new CustomerTaskToDo)->newQuery();
-        if($request->keyword)
-        {
-            $tasks = $tasks->where('title','like', '%'.$request->keyword.'%');
-        }
-        if($request->status)
-        {
-            $tasks = $tasks->where('status',$request->status)
-        }
-        if($request->start_day)
-        {
-            $tasks = $tasks->where('deadline','>',$request->start_day);
-        }
-        if($request->end_day)
-        {
-            $tasks = $tasks->where('deadline','>',$request->end_day);
-        }
-    }
+    // public function search(Request $request)
+    // {
+    //     $tasks = (new CustomerTaskToDo)->newQuery();
+    //     $tasks = $tasks->where('customer_id',$request->id);
+    //     if($request->keyword)
+    //     {
+    //         $tasks = $tasks->where('title','like', '%'.$request->keyword.'%');
+    //     }
+    //     if($request->status)
+    //     {
+    //         $tasks = $tasks->where('status',$request->status);
+    //     }
+    //     if($request->start_day)
+    //     {
+    //         $tasks = $tasks->where('deadline','>',$request->start_day);
+    //     }
+    //     if($request->end_day)
+    //     {
+    //         $tasks = $tasks->where('deadline','>',$request->end_day);
+    //     }
+    //     $tasks->orderBy('created_at', 'desc')->get();
+    //     return $tasks;
+    // }
 }
