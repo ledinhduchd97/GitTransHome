@@ -27,6 +27,7 @@ class PartnerTaskToDoSeederTable extends Seeder
                 'invest' => 1000000,
                 'contract' => 2000000,
                 'ranking' => rand(0,1),
+                'note' => $faker->jobTitle,
                 'created_at' => $faker->dateTime()
             ]);
         }

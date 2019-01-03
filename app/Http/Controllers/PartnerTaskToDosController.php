@@ -109,6 +109,7 @@ class PartnerTaskToDosController extends Controller
         $task->ranking = $request->ranking;
         $task->invest = $request->invest;
         $task->created_at = $request->created_at;
+        $task->note = $request->note;
         $task->save();
         session()->flash('success', 'Update succesfully');
         return back();

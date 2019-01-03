@@ -17,6 +17,7 @@ class PartnerTaskToDos extends Model
         'invest',
         'contract',
         'ranking',
+        'note',
         'created_at'
     ];
 

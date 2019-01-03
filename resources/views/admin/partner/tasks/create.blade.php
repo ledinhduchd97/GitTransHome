@@ -195,6 +195,21 @@
                         </div>
                         <div class="clear-fix"></div>
                     </div>
+                    <div class="edit-tk__content--row">
+                        <div class="text"><span>
+                     Note (<span class="required">*</span>):</span></div>
+                        <div class="content">
+                            <textarea class="border--base padding--base" id="note" type="text" value="" name="note" style="width: 100%; height: 150px;"></textarea>
+                            <div class="error-sex">
+                                @if(sizeof($errors) != 0)
+                                    @if($errors)
+                                        <p style="color:red; font-size: 10px;">{{$errors->first('note')}}</p>
+                                    @endif
+                                @endif
+                            </div>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
                     <div class="edit-tk__content--row text-center">
                         <button class="btn-submit btn--primary padding--base" type="submit" id="btn-adduser">Submit</button>
                         <a class="btn-cancel btn--primary padding--base" href="{{route('admin.partner.index')}}">Cancel</a>
@@ -207,5 +222,13 @@
 
     <!--.edit-tk-wrap-->
     </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#note' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection
 

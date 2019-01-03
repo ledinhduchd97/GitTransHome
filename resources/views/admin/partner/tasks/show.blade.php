@@ -85,6 +85,11 @@
                         <div class="content"><span class="acc-address">{{$task->status}}</span></div>
                         <div class="clear-fix"></div>
                     </div>
+                    <div class="view-detail__content--row">
+                        <div class="text"><span>Note :</span></div>
+                        <div class="content"><span class="acc-address">{!!$task->note!!}</span></div>
+                        <div class="clear-fix"></div>
+                    </div>
                     <div class="view-detail__content--row text-center">
                         <a class="btn-edit btn--primary padding--base"
                            href="{{route('admin.partnerTasks.edit',['id'=>$task->id])}}">Edit</a>
