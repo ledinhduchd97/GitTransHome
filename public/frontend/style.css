@@ -2611,13 +2611,17 @@ ul.link li a {
     /* height: 80px; */
   }
 }
-
+@media only screen and (width: 1199px){
+  .home{
+    padding-top: 115px !important;
+  }
+}
 @media only screen and (max-width: 1199px) {
   .logo img{
     /* height: 70px !important; */
   }
   .home{
-    padding-top: 115px !important;
+    padding-top: 115px;
   }
   .slider-video .owl-nav{
     top: -77px;
@@ -2936,7 +2940,9 @@ ul.link li a {
 }
 
 @media only screen and (max-width: 767px) {
-  
+  .home{
+    padding-top: 70px;
+  }
   .about-us__img {
     margin-left: 0;
   }
@@ -3061,6 +3067,9 @@ ul.link li a {
 @media only screen and (max-width: 666px) {
   .feature {
     padding: 50px 0;
+  }
+  .home{
+    padding-top: 70px;
   }
   .about-us__content--title,
   .our-video__title h2,
