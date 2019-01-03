@@ -141,7 +141,7 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item">
-                    <label for="address" class="control-label col-sm-2 text">License</label>
+                    <label for="lisence" class="control-label col-sm-2 text">License</label>
                     <div class="col-sm-10 content">
                         <input type="text" class="form-control border--base padding--base" value="{{ $setup->lisence }}" id="lisence" name="lisence" required maxlength="250">
                         @if ($errors)
@@ -185,8 +185,8 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item text-center">
-                    <button class="btn btn-primary border--base padding--base" type="submit">Save</button>
-                    <button class="btn btn-secondary border--base padding--base">Cancel</button>
+                    <button class="btn btn--primary border--base padding--base" type="submit" style="font-size:14px;">Save</button>
+                    <button class="btn btn--primary border--base padding--base" style="font-size:14px;">Cancel</button>
                 </div>
             </form>
             </div>
