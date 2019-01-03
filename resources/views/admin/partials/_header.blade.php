@@ -16,9 +16,6 @@
                 <a href="{{route('admin.tasks.index')}}"> <i class="menu-icon fas fa-tasks"></i>Tasks to do </a>
             </li>
             @endif
-            <!-- <li class="{{ Route::currentRouteNamed('get.index.admin') ? 'active' : '' }}">
-                <a href="{{route('get.index.admin')}}"> <i class="menu-icon fa fa-tachometer-alt"></i>Dashboard </a>
-            </li> -->
             <li class="{{ Route::currentRouteNamed('admin.customers.*') ? 'active' : '' }}">
                 <a href="{{ route('admin.customers.index') }}"> <i class="menu-icon fa fa-user"></i>Customer</a>
             </li>
@@ -45,28 +42,6 @@
                 <a href="{{route('admin.user.index')}}"><i class="menu-icon fa fa-user"></i>Account</a>
             </li>
             @endif
-            <!-- <li class="menu-item-has-children dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Task to do</a>
-                <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
-                    <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
-                    <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
-                    <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
-                    <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
-                </ul>
-            </li>
-
-            <li class="menu-item-has-children dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cog"></i>Set up</a>
-                <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
-                    <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
-                    <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
-                    <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
-                    <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
-                </ul>
-            </li> -->
-
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
@@ -122,49 +97,6 @@
                   </div>
                 </div>
                 @endif
-                <!-- <div class="dropdown for-message">
-                  <button class="btn btn-secondary dropdown-toggle" type="button"
-                        id="message"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="ti-email"></i>
-                    <span class="count bg-primary">9</span>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="message">
-                    <p class="red">You have 4 Mails</p>
-                    <a class="dropdown-item media bg-flat-color-1" href="#">
-                        <span class="photo media-left"><img alt="avatar" src="{{asset('frontend-admin/images/avatar/1.jpg')}}"></span>
-                        <span class="message media-body">
-                            <span class="name float-left">Jonathan Smith</span>
-                            <span class="time float-right">Just now</span>
-                                <p>Hello, this is an example msg</p>
-                        </span>
-                    </a>
-                    <a class="dropdown-item media bg-flat-color-4" href="#">
-                        <span class="photo media-left"><img alt="avatar" src="{{asset('frontend-admin/images/avatar/2.jpg')}}"></span>
-                        <span class="message media-body">
-                            <span class="name float-left">Jack Sanders</span>
-                            <span class="time float-right">5 minutes ago</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        </span>
-                    </a>
-                    <a class="dropdown-item media bg-flat-color-5" href="#">
-                        <span class="photo media-left"><img alt="avatar" src="{{asset('frontend-admin/images/avatar/3.jpg')}}"></span>
-                        <span class="message media-body">
-                            <span class="name float-left">Cheryl Wheeler</span>
-                            <span class="time float-right">10 minutes ago</span>
-                                <p>Hello, this is an example msg</p>
-                        </span>
-                    </a>
-                    <a class="dropdown-item media bg-flat-color-3" href="#">
-                        <span class="photo media-left"><img alt="avatar" src="{{asset('frontend-admin/images/avatar/4.jpg')}}"></span>
-                        <span class="message media-body">
-                            <span class="name float-left">Rachel Santos</span>
-                            <span class="time float-right">15 minutes ago</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        </span>
-                    </a>
-                  </div>
-                </div> -->
             </div>
         </div>
 

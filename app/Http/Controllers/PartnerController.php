@@ -290,7 +290,7 @@ class PartnerController extends Controller
             }
         }
         $partner->save();
-        session(['success' => 'Edit abouts success !']);
+        session(['success' => 'Edit partner success !']);
         return redirect()->route('admin.partner.editview');
     }
     public function getNotePartner(Request $request)
