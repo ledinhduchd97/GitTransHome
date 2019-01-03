@@ -2489,6 +2489,9 @@ ul.link li a {
   .container {
     max-width: 1200px;
   }
+  .home{
+    padding-top: 125px;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -2612,6 +2615,9 @@ ul.link li a {
 @media only screen and (max-width: 1199px) {
   .logo img{
     /* height: 70px !important; */
+  }
+  .home{
+    padding-top: 115px !important;
   }
   .slider-video .owl-nav{
     top: -77px;
@@ -3302,6 +3308,9 @@ ul.link li a {
     font-size: 30px;
     margin-bottom: 0;
   }
+  .home{
+    padding-top: 125px;
+  }
   .free-cash .modal-header h4 {
     font-size: 20px;
   }
@@ -3816,6 +3825,9 @@ ul.link li a {
 }
 
 @media screen and (max-width: 991px){
+  .home{
+    padding-top: 70px;
+  }
   .sell__content .btn-getsell {
     margin-top: 10px;
   }
