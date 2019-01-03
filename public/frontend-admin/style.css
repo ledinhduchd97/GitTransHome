@@ -72,7 +72,7 @@ img {
 
 .container {
   margin: 0px auto;
-  width: 1170px;
+  max-width: 1170px;
 }
 
 .fleft {
@@ -1343,16 +1343,26 @@ input {
   max-width: 15ch;
   display: inline-block;
   overflow: hidden;
-  /*display: -webkit-box;*/
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   margin: auto;
+}
+.table--base p.type1 {
+  max-width: 15ch;
+  display: inline-block;
+  overflow: hidden;
+  /* display: -webkit-box; */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin: auto;
+  text-overflow: ellipsis;
 }
 .table--base p.email,.table--base p.partner,.table--base p.status {
   max-width: 20ch;
   display: inline-block;
   overflow: hidden;
-  /*display: -webkit-box;*/
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   margin: auto;
@@ -2094,6 +2104,12 @@ input[type="file"]{
 
 /* btn fileinput */
 .btn-inputfile{
+  margin: 10px 0 5px;
+  border-radius: 5px;
+}
+.btn-inputfile2{
+  font-size: 15px;
+  padding: 5px 15px;
   margin: 10px 0 5px;
   border-radius: 5px;
 }

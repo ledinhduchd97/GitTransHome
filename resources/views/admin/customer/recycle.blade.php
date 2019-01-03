@@ -146,7 +146,7 @@
                                 <p class="date">{{$customer->created_at}}</p>
                             </td>
                             <td>
-                                <p class="type line">{{ $customer->type }}</p>
+                                <p class="type1">{{ $customer->type }}</p>
                             </td>
                             <!-- <td>
                                 <p>{{ $customer->status }}</p>
