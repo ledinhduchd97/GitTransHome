@@ -29,7 +29,8 @@ class AddCustomerRequest extends FormRequest
             'birthday' => 'required',
             'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|unique:customers',
             'phone' => 'required|regex:/^[0-9 \(\)-]+$/',
-            'address' => 'required'
+            'address' => 'required',
+            'type' => 'max:255'
         ];
     }
 

@@ -62,8 +62,21 @@ class CustomerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(AddCustomerRequest $request)
+    public function store(Request $request)
     {
+        $request->validate(
+            [
+               'first_name' => 'required|regex:/^[a-zA-Z ]+$/',
+                'last_name' => 'required|regex:/^[a-zA-Z ]+$/',
+                'birthday' => 'required',
+                'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|unique:customers',
+                'phone' => 'required|regex:/^[0-9 \(\)-]+$/',
+                'address' => 'required',
+                'type' => 'max:255' 
+            ],
+            [
+            ]
+        );
         $this->customer->create($request->all());
         session(['success' => 'Successfully Add new Customer']);
         return back();

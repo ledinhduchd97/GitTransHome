@@ -42,7 +42,7 @@
                 <div class="tk-top__options">
                   <form action="">
                     <div class="col2 fleft">
-                      <input class="customer_search padding--base border--base" id="customer_search" type="search" name="keyword" placeholder="keyword"/>
+                      <input class="customer_search padding--base border--base" id="customer_search" type="search" name="keyword" value="{{ request()->keyword }}" placeholder="keyword"/>
                     </div>
                     <div class="col2 fleft">
                       <!-- <select class="customer-status padding--base border--base" id="customer-status" name="status">
@@ -50,19 +50,19 @@
                         <option value="0">Waiting for approvel</option>
                         <option value="1">Active</option>
                       </select> -->
-                      <input class="customer_search padding--base border--base" id="customer_search" type="search" name="status" placeholder="status"/>
+                      <input class="customer_search padding--base border--base" id="customer_search" type="search" name="status" value="{{ request()->status }}" placeholder="Status"/>
                     </div>
                     <div class="col-25 fleft">
                       <div class="tk-top__from-date date--wrap"><span>Start day</span>
                         <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                          <input name="start_day" class="padding--base border--base padding--date" id="startDay" type="date"/>
+                          <input name="start_day" class="padding--base border--base padding--date" id="startDay" type="date" value="{{ request()->start_day }}" />
                         </div>
                       </div>
                     </div>
                     <div class="col-25 fleft">
                       <div class="tk-top__to-date date--wrap"><span>Finish day</span>
                         <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                          <input name="end_day" class="padding--base border--base padding--date" id="endDay" type="date"/>
+                          <input name="end_day" class="padding--base border--base padding--date" id="endDay" type="date" value="{{ request()->end_day }}"/>
                         </div>
                       </div>
                     </div>
