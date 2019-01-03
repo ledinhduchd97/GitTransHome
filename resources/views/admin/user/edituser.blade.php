@@ -213,7 +213,7 @@
                 <div class="clear-fix"></div>
               </div>
                 <div class="edit-tk__content--row text-center">
-                  <button class="btn-submit btn--primary padding--base" id="btn-adduser" style="border-radius: 0px;" type="submit">Save</button>
+                  <button class="btn-submit btn--primary padding--base" id="btn-adduser" type="submit">Save</button>
                   <button class="btn-cancel btn--primary padding--base" data-url="{{route('admin.user.index')}}" type="reset" onclick="window.location = this.dataset.url;">Cancel</button>
                 </div>
               </form>
