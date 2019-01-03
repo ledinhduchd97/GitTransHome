@@ -309,7 +309,7 @@ jQuery(document).ready(function ($) {
 
       patner_email: {
         required: true,
-        regex: /^[a-zA-z0-9]{1,32}@gmail.com$/ },
+        regex: /^[a-zA-z0-9.]{1,32}@gmail.com$/ },
 
       patner_phone: {
         required: true,

@@ -50,7 +50,7 @@ class PartnerController extends Controller
             $partners = $partners->where('created_at','<',$request->end_day);
         }
 
-        $partners = $partners->where('status_recycle',1)->paginate(20);
+        $partners = $partners->where('status_recycle',1)->orderBy('created_at', 'desc')->paginate(20);
         $partners->withPath("?keyword=$key&status=$status&start_day=$start&end_day=$end");
         // dd($partners);
         $view = count(Partner::where('status_recycle',1)->get());
@@ -80,7 +80,7 @@ class PartnerController extends Controller
         {
             $partners = $partners->where('created_at','<',$request->end_day);
         }
-        $partners = $partners->where('status_recycle',0)->paginate(20);
+        $partners = $partners->where('status_recycle',0)->orderBy('created_at', 'desc')->paginate(20);
         $partners->withPath("?keyword=$key&status=$status&start_day=$start&end_day=$end");
         $view = count(Partner::where('status_recycle',1)->get());
         $recycle = count(Partner::where('status_recycle',0)->get());
