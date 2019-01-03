@@ -81,7 +81,7 @@
                     <div class="feature__infor">
                       <p class="feature__infor--time highlight line-clame__base">{{$house->note}}</p>
                       <h3 class="feature__infor--title">{{$house->name}}</h3>
-                      <p class="feature__infor--des">{!!$house->description!!}</p>
+                      <div class="feature__infor--des">{!!$house->description!!}</div>
                       <p class="sale">For  Sale</p>
                       <p class="price">{{ $house->unit }} {{ $house->price }}</p><a class="btn-view link-base" href="{{route('get.detail',['id'=>$house->id])}}"><span>View Property &gt;</span></a>
                     </div>
@@ -128,7 +128,7 @@
                     <div class="feature__infor">
                       <p class="feature__infor--time highlight line-clame__base">{{$house->note}}</p>
                       <h3 class="feature__infor--title">{{$house->name}}</h3>
-                      <p class="feature__infor--des">{!!$house->description!!}</p>
+                      <div class="feature__infor--des">{!!$house->description!!}</div>
                       <p class="sale">For  Sale</p>
                       <p class="price">{{ $house->unit }} {{ $house->price }}</p><a class="btn-view link-base" href="{{route('get.detail',['id'=>$house->id])}}"><span>View Property &gt;</span></a>
                     </div>

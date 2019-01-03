@@ -29,7 +29,7 @@
                                         <input type="hidden" value="{{Auth::id()}}" name="user_update">
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->name}}" name="name"/>
+                                                   value="{{$house->name}}" name="name" required />
                                             @if($errors->has('name'))
                                                 <p class="text-danger">{{ $errors->first('name') }}</p>
                                             @endif
@@ -40,7 +40,7 @@
                                         <div class="text"><span>Code :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->code}}" name="code"/>
+                                                   value="{{$house->code}}" name="code" required/>
                                             @if($errors->has('code'))
                                                 <p class="text-danger">{{ $errors->first('code') }}</p>
                                             @endif
@@ -51,7 +51,7 @@
                                         <div class="text"><span>Note :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->note}}" name="note"/>
+                                                   value="{{$house->note}}" name="note" required/>
                                             @if($errors->has('note'))
                                                 <p class="text-danger">{{ $errors->first('note') }}</p>
                                             @endif
@@ -62,7 +62,7 @@
                                         <div class="text"><span>Phone :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->phone}}" name="phone"/>
+                                                   value="{{$house->phone}}" name="phone" required/>
                                             @if($errors->has('phone'))
                                                 <p class="text-danger">{{ $errors->first('phone') }}</p>
                                             @endif
@@ -73,7 +73,7 @@
                                         <div class="text"><span>Address :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->address}}" name="address"/>
+                                                   value="{{$house->address}}" name="address" required/>
                                             @if($errors->has('address'))
                                                 <p class="text-danger">{{ $errors->first('address') }}</p>
                                             @endif
@@ -84,7 +84,7 @@
                                         <div class="text"><span>Area :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->area}}" name="area"/>
+                                                   value="{{$house->area}}" name="area" required/>
                                             @if($errors->has('area'))
                                                 <p class="text-danger">{{ $errors->first('area') }}</p>
                                             @endif
@@ -98,7 +98,7 @@
                                         <div class="text"><span>Number_bedroom :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->number_bedroom}}" name="number_bedroom"/>
+                                                   value="{{$house->number_bedroom}}" name="number_bedroom" required/>
                                             @if($errors->has('number_bedroom'))
                                                 <p class="text-danger">{{ $errors->first('number_bedroom') }}</p>
                                             @endif
@@ -109,7 +109,7 @@
                                         <div class="text"><span>Number_bathroom :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->number_bathroom}}" name="number_bathroom"/>
+                                                   value="{{$house->number_bathroom}}" name="number_bathroom" required/>
                                             @if($errors->has('number_bathroom'))
                                                 <p class="text-danger">{{ $errors->first('number_bathroom') }}</p>
                                             @endif
@@ -120,7 +120,7 @@
                                         <div class="text"><span>Living Area :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->site_area}}" name="site_area"/>
+                                                   value="{{$house->site_area}}" name="site_area" required/>
                                             @if($errors->has('site_area'))
                                                 <p class="text-danger">{{ $errors->first('site_area') }}</p>
                                             @endif
@@ -131,7 +131,7 @@
                                         <div class="text"><span>Lot Size :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$house->area_gross_floor}}" name="area_gross_floor"/>
+                                                   value="{{$house->area_gross_floor}}" name="area_gross_floor" required/>
                                             @if($errors->has('area_gross_floor'))
                                                 <p class="text-danger">{{ $errors->first('area_gross_floor') }}</p>
                                             @endif
@@ -142,8 +142,8 @@
                                         <div class="text"><span>Price :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" id="price" type="text"
-                                                   value="{{$house->price}}" name="price"/><span class="unit-text">Unit :</span>
-                                            <select class="border--base padding--base" id="unit" name="unit">
+                                                   value="{{$house->price}}" name="price" required/><span class="unit-text">Unit :</span>
+                                            <select class="border--base padding--base" id="unit" name="unit" required>
                                                     <option value="0" {{$house->get_value_unit($house->unit) == 0?"selected":""}}>€</option>
                                                     <option value="1" {{$house->get_value_unit($house->unit) == 1?"selected":""}}>$</option>
                                                     <option value="2" {{$house->get_value_unit($house->unit) == 2?"selected":""}}>£</option>
@@ -187,14 +187,16 @@
                                                         </div>
                                                     @endif
                                                 @endforeach
-                                                <input type="hidden" value="" name="images_slide[]">
-                                                <img src=""/>
-                                                <input type="file" name="image[]" accept="image/*">
+                                                <input type="hidden" value="" name="images_slide[]" >
+                                                <!-- <div class="slide_page_detail">
+                                                    <img src=""/>
+                                                    <input type="file" name="image[]" accept="image/*" required><span class="remove_image"><i class="fa fa-trash"></i></<span>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <span class="add_more_image" title="Add image"
-                                              style="font-size: 25px; position: relative; top:-30px;left: 72%;"><i
-                                                    class="fas fa-plus-square"></i></span>
+                                              style="font-size: 25px; float: right; cursor: pointer; margin-right: 115px;"><i
+                                                    class="fas fa-plus-square" style="padding-top: 35px;"></i></span>
                                         <div class="clear-fix"></div>
                                     </div>
                                     <!--  -->
@@ -223,7 +225,7 @@
                                         <div class="text"><span>Video URL :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" id="file_youtube" type="url"
-                                                   name="video" value="{{$house->video}}"/>
+                                                   name="video" value="{{$house->video}}" required/>
                                             @if($errors->has('video'))
                                                 <p class="text-danger">{{ $errors->first('video') }}</p>
                                             @endif
@@ -247,7 +249,7 @@
                                             <div class="text"><span>Brokerage Name :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->brokerage}}" name="brokerage"/>
+                                                       value="{{$house->brokerage}}" name="brokerage" required/>
                                                 @if($errors->has('brokerage'))
                                                     <p class="text-danger">{{ $errors->first('brokerage') }}</p>
                                                 @endif
@@ -258,7 +260,7 @@
                                             <div class="text"><span>Agent :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->agent}}" name="agent"/>
+                                                       value="{{$house->agent}}" name="agent" required/>
                                                 @if($errors->has('agent'))
                                                     <p class="text-danger">{{ $errors->first('agent') }}</p>
                                                 @endif
@@ -269,7 +271,7 @@
                                             <div class="text"><span>License :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->license}}" name="license"/>
+                                                       value="{{$house->license}}" name="license" required/>
                                                 @if($errors->has('license'))
                                                     <p class="text-danger">{{ $errors->first('license') }}</p>
                                                 @endif
@@ -280,7 +282,7 @@
                                             <div class="text"><span>MLS Number :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->mls}}" name="mls"/>
+                                                       value="{{$house->mls}}" name="mls" required/>
                                                 @if($errors->has('mls'))
                                                     <p class="text-danger">{{ $errors->first('mls') }}</p>
                                                 @endif
@@ -291,7 +293,7 @@
                                             <div class="text"><span>Zipcode :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->zipcode}}" name="zipcode"/>
+                                                       value="{{$house->zipcode}}" name="zipcode" required/>
                                                 @if($errors->has('zipcode'))
                                                     <p class="text-danger">{{ $errors->first('zipcode') }}</p>
                                                 @endif
@@ -302,7 +304,7 @@
                                             <div class="text"><span>Year Built :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$house->builded_year}}" name="builded_year"/>
+                                                       value="{{$house->builded_year}}" name="builded_year" required/>
                                                 @if($errors->has('builded_year'))
                                                     <p class="text-danger">{{ $errors->first('builded_year') }}</p>
                                                 @endif
@@ -312,7 +314,7 @@
                                         <div class="edit-house--left__item">
                                             <div class="text"><span>Status :</span></div>
                                             <div class="content">
-                                                <select class="border--base padding--base" id="status" name="status">
+                                                <select class="border--base padding--base" id="status" name="status" required>
                                                         <option value="0" {{ $house->status===0 ? "selected" : ""}}>New</option>
                                                         <option value="1" {{ $house->status===1 ? "selected" : ""}}>Bought</option>
                                                 </select>
@@ -385,10 +387,18 @@
         var click = $(".add_more_image").click(function (event) {
             // $(this).remove();
             $(".image_slide_detail").append(`
+                <div class="slide_page_detail">
                 <img src/>
-                <input type="file" name="image[]" accept="image/*">
+                <input type="file" name="image[]" accept="image/*" required><span class="remove_image"><i class="fa fa-trash"></i></<span>
+                </div>
             `);
             previewImage();
+            $(".remove_image").click(function(event) {
+                $(this).closest('.slide_page_detail').remove();
+            });
+        });
+        $(".remove_image").click(function(event) {
+            $(this).closest('.slide_page_detail').remove();
         });
         click;
 

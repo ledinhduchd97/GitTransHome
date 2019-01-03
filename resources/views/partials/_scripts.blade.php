@@ -5,4 +5,5 @@
 <script src="{{asset('frontend/libs/validation/validation.js')}}"></script>
 <script src="{{asset('frontend/js/validation.js')}}"></script>
 <script src="{{asset('frontend/js/core.js')}}"></script>
+
 @yield('scripts')

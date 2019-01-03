@@ -198,8 +198,8 @@ class HouseController extends Controller
         if(isset($request->image)){
             $images = $request->image;
             if(is_array($images)){
-                for($i = 0 ; $i < sizeof($images) ; $i++){
-                    $file = $images[$i];
+                foreach ($images as $key => $image) {
+                    $file = $image;
                     if(!empty($file)){
                         $photo = $file->move('upload', 'imagehouse'.uniqid().".".$file->getClientOriginalExtension());
                         Image::create([
@@ -361,7 +361,6 @@ class HouseController extends Controller
 
                 }
             }
-
             $images = $request->image;
             if(is_array($images)){
                 for($i = 0 ; $i < sizeof($images) ; $i++){

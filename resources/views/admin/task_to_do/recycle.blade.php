@@ -116,7 +116,7 @@
                             <td>
                                 <p class="name">{{ $task->title }}</p>
                             </td>            
-                            <td>
+                            <!-- <td>
                                 <p>{{ $task->customer->first_name }}</p>
                             </td>
                             <td>
@@ -127,6 +127,34 @@
                             </td>
                             <td>
                                 <p>{{ $task->customer->type }}</p>
+                            </td> -->
+                            <td>
+                                @if(isset($task->customer->first_name))
+                                    <p>{{ $task->customer->first_name }}</p>
+                                @else
+                                    <p>-</p>
+                                @endif
+                            </td>
+                            <td>
+                                @if(isset($task->customer->last_name))
+                                    <p>{{ $task->customer->last_name }}</p>
+                                @else
+                                    <p>-</p>
+                                @endif
+                            </td>
+                            <td>
+                                @if(isset($task->customer->birthday))
+                                    <p>{{ $task->customer->birthday }}</p>
+                                @else
+                                    <p>-</p>
+                                @endif
+                            </td>
+                            <td>
+                                @if(isset($task->customer->birthday))
+                                    <p class="type">{{ $task->customer->type }}</p>
+                                @else
+                                    <p>-</p>
+                                @endif
                             </td>
                             <td>
                                 <p>{{ $task->to_do_type }}</p>
