@@ -84,7 +84,7 @@
                                             <div class="tk-top tk-top-wrap">
                                                 <div class="tk-top__top">
                                                     <div class="tk-top__top--left fleft col-50">
-                                                        <h2 class="tk-top__title"></h2><a class="add-new add-note" style="color: #fff;">Add new</a>
+                                                        <h2 class="tk-top__title"></h2><a class="add-new add-note" style="color: #fff; cursor: pointer;">Add new</a>
                                                     </div>
                                                     <div class="tk-top__top--right fleft col-50">
                                                         <div class="text-right disabled"><span class="dashboard">Dashboard</span></div>
@@ -223,25 +223,25 @@
                                                 @foreach($tasks as $task)
                                                 <tr>
                                                     <td>
-                                                        <p>{{$task->title}}</p>
+                                                        <p class="name">{{$task->title}}</p>
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->age }}</p>
+                                                        <p class="user">{{ $task->age }}</p>
                                                     </td>
                                                     <td>
                                                         <p>{{ $task->update }}</p>
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->type }}</p>
+                                                        <p class="type1">{{ $task->type }}</p>
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->deadline }}</p>
+                                                        <p class="date">{{ $task->deadline }}</p>
                                                     </td>
                                                     <td>
                                                         <p>{{ $task->ranking}}</p>
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->status }}</p>
+                                                        <p class="status">{{ $task->status }}</p>
                                                     </td>
                                                     <td>
                                                         <div class="table-icon">
@@ -253,7 +253,7 @@
                                                 @endforeach
                                             </table>
                                         </div>
-                                        <div class="customer_list__bottom table-bot" style="float: right;">
+                                        <div class="customer_list__bottom table-bot" style="float: right; display:none">
                                             <div class="paging text-right">
                                                 {{ $tasks->links('vendor.pagination.bootstrap-4', ['paginator' => $tasks]) }}
                                             </div>

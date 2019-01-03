@@ -107,7 +107,7 @@
         <div class="danhsachtk__table table--base">
             <div class="fright total">
                 <p>Total : 
-                    <span>{{$view}}</span>
+                    <span>{{$view}} entries</span>
                 </p>
             </div>
             <table>
@@ -147,10 +147,10 @@
                                 <p>{{ $task->customer->birthday }}</p>
                             </td>
                             <td>
-                                <p>{{ $task->customer->type }}</p>
+                                <p class="type">{{ $task->customer->type }}</p>
                             </td>
                             <td>
-                                <p>{{ $task->to_do_type }}</p>
+                                <p class="type">{{ $task->to_do_type }}</p>
                             </td>
                             <td>
                                 <p>{{ $task->start_task }}</p>

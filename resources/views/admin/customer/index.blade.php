@@ -136,7 +136,7 @@
                                 <p class="date">{{$customer->created_at}}</p>
                             </td>
                             <td>
-                                <p class="type line">{{ $customer->type }}</p>
+                                <p class="type1">{{ $customer->type }}</p>
                             </td>
                             <td>
                                 <div class="table-icon"><i class="far fa-sticky-note note_popup" data-toggle="modal" data-target="#exampleNote" id-customer="{{$customer->id}}"></i>

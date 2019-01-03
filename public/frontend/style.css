@@ -2227,6 +2227,9 @@ ul.link li a {
   /* color: #ed8a63; */
 }
 
+.login-wrap{
+  padding-top: 145px;
+}
 .login-wrap .form-login {
   padding: 80px 0;
 }
