@@ -2605,13 +2605,13 @@ ul.link li a {
     line-height: 80px;
   }
   .logo img{
-    height: 80px;
+    /* height: 80px; */
   }
 }
 
 @media only screen and (max-width: 1199px) {
   .logo img{
-    height: 70px !important;
+    /* height: 70px !important; */
   }
   .slider-video .owl-nav{
     top: -77px;
@@ -3293,7 +3293,7 @@ ul.link li a {
 }
 @media screen and (max-width: 1365px){
   .logo img{
-    height: 80px;
+    /* height: 80px; */
   }
 }
 
@@ -3316,7 +3316,7 @@ ul.link li a {
     font-size: 20px;
   }
   .logo img{
-    height: 70px;
+    /* height: 70px; */
   }
 }
 
