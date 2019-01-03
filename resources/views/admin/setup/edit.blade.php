@@ -64,9 +64,7 @@
                             <img src="{{ asset($setup->logo_header) }}" alt="">
                             <button type="button" class="position-absolute close text-black" style="top: 10px; right: 10px;">&times;</button>
                         </div>
-                        <label for="logo_header" class="btn btn-primary btn-inputfile2">Select the file</label>
-                        <input type="file" id="image" name="logo_header"  style="display:none;">
-                        <label style="cursor:default; vertical-align:sub;">Logo header</label>
+                        <input type="file" id="image" name="logo_header">
                         <!-- <input type="hidden" name="logo_header"> -->
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('logo_header') }}</p>
@@ -81,9 +79,7 @@
                             <img src="{{ asset($setup->logo_footer) }}" alt="">
                             <button type="button" class="position-absolute close text-black" style="top: 10px; right: 10px;">&times;</button>
                         </div>
-                        <label for="logo_footer" class="btn btn-primary btn-inputfile2">Select the file</label>
-                        <input type="file" id="image" name="logo_footer" style="display:none;">
-                        <label style="cursor:default; vertical-align:sub;">Logo footer</label>
+                        <input type="file" id="image" name="logo_footer">
                         <!-- <input type="hidden" name="logo_footer"> -->
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('logo_footer') }}</p>
