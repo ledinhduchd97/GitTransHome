@@ -21,7 +21,6 @@
 <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
 <link rel="stylesheet" href="{{asset('frontend-admin/assets/scss/style.css')}}">
 <link href="{{asset('frontend-admin/assets/css/lib/vector-map/jqvmap.min.css')}}" rel="stylesheet">
-
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{{asset('frontend-admin/style.css')}}"/>
 @yield('css')
