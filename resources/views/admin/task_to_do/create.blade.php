@@ -40,7 +40,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <input type="" list="name" name="name">
+                  <input type="" list="name" name="name" class="padding--base border--base">
                   <datalist id="name">
                     <option value="acbc"></option>
                     <option value="acbc"></option>
