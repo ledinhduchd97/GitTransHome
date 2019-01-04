@@ -1,13 +1,14 @@
 @extends('admin.layouts.app')
 @section('title','Tasks to do')
 @section('css')
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+	   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
     <link rel="stylesheet" href="{{asset('frontend-admin/libs/datepicker/jquery-ui.theme.css')}}"/>
     <link rel="stylesheet" href="{{asset('frontend-admin/libs/datepicker/jquery-ui.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('frontend-admin/style.css')}}"/>	
+    <link rel="stylesheet" href="{{asset('frontend-admin/picker.min.css')}}">
 @endsection
 @section('content')
 	    <div class="tasktodo-add content-wrap content-wrap2" id="tasktodo-add">
@@ -40,20 +41,13 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <!-- <input type="" list="name" name="name" class="padding--base border--base"> -->
-                  <!-- <datalist id="name">
-                    <option value="acbc"></option>
-                    <option value="acbc"></option>
-                  </datalist> -->
-                    <!-- update HTML 4-1 -->
-                <select class="padding--base border--base" id="tasktodo-add--status" name="customer_id">
+                  <select class="padding--base border--base customer_id" name="customer_id" id="ex-search">
                     @if(isset($customers))
                       @foreach($customers as $customer)
                       <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
                       @endforeach
                     @endif
                   </select>
-                  <!-- <input class="border--base padding--base" type="text" value="" name="customer_name"/> -->
                   @if(sizeof($errors) != 0)
 	                  @if($errors)
 	                    <p style="color:red; font-size: 10px;">{{$errors->first('customer_id')}}</p>
@@ -175,7 +169,10 @@
       </div>
 @endsection
 @section('script')
-      <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+      <script type="text/javascript" src="{{asset('frontend-admin/picker.min.js')}}"></script>
+      <script>
+        $('#ex-search').picker({search : true});
+      </script>
       <script>
       ClassicEditor
               .create( document.querySelector( '#editor' ) )
