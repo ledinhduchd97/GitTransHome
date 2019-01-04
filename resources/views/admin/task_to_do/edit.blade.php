@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="libs/datepicker/jquery-ui.theme.css"/>
     <link rel="stylesheet" href="libs/datepicker/jquery-ui.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="{{asset('frontend-admin/picker.min.css')}}">
 @endsection
 @section('content')
 	     <div class="tasktodo-edit content-wrap content-wrap2" id="tasktodo-edit">
@@ -41,12 +42,12 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <input type="" list="name" name="name" class="padding--base border--base">
+                 <!--  <input type="" list="name" name="name" class="padding--base border--base">
                   <datalist id="name">
                     <option value="acbc"></option>
                     <option value="acbc"></option>
-                  </datalist>
-                  <!-- <select class="padding--base border--base" id="tasktodo-add--status" name="customer_id">
+                  </datalist> -->
+                  <select class="padding--base border--base" id="customer_id" name="customer_id">
                     @if(isset($customers))
                       <option value="{{$tasktodo->customer->id}}">{{$tasktodo->customer->first_name}} {{$tasktodo->customer->last_name}}</option>
                       @foreach($customers as $customer)
@@ -55,7 +56,7 @@
                         @endif
                       @endforeach
                     @endif
-                  </select> -->
+                  </select>
                   <!-- <input class="border--base padding--base" type="text" value="" name="customer_name"/> -->
                   @if(sizeof($errors) != 0)
                     @if($errors)
@@ -197,6 +198,10 @@
       </div>
 @endsection
 @section('script')
+      <script type="text/javascript" src="{{asset('frontend-admin/picker.min.js')}}"></script>
+      <script>
+        $('#customer_id').picker({search : true});
+      </script>
       <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
       <script>
       ClassicEditor
