@@ -114,7 +114,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Age</th>
-                    <th>Tittle task</th>
+                    <th>Title task</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Birthday</th>
