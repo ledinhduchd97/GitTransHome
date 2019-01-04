@@ -2164,3 +2164,7 @@ input[type="file"]{
 .sub-menu{
   margin: 0 -10px;
 }
+/*  */
+.header-left .dropdown .dropdown-menu p{
+  margin: 0 15px 0 5px;
+}
