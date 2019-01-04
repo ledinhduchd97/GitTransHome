@@ -59,7 +59,7 @@
       <div class="footer__wrap2">
         <div class="row">
           <div class="col-9 col-xl-6 col-md-4 col-sm-8">
-            <p><span>Copyright &copy;2018 </span><span class="white">Tranhome</span></p>
+            <p><span>Copyright &copy;2018 </span><span class="white">Tranhomes</span></p>
           </div>
           <div class="col-3 col-xl-6 text-right col-md-8 col-sm-4"><a class="login" href="{{route('get.login')}}"><span>Login</span></a>
             <p class="design-by"><span>Tranhomes theme, designed by </span><span class="white">3fgroup</span></p>
