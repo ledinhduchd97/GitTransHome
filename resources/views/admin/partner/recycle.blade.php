@@ -104,10 +104,10 @@
                     <p>{{(($partners->currentPage()-1)* $partners->perPage()) + ($key+1)}}</p>
                   </td>
                   <td>
-                    <p>{{$partner->fullname}}</p>
+                    <p class=name>{{$partner->fullname}}</p>
                   </td>
                   <td>
-                    <p>{{$partner->email}}</p>
+                    <p class="email">{{$partner->email}}</p>
                   </td>
                   <td>
                     <p>{{$partner->phone}}</p>

@@ -30,10 +30,10 @@
               <div class="footer__col--text">
                 <ul class="footer-menu menu--base">
                   <li><a href="{{route('get.index')}}">home</a></li>
-                  <li><a href="#">properties</a></li>
-                  <li><a href="#">sell your house</a></li>
-                  <li><a href="#">about us</a></li>
-                  <li class="margin-none"><a href="#">partner</a></li>
+                  <li><a href="#feature">properties</a></li>
+                  <li><a href="{{route('get.freecash')}}">sell your house</a></li>
+                  <li><a href="#about-us">about us</a></li>
+                  <li class="margin-none"><a href="#partner">partner</a></li>
                 </ul>
               </div>
             </div>
