@@ -78,19 +78,19 @@
                     <p class="red">You have {{ $data['noti'] + $data['noti_cus'] + $data['noti_par']}} Notification</p>
                     @foreach($data['tasks'] as $task)
                     <a class="dropdown-item media bg-flat-color-5" href="{{route('admin.tasks.show',['task'=>$task->id])}}">
-                        <i class="fa fa-warning"></i>
+                        <img src="https://img.icons8.com/ios/50/000000/bell-filled.png" style="width: 20px;">
                         <p><b>{{$task->title}}</b><span> - Time : {{$task->deadline}}</span></p>
                     </a>
                     @endforeach
                     @foreach($data['tasks_cus'] as $task)
                     <a class="dropdown-item media bg-flat-color-4" href="{{route('admin.customerTasks.show',['customerTask'=>$task->id])}}">
-                        <i class="fa fa-warning"></i>
+                        <img src="https://img.icons8.com/ios/50/000000/bell-filled.png" style="width: 20px;">
                         <p><b>{{$task->title}}</b><span> - Time : {{$task->deadline}}</span></p>
                     </a>
                     @endforeach
                     @foreach($data['tasks_par'] as $task)
                     <a class="dropdown-item media bg-flat-color-1" href="{{route('admin.partnerTasks.show',['partnerTask' => $task->id])}}">
-                        <i class="fa fa-warning"></i>
+                        <img src="https://img.icons8.com/ios/50/000000/bell-filled.png" style="width: 20px;">
                         <p><b>{{$task->title}}</b><span> - Time : {{$task->deadline}}</span></p>
                     </a>
                     @endforeach

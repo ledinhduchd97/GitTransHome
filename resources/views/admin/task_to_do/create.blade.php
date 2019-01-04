@@ -48,7 +48,6 @@
                       @endforeach
                     @endif
                   </select>
-                  <!-- <input class="border--base padding--base" type="text" value="" name="customer_name"/> -->
                   @if(sizeof($errors) != 0)
 	                  @if($errors)
 	                    <p style="color:red; font-size: 10px;">{{$errors->first('customer_id')}}</p>

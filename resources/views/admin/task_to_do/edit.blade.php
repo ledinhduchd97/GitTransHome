@@ -41,7 +41,12 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <select class="padding--base border--base" id="tasktodo-add--status" name="customer_id">
+                  <input type="" list="name" name="name" class="padding--base border--base">
+                  <datalist id="name">
+                    <option value="acbc"></option>
+                    <option value="acbc"></option>
+                  </datalist>
+                  <!-- <select class="padding--base border--base" id="tasktodo-add--status" name="customer_id">
                     @if(isset($customers))
                       <option value="{{$tasktodo->customer->id}}">{{$tasktodo->customer->first_name}} {{$tasktodo->customer->last_name}}</option>
                       @foreach($customers as $customer)
@@ -50,7 +55,7 @@
                         @endif
                       @endforeach
                     @endif
-                  </select>
+                  </select> -->
                   <!-- <input class="border--base padding--base" type="text" value="" name="customer_name"/> -->
                   @if(sizeof($errors) != 0)
                     @if($errors)
