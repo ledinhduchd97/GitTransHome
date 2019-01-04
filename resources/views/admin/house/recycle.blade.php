@@ -138,19 +138,38 @@
                 @if(isset($houses))
                     @foreach($houses as $house)
                         <tr>
-                            <td>{{$house->id}}</td>
-                            <td>{{$house->name}}</td>
-                            <td>{{$house->address}}</td>
-                            <td>{{$house->site_area}}</td>
-                            <td>{{$house->area_gross_floor}}</td>
-                            <td>{{ $house->unit }} {{ $house->price }}</td>
-                            <td>{{$house->number_bedroom}}</td>
-                            <td>{{$house->number_bathroom}}</td>
-                            <td>{{$house->created_at}}</td>
-                            <td>@if($house->status == 1)
-                                    Bought
+                            <td>
+                                <p>{{$house->id}}</p>
+                            </td>
+                            <td>
+                                <p class="name">{{$house->name}}</p>
+                            </td>
+                            <td>
+                                <p class="address">{{$house->address}}</p>
+                            </td>
+                            <td>
+                                <p>{{$house->site_area}}</p>
+                            </td>
+                            <td>
+                                <p>{{$house->area_gross_floor}}</p>
+                            </td>
+                            <td>
+                                <p>{{ $house->unit }} {{ $house->price }}</p>
+                            </td>
+                            <td>
+                                <p>{{$house->number_bedroom}}</p>
+                            </td>
+                            <td>
+                                <p>{{$house->number_bathroom}}</p>
+                            </td>
+                            <td>
+                                <p>{{$house->created_at}}</p>
+                            </td>
+                            <td>
+                                @if($house->status == 1)
+                                <p>    Bought</p>
                                 @else
-                                    New
+                                <p>    New</p>
                                 @endif
                             </td>
                             <td>

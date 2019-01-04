@@ -41,12 +41,20 @@
                             </div>
                             <div class="about_us-view__row">
                                 <p class="text">Detail description</p>
-                                <textarea id="editor" class="content padding--base border--base" name="detail_description"
+                                <form action="" id="edito">
+                                    <textarea id="editor" class="content padding--base border--base" name="detail_description"
+                                            cols="30" rows="4" placeholder="Short description"
+                                            required="required">{{$aboutus->detail_description}}</textarea>
+                                    @if($errors->has('detail_description'))
+                                        <p class="text-danger">{{ $errors->first('detail_description') }}</p>
+                                    @endif    
+                                </form>
+                                <!-- <textarea id="editor" class="content padding--base border--base" name="detail_description"
                                           cols="30" rows="4" placeholder="Short description"
                                           required="required">{{$aboutus->detail_description}}</textarea>
                                 @if($errors->has('detail_description'))
                                     <p class="text-danger">{{ $errors->first('detail_description') }}</p>
-                                @endif
+                                @endif -->
                             </div>
 
                         </div>

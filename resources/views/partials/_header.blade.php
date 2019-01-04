@@ -55,7 +55,7 @@
         <li><a href="{{route('get.index')}}"><span>home</span></a></li>
         <!--FE update html 24/10-->
         <li><a href="#feature"><span>Properties</span></a></li>
-        <li><a href="#sell"><span>Sell My Home</span></a></li>
+        <li><a href="{{route('get.freecash')}}"><span>Sell My House</span></a></li>
         <li><a href="#about-us"><span>About Us</span></a></li>
         <li class="padding-none"><a href="#partner"><span>Partner</span></a></li>
         <!--FE end update html 24/10-->

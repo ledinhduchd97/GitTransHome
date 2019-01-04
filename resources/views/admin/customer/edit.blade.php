@@ -56,7 +56,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Date of birth :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" value="{{ transformDateToInputDate($customer->birthday) }}" name="birthday" required="required"/>
+                                        <input class="border--base padding--base dateofbirth" type="date" value="{{ transformDateToInputDate($customer->birthday) }}" name="birthday" required="required"/>
                                         @if($errors->has('birthday'))
                                             <p class="text-danger">{{ $errors->first('birthday') }}</p>
                                         @endif

@@ -58,7 +58,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Date of birth :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" name="birthday" required="required" format="MM/dd/yyyy"/>
+                                        <input class="border--base padding--base dateofbirth" type="date" name="birthday" required="required"/>
                                         @if($errors->has('birthday'))
                                             <p class="text-danger" style="font-size: 8px;">{{ $errors->first('birthday') }}</p>
                                         @endif

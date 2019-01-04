@@ -18,6 +18,7 @@
 <script src="{{asset('frontend-admin/libs/datepicker/jquery-ui.js')}}"></script>
 <!-- <script src="{{asset('frontend-admin/libs/validation/validation.js')}}"></script> -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="{{asset('frontend-admin/js/jsnew.js')}}"></script>
 <script src="{{asset('frontend-admin/js/core.js')}}"></script>
 
 <script>
