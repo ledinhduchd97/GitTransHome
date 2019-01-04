@@ -140,7 +140,7 @@
             </div>
             <div class="btn-mini text-center" id="btn-mini">
                 <p>Mini All</p>
-              </div>
+            </div>
           </div>
         </section>
         <section class="sell" id="sell">
@@ -169,7 +169,7 @@
                   <h3 class="about-us__content--title">{{$aboutus->title}}</h3>
                   <p class="about-us__content--subtitle">{{$aboutus->short_description}}</p>
                   <div class="about-us__content--description"> 
-                    <p><span class="highlight2"><?php echo($aboutus->detail_description)?></p>
+                    <p><span class="highlight2"><?php echo($aboutus->detail_description)?></span></p>
                   </div>
                   <div class="about-us__signature"><img src="{{asset($aboutus->image_signature)}}" alt=""/></div>
                 </div>
