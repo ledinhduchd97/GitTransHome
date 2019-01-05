@@ -4,7 +4,7 @@
 <section class="detail" id="detail">
   <div class="container">
     @if(isset($house))
-    <div class="direction"><a href="#"><span>Home</span></a><span class="angle_right"><i class="fas fa-angle-right"></i></span><a href="#"><span>Feartured Listings</span></a><span class="angle_right"><i class="fas fa-angle-right"></i></span><a class="active" href="#"><span>{{$house->name}}</span></a></div>
+    <div class="direction"><a href="#"><span>Home</span></a><span class="angle_right"><i class="fas fa-angle-right"></i></span><a class="direction3" href="#"><span>Feartured Listings</span></a><span class="angle_right"><i class="fas fa-angle-right"></i></span><a class="active direction3" href="#"><span>{{$house->name}}</span></a></div>
     <div class="detail__content">   
       <div class="row">
         
