@@ -107,7 +107,7 @@ class PartnerController extends Controller
         $rules = [
             'patner_fullname' => 'required|min:6|max:50',
             'patner_email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
-            'patner_phone' => 'required|regex:/^[0-9 \(\)-]+$/',
+            'patner_phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
         ];
         $messages = [
             'patner_fullname.required' => 'Fullname can not be empty',
@@ -143,7 +143,7 @@ class PartnerController extends Controller
         $rules = [
             'fullname' => 'required|max:50',
             'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
-            'phone' => 'required|regex:/^[0-9 \(\)-]+$/',
+            'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
             'partner_type' => 'required|max:255',
@@ -218,7 +218,7 @@ class PartnerController extends Controller
         $rules = [
             'fullname' => 'required|max:50',
             'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
-            'phone' => 'required|regex:/^[0-9 \(\)-]+$/',
+            'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
             'partner_type' => 'required|max:255',
