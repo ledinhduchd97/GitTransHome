@@ -3880,4 +3880,12 @@ ul.link li a {
   font-size: 20px;
   color: #222;
 }
+@media screen and (max-width:380px){
+  ._j68
+  {
+    width:300px !important;
+    left: 70px !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

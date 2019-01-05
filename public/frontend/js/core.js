@@ -314,6 +314,7 @@ jQuery(document).ready(function ($) {
       patner_phone: {
         required: true,
         // number: true,
+        minlength:10,
         maxlength: 13, 
       } 
     },
