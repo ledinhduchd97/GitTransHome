@@ -103,7 +103,7 @@ class CustomerController extends Controller
         $rules = [
             'first_name' => 'required|max:65',
             'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|unique:customers|max:255',
-            'phone' => 'required|max:13|min:10|regex:/^[0-9 \(\)-]+$/|max:255',
+            'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'address' => 'required'
         ];
         $validator = Validator::make($request->all(), $rules);

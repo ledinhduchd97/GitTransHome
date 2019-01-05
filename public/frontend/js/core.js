@@ -255,8 +255,8 @@ jQuery(document).ready(function ($) {
     messages: {
       first_name: {
         required: 'First name must be filled out',
-        maxlength: jQuery.validator.format('First name must be not over 10 character'),
-        minlength: jQuery.validator.format('First name must be at least 1 character'),
+        maxlength: jQuery.validator.format('First name must be not over 10 characters'),
+        minlength: jQuery.validator.format('First name must be at least 1 characters'),
         regex: 'The first name must be in the correct format' },
 
       email: {
@@ -265,8 +265,8 @@ jQuery(document).ready(function ($) {
 
       phone: {
         required: 'The phone must be filled out',
-        minlength: jQuery.validator.format('The phone must be at least 10 character'),
-        maxlength: jQuery.validator.format('The phone must be not over 13 character'),
+        minlength: jQuery.validator.format('The phone must be at least 10 characters'),
+        maxlength: jQuery.validator.format('The phone must be not over 13 characters'),
       } 
     } 
   });
@@ -290,13 +290,13 @@ jQuery(document).ready(function ($) {
     messages: {
       username: {
         required: "Username must be fill out",
-        minlength: jQuery.validator.format('The username must be at least 3 character'),
-        maxlength: jQuery.validator.format('The username must be not over 50 character') },
+        minlength: jQuery.validator.format('The username must be at least 3 characters'),
+        maxlength: jQuery.validator.format('The username must be not over 50 characters') },
 
       password: {
         required: "Password must be fill out",
-        minlength: jQuery.validator.format('The password must be at least 6 character'),
-        maxlength: jQuery.validator.format('The password must be not over 18 character') } } });
+        minlength: jQuery.validator.format('The password must be at least 6 characters'),
+        maxlength: jQuery.validator.format('The password must be not over 18 characters') } } });
 
 
 
@@ -313,7 +313,6 @@ jQuery(document).ready(function ($) {
 
       patner_phone: {
         required: true,
-        // number: true,
         minlength:10,
         maxlength: 13, 
       } 
@@ -323,8 +322,8 @@ jQuery(document).ready(function ($) {
     messages: {
       patner_fullname: {
         required: "Full name must be fill out",
-        minlength: jQuery.validator.format("The fullname must be at least 6 character"),
-        maxlength: jQuery.validator.format('The fullname must be not over 50 character') },
+        minlength: jQuery.validator.format("The fullname must be at least 6 characters"),
+        maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
 
       patner_email: {
         required: "Email must be fill out",
@@ -333,7 +332,8 @@ jQuery(document).ready(function ($) {
       patner_phone: {
         required: "The phone must be fill out",
         number: "The phone must be the number",
-        maxlength: jQuery.validator.format("The phone must be not over 13 character"), 
+        minlength:jQuery.validator.format("The phone must be at least 10 characters"),
+        maxlength: jQuery.validator.format("The phone must be not over 13 characters"), 
       } 
     } 
   });

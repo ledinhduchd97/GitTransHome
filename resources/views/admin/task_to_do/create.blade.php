@@ -1,64 +1,58 @@
 @extends('admin.layouts.app')
 @section('title','Tasks to do')
 @section('css')
-	   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
     <link rel="stylesheet" href="{{asset('frontend-admin/libs/datepicker/jquery-ui.theme.css')}}"/>
     <link rel="stylesheet" href="{{asset('frontend-admin/libs/datepicker/jquery-ui.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('frontend-admin/style.css')}}"/>	
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend-admin/style.css')}}"/> 
     <link rel="stylesheet" href="{{asset('frontend-admin/picker.min.css')}}">
 @endsection
 @section('content')
-	    <div class="tasktodo-add content-wrap content-wrap2" id="tasktodo-add">
+      <div class="tasktodo-add content-wrap content-wrap2" id="tasktodo-add">
         <div class="tasktodo tasktodo-wrap">
           <div class="tasktodo-edit__top">
             <h2 class="tasktodo-edit__top--title">Add new task to do</h2>
             @if(session()->has('success'))
-  	        <div class="alert alert-success">
-  	                {{ session()->has('success') ? session('success') : "" }}
-  	                {{ session()->forget('success') }}
-  	        </div>
+            <div class="alert alert-success">
+                    {{ session()->has('success') ? session('success') : "" }}
+                    {{ session()->forget('success') }}
+            </div>
            @endif
           </div>
           <div class="tasktodo-edit__main">
             <form id="form--tasktodo-edit" action="{{route('admin.tasks.store')}}" method="post">
-            	{{ csrf_field() }}
-            	{{ method_field('POST') }}
+              {{ csrf_field() }}
+              {{ method_field('POST') }}
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Title task :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" type="text" value="" name="title"/>
                    @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('title')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('title')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <!-- <select class="padding--base border--base customer_id" name="customer_id" id="ex-search">
+                  <select class="padding--base border--base customer_id" name="customer_id" id="ex-search">
                     @if(isset($customers))
                       @foreach($customers as $customer)
                       <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
                       @endforeach
                     @endif
-                  </select> -->
-                  <select class="selectpicker" data-live-search="true" id="" name="customer_id">
-                    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
                   </select>
-
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('customer_id')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('customer_id')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -67,10 +61,10 @@
                 <div class="content">
                   <input class="border--base padding--base" type="text" value="" name="to_do_type"/>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('to_do_type')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('to_do_type')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -79,10 +73,10 @@
                 <div class="content">
                   <input class="border--base padding--base" type="datetime-local" value="" name="start_task"/>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('start_task')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('start_task')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -103,10 +97,10 @@
                 <div class="content">
                   <input class="border--base padding--base" type="datetime-local" value="" name="deadline"/>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('deadline')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('deadline')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -131,10 +125,10 @@
                     <option value="2">Normal</option>
                   </select>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('ranking')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('ranking')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -146,10 +140,10 @@
                     <option value="0">Waiting</option>
                   </select>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('status')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('status')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -158,10 +152,10 @@
                 <div class="content">
                   <input class="border--base padding--base" type="text" value="Tranhomes" name="assigned"/>
                   @if(sizeof($errors) != 0)
-	                  @if($errors)
-	                    <p style="color:red; font-size: 10px;">{{$errors->first('assigned')}}</p>
-	                  @endif
-	                @endif
+                    @if($errors)
+                      <p style="color:red; font-size: 10px;">{{$errors->first('assigned')}}</p>
+                    @endif
+                  @endif
                 </div>
                 <div class="clear-fix"></div>
               </div>
@@ -177,8 +171,7 @@
 @section('script')
       <script type="text/javascript" src="{{asset('frontend-admin/picker.min.js')}}"></script>
       <script>
-        // $('#ex-search').picker({search : true});
-        $(".selectpicker").selectpicker();
+        $('#ex-search').picker({search : true});
       </script>
       <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
       <script>

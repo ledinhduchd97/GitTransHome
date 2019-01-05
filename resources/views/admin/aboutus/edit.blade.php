@@ -88,12 +88,13 @@
                     </div>
                     <div class="clear-fix"></div>
                 </div>
+                <div class="about_us-edit__link text-center">
+                    <input class="btn--primary padding--base btn-save" type="submit" value="Save"/>
+                    <a class="btn--primary padding--base btn-cancel" href=""><span>Cancel</span></a>
+                </div>
             </div>
             <!--.about-us-view-wrap-->
-            <div class="about_us-edit__link text-center">
-                <input class="btn--primary padding--base btn-save" type="submit" value="Save"/><a
-                        class="btn--primary padding--base btn-cancel" href=""><span>Cancel</span></a>
-            </div>
+            
         </form>
     </div>
 @endsection
