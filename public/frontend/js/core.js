@@ -250,7 +250,6 @@ jQuery(document).ready(function ($) {
         required: true,
         minlength: 10,
         maxlength: 13,
-        regex: /^[0-9 \(\)-]+$/ ,
       } 
     },
     messages: {
@@ -268,8 +267,9 @@ jQuery(document).ready(function ($) {
         required: 'The phone must be filled out',
         minlength: jQuery.validator.format('The phone must be at least 10 character'),
         maxlength: jQuery.validator.format('The phone must be not over 13 character'),
-        regex: "The phone must be in the correct default format (123)4567-890"
-      } } });
+      } 
+    } 
+  });
 
 
 
@@ -314,8 +314,9 @@ jQuery(document).ready(function ($) {
       patner_phone: {
         required: true,
         // number: true,
-        maxlength: 13,
-        regex: /^\([0-9]{3}\)[0-9]{4}\-[0-9]{3}$/ } },
+        maxlength: 13, 
+      } 
+    },
 
 
     messages: {
@@ -331,8 +332,10 @@ jQuery(document).ready(function ($) {
       patner_phone: {
         required: "The phone must be fill out",
         number: "The phone must be the number",
-        maxlength: jQuery.validator.format("The phone must be not over 13 character"),
-        regex: "The phone must be in the correct default format (123)4567-890" } } });
+        maxlength: jQuery.validator.format("The phone must be not over 13 character"), 
+      } 
+    } 
+  });
 
 
 

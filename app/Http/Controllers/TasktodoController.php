@@ -212,7 +212,7 @@ class TasktodoController extends Controller
             $tasks = $tasks->withTitleOrName($request->keyword);
         }
 
-        if($request->status) {
+        if(isset($request->status)) {
             $tasks = $tasks->withStatus($request->status);
         }
 
