@@ -157,7 +157,7 @@
                                 @endif
                             </td>
                             <td>
-                                <p>{{ $task->to_do_type }}</p>
+                                <p class="type">{{ $task->to_do_type }}</p>
                             </td>
                             <td>
                                 <p>{{ $task->start_task }}</p>
