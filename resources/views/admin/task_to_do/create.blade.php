@@ -41,13 +41,19 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                  <select class="padding--base border--base customer_id" name="customer_id" id="ex-search">
+                  <!-- <select class="padding--base border--base customer_id" name="customer_id" id="ex-search">
                     @if(isset($customers))
                       @foreach($customers as $customer)
                       <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
                       @endforeach
                     @endif
+                  </select> -->
+                  <select class="selectpicker" data-live-search="true" id="" name="customer_id">
+                    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
                   </select>
+
                   @if(sizeof($errors) != 0)
 	                  @if($errors)
 	                    <p style="color:red; font-size: 10px;">{{$errors->first('customer_id')}}</p>
@@ -171,7 +177,8 @@
 @section('script')
       <script type="text/javascript" src="{{asset('frontend-admin/picker.min.js')}}"></script>
       <script>
-        $('#ex-search').picker({search : true});
+        // $('#ex-search').picker({search : true});
+        $(".selectpicker").selectpicker();
       </script>
       <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
       <script>

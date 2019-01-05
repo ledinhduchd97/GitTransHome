@@ -13,11 +13,13 @@
 <script src="{{asset('frontend-admin/assets/js/lib/vector-map/jquery.vmap.min.js')}}"></script>
 <script src="{{asset('frontend-admin/assets/js/lib/vector-map/jquery.vmap.sampledata.js')}}"></script>
 <script src="{{asset('frontend-admin/assets/js/lib/vector-map/country/jquery.vmap.world.js')}}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="{{asset('frontend-admin/libs/datepicker/jquery-ui.js')}}"></script>
 <!-- <script src="{{asset('frontend-admin/libs/validation/validation.js')}}"></script> -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{asset('frontend-admin/js/jsnew.js')}}"></script>
 <script src="{{asset('frontend-admin/js/core.js')}}"></script>

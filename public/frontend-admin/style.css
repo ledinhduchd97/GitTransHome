@@ -2169,13 +2169,3 @@ input[type="file"]{
   margin: 0 15px 0 5px;
 }
 /* picker */
-.picker .pc-select{
-  min-width: 100%;
-}
-.picker .pc-select .pc-trigger{
-  margin: 0;
-  height: 40px;
-  line-height: 40px;
-  vertical-align: middle;
-  transition: all 0.3s ease;
-}
