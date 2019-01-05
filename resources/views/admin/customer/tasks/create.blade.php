@@ -164,7 +164,7 @@
                      Status (<span class="required">*</span>):</span></div>
                         <div class="content">
                             <select class="account-position border--base padding--base" id="status" name="status">
-                                <option value="">--- status ---</option>
+                                <option value="">--- Status ---</option>
                                 <option value="0">Done</option>
                                 <option value="1">Waiting</option>
                             </select>

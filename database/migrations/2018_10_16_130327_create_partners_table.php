@@ -19,9 +19,9 @@ class CreatePartnersTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->dateTime('date_of_birth')->nullable();
-            $table->string('address')->nullable();
-            $table->string('partner_type')->nullable();  //0 là normal , 1 là vip
-            $table->string('status')->nullable();
+            $table->text('address')->nullable();
+            $table->text('partner_type')->nullable();
+            $table->text('status')->nullable();
             $table->integer('status_recycle')->default(1);
             $table->integer('user_update')->unsigned()->index()->nullable();
             $table->foreign('user_update')->references('id')->on('users')->onDelete('cascade');
