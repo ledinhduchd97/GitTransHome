@@ -1,6 +1,5 @@
 jQuery(document).ready(function(){
   var time = new Date();
-
   $(".dateofbirth").attr("max",check_date(time));
   
   function check_date(date){
