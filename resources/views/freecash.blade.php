@@ -41,7 +41,7 @@
                 <form id="form_search" action="#">
                 	<!-- modal -->
                   <!-- <label>Address</label> -->
-                  <input id="how_we__search" type="text" name="how_we__search" placeholder="Enter your address" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your address'" /><a class="btn btn-primary btn-base btn_search" id="btn-map" data-toggle="" data-target=".modal_map"><span>Submit</span></a>
+                  <input id="how_we__search" type="text" name="how_we__search" placeholder="Enter your address" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your address'" /><a class="btn btn-primary btn-base btn_search" id="btn-map" data-toggle="" data-target=".modal_map" maxlength="255"><span>Submit</span></a>
                 </form>
                 <div class="message-address" style="display: none; margin: 7px auto;
     max-width: 1030px;">

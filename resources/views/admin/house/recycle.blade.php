@@ -136,10 +136,10 @@
                     <th>Option</th>
                 </tr>
                 @if(isset($houses))
-                    @foreach($houses as $house)
+                    @foreach($houses as $key => $house)
                         <tr>
                             <td>
-                                <p>{{$house->id}}</p>
+                                <p>{{(($houses->currentPage()-1)* $houses->perPage()) + ($key+1)}}</p>
                             </td>
                             <td>
                                 <p class="name">{{$house->name}}</p>
