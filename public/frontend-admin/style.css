@@ -1366,6 +1366,7 @@ input {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   display: -webkit-box;
+  overflow: hidden;
 }
 .table--base p.email,.table--base p.partner,.table--base p.status {
   max-width: 20ch;
