@@ -1277,6 +1277,13 @@ ul.link li a {
   left: 10px;
   color: #fff;
 }
+.other_house--item__desc .name_house{
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 .other_house--item__content2 {
   position: relative;
