@@ -20,7 +20,7 @@ class CreateSetUpsTable extends Migration
             $table->string("logo_header");
             $table->string("logo_footer");
             $table->text("thank_you");
-            $table->text("sell_my_home");
+            // $table->text("sell_my_home");
             $table->string("phone");
             $table->string("email");
             $table->string("lisence");

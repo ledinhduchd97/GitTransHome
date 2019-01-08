@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title','Setup')
+@section('title','Over view')
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css"
@@ -97,7 +97,7 @@
                     </div>
                     <div class="clear-fix"></div>
                 </div>
-                <div class="form-group form--base set-up-form--item">
+                <!-- <div class="form-group form--base set-up-form--item">
                     <label class="control-label col-sm-2 text">Description sell my home:</label>
                     <div class="col-sm-10 content">
                         <textarea name="sell_my_home"  cols="30" rows="10">{{$setup->sell_my_home}}</textarea>
@@ -106,7 +106,7 @@
                         @endif
                     </div>
                     <div class="clear-fix"></div>
-                </div>
+                </div> -->
                 <h3 class="text-center font-weight-bold set-up__content--title">
                     Information company
                 </h3>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="form-group form--base set-up-form--item text-center">
                     <button class="btn btn--primary border--base padding--base" type="submit" style="font-size:14px;">Save</button>
-                    <button class="btn btn--primary border--base padding--base" style="font-size:14px;">Cancel</button>
+                    <a href="{{route('admin.tasks.index')}}"><input class="btn btn--primary border--base padding--base" style="font-size:14px;" type="button" value="Cancel"></a>
                 </div>
             </form>
             </div>

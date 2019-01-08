@@ -19,7 +19,7 @@ class SetUpsTableSeeder extends Seeder
             'logo_header' => 'https://via.placeholder.com/150',
             'logo_footer' => 'https://via.placeholder.com/150',
             'thank_you' => 'We have received you information. We will get back to you as soon as possible. If you’d like to speak to someone immediately, please call our office at (949) 682-3437.',
-            'sell_my_home' => 'Phần mềm: 3F Group chuyên cung cấp các giải pháp về Phần mềm trên nền Web với sự tiện dụng và chuyên nghiệp, phần mềm trên nền Web với sự tiện dụng và chuyên nghiệp',
+            // 'sell_my_home' => 'Phần mềm: 3F Group chuyên cung cấp các giải pháp về Phần mềm trên nền Web với sự tiện dụng và chuyên nghiệp, phần mềm trên nền Web với sự tiện dụng và chuyên nghiệp',
             'phone' => $faker->e164PhoneNumber,
             'email' => $faker->unique()->email,
             'lisence' => 'This is my lisence',

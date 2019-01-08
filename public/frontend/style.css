@@ -3405,6 +3405,8 @@ ul.link li a {
   .sell__content {
     padding: 15px 50px;
     width: 100%;
+    top: 0;
+    left: 0;
     background-color: transparent;
   }
   .sell__content h1 {
@@ -3819,6 +3821,7 @@ ul.link li a {
   }
   .sell__content {
     padding: 15px 0;
+
   }
 }
 

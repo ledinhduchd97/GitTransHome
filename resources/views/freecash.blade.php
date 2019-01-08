@@ -5,7 +5,9 @@
 @section('content')
       <div class="free-cash free-cash-wrap">
         <div class="free-cash__title">
-          <h2 class="text-center">We pay cash to you immediately</h2>
+          @if(isset($sellmyhome->note))
+          <h2 class="text-center">{{$sellmyhome->note}}</h2>
+          @endif
         </div>
         <div class="free-cash__search">
           <div class="container">             
@@ -26,27 +28,43 @@
         <div class="free-cash__how-we-buy">
           <div class="container">
             <div class="modal-header">
-              <h3 class="modal-title form_information__title" id="form_information__title">{{$freecashes->form_information_title_h3}}</h3>
-              <h4>{{$freecashes->form_information_title_h4}}</h4>
+              @if(isset($sellmyhome->title_1))
+                <h3 class="modal-title form_information__title" id="form_information__title">{{$sellmyhome->title_1}}</h3>
+              @endif
+              @if(isset($sellmyhome->description_1))
+                <h4>{{$sellmyhome->description_1}}</h4>
+              @endif
             </div>
             <div class="modal-body">
               <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                  <div class="how_we--item"><img class="how_we--item__img" src="{{asset('frontend/images/free-cash-img1.png')}}" alt="anh"/>
-                    <h4 class="how_we--item__title">{{$freecashes->how_we_item_title_1}}</h4>
-                    <p class="how_we--item__desc">{{$freecashes->how_we_item_desc_1}}</p>
+                  <div class="how_we--item">@if(isset($sellmyhome->image_1))<img class="how_we--item__img" src="{{asset($sellmyhome->image_1)}}" alt="anh"/>@endif
+                    @if(isset($sellmyhome->title_image_1))
+                    <h4 class="how_we--item__title">{{$sellmyhome->title_image_1}}</h4>
+                    @endif
+                    @if(isset($sellmyhome->description_image_1))
+                    <p class="how_we--item__desc">{{$sellmyhome->description_image_1}}</p>
+                    @endif
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-4">
-                  <div class="how_we--item"><img class="how_we--item__img" src="{{asset('frontend/images/free-cash-img2.png')}}" alt="anh"/>
-                    <h4 class="how_we--item__title">{{$freecashes->how_we_item_title_2}}</h4>
-                    <p class="how_we--item__desc">{{$freecashes->how_we_item_desc_2}}</p>
+                  <div class="how_we--item">@if(isset($sellmyhome->image_2))<img class="how_we--item__img" src="{{asset($sellmyhome->image_2)}}" alt="anh"/>@endif
+                    @if(isset($sellmyhome->title_image_2))
+                    <h4 class="how_we--item__title">{{$sellmyhome->title_image_2}}</h4>
+                    @endif
+                    @if(isset($sellmyhome->description_image_2))
+                    <p class="how_we--item__desc">{{$sellmyhome->description_image_2}}</p>
+                    @endif
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-4">
-                  <div class="how_we--item"><img class="how_we--item__img" src="{{asset('frontend/images/free-cash-img3.png')}}" alt="anh"/>
-                    <h4 class="how_we--item__title">{{$freecashes->how_we_item_title_3}}</h4>
-                    <p class="how_we--item__desc">{{$freecashes->how_we_item_desc_3}}</p>
+                  <div class="how_we--item">@if(isset($sellmyhome->image_3))<img class="how_we--item__img" src="{{asset($sellmyhome->image_3)}}" alt="anh"/>@endif
+                    @if(isset($sellmyhome->title_image_3))
+                      <h4 class="how_we--item__title">{{$sellmyhome->title_image_3}}</h4>
+                    @endif
+                    @if(isset($sellmyhome->description_image_3))
+                    <p class="how_we--item__desc">{{$sellmyhome->description_image_3}}</p>
+                    @endif
                   </div>
                 </div>
               </div>
@@ -58,39 +76,22 @@
             <div class="row">
               <div class="col-lg-12 col-md-12">
                 <div class="how_we__table">
-                  <h3 class="how_we__table-title">Selling To On Faith Properties LLC vs. Listing With A Local California Agent</h3>
-                  <p class="how_we__table-desc">{{$setup->sell_my_home}}</p>
+                  @if(isset($sellmyhome->title_2))
+                    <h3 class="how_we__table-title">{{$sellmyhome->title_2}}</h3>
+                  @endif
+                  @if(isset($sellmyhome->description_2))
+                  <p class="how_we__table-desc">{{$sellmyhome->description_2}}</p>
+                  @endif
                   <table class="how_we__table-infor col-md-12">
-                    <tr>
-                      <th class="col-md-4"></th>
-                      <th class="col-md-4">Selling w/ An Agent</th>
-                      <th class="col-md-4">SOLD To On Falth Properties LLC</th>
-                    </tr>
-                    <tr>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                    </tr>
-                    <tr>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                    </tr>
-                    <tr>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                    </tr>
-                    <tr>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                    </tr>
-                    <tr>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                      <td class="col-md-4"></td>
-                    </tr>
+                    @if(isset($tables))
+                      @foreach($tables as $table)
+                      <tr>
+                        <th class="col-md-4">{{$table->column_1}}</th>
+                        <th class="col-md-4">{{$table->column_2}}</th>
+                        <th class="col-md-4">{{$table->column_3}}</th>
+                      </tr>
+                      @endforeach
+                    @endif
                   </table>
                 </div>
               </div>
