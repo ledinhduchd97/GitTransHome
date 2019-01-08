@@ -3,8 +3,8 @@
   <div class="header__contact">
     <div class="container">
       <div class="fleft contact__infor">
-        <a class="contact__phone" href="#"><span><img src="{{asset('frontend/images/icon-phone.png')}}" alt=""/><span>{{$setup->phone}}</span></span></a>
-        <a class="contact__email" href="#"><span><img src="{{asset('frontend/images/icon-mail.png')}}" alt=""/><span>{{$setup->email}}</span></span></a>
+        <a class="contact__phone" href="#"><span><img src="{{asset('frontend/images/call.png')}}" alt="" style="width:22px; height:12px"/><span>{{$setup->phone}}</span></span></a>
+        <a class="contact__email" href="#"><span><img src="{{asset('frontend/images/close-envelope.png')}}" alt="" style="width:22px; height:12px"/><span>{{$setup->email}}</span></span></a>
         <a class="contact__lisence" href="#" style="margin-left: 25px;"><span><i class="fas fa-clone" style="margin-right: 10px;"></i><span>{{$setup->lisence}}</span></span></a>
       </div>
       <div class="fright contact__link">

@@ -4,6 +4,25 @@
 @endsection
 @section('content')
       <div class="free-cash free-cash-wrap">
+        <div class="free-cash__title">
+          <h2 class="text-center">We pay cash to you immediately</h2>
+        </div>
+        <div class="free-cash__search">
+          <div class="container">             
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <form id="form_search" action="#">
+                	<!-- modal -->
+                  <!-- <label>Address</label> -->
+                  <input id="how_we__search" type="text" name="how_we__search" placeholder="Enter your address" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your address'" /><a class="btn btn-primary btn-base btn_search" id="btn-map" data-toggle="" data-target=".modal_map" maxlength="255"><span>Submit</span></a>
+                </form>
+                <div class="message-address" style="display: none; margin: 7px auto; max-width: 1030px;">
+                	<p style="color:red; font-size: 12px;">Address must be filled out</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="free-cash__how-we-buy">
           <div class="container">
             <div class="modal-header">
@@ -29,23 +48,6 @@
                     <h4 class="how_we--item__title">{{$freecashes->how_we_item_title_3}}</h4>
                     <p class="how_we--item__desc">{{$freecashes->how_we_item_desc_3}}</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="free-cash__search">
-          <div class="container">             
-            <div class="row">
-              <div class="col-lg-12 col-md-12">
-                <form id="form_search" action="#">
-                	<!-- modal -->
-                  <!-- <label>Address</label> -->
-                  <input id="how_we__search" type="text" name="how_we__search" placeholder="Enter your address" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your address'" /><a class="btn btn-primary btn-base btn_search" id="btn-map" data-toggle="" data-target=".modal_map" maxlength="255"><span>Submit</span></a>
-                </form>
-                <div class="message-address" style="display: none; margin: 7px auto;
-    max-width: 1030px;">
-                	<p style="color:red; font-size: 12px;">Address must be filled out</p>
                 </div>
               </div>
             </div>

@@ -19,6 +19,10 @@ jQuery(document).ready(function(){
   
   // 
   $('.selectpicker').selectpicker();
+  // language update 07/01
+  $("#language-select").click(function(){
+    $("#language").removeAttr("data-toggle");
+  });
   // date start and finish
   var a,b;
   var btn_task = $("#btn-search-task");
@@ -61,4 +65,5 @@ function check(date_start,date_finish){
       }
     }
   }
+  // 
 }

@@ -735,7 +735,8 @@ label.error {
   padding-top: 4px;
   color: #ea723d;
 }
-.footer .footer-contact__item:first-child{
+/* update 07/01 */
+.footer .footer-contact__item:last-child{
   color: #666;
 }
 
@@ -791,6 +792,7 @@ label.error {
 .contact__infor a {
   display: inline-block;
   letter-spacing: 0.35px;
+  color: #ea723d;
 }
 
 .contact__infor a span img {
@@ -843,7 +845,7 @@ ul.link li a {
 
 .logo img {
   vertical-align: text-bottom;
-  /*height: 100px;*/
+  height: 100px;
 }
 
 .header.fixed {
@@ -3902,3 +3904,21 @@ ul.link li a {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* freecash title update 07/01*/
+.free-cash__title h2{
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 64px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #222222;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'poppins', sans-serif;
+  word-spacing: 5px;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 150ch;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

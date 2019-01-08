@@ -214,6 +214,11 @@ jQuery(document).ready(function ($) {
     removeActive();
     scrollEle(id);
   });
+// update 07/01
+  $('.footer-menu li a').click(function () {
+    var id = $(this).attr('href');
+    scrollEleft(id);
+  });
 
   $(window).on('resize', function () {
     var win = $(this); //this = window
@@ -367,9 +372,12 @@ function scrollEle(ele) {
   $("html, body").animate({
     scrollTop: $(ele).offset().top - 144},
   1000);
-  // $("html, body").animate({
-  //   scrollTop: $(ele).offset().top
-  // }, 1000);
+}
+// update 07/01
+function scrollEleft(ele) {
+  $("html, body").animate({
+    scrollTop: $(ele).offset().top - 144},
+  1000);
 }
 
 function scrollHeader() {

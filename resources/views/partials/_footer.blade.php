@@ -44,9 +44,10 @@
                 <h3>Contact Us</h3>
               </div>
               <div class="footer__col--text">
-                <p class="footer-contact__item"><i class="fas fa-map-marker-alt"></i>{{$setup->address}}</p>
+                <!-- update 07/01 -->
                 <p class="footer-contact__item"><i class="fas fa-phone"></i>{{$setup->phone}}</p>
                 <p class="footer-contact__item"><i class="fas fa-envelope"></i>{{$setup->email}}</p>
+                <p class="footer-contact__item"><i class="fas fa-map-marker-alt"></i>{{$setup->address}}</p>
               </div>
             </div>
           </div>

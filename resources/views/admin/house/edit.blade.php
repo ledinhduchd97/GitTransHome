@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="clear-fix"></div>
                                     </div>
-                                    <div class="edit-house--left__item">
+                                    <!-- <div class="edit-house--left__item">
                                         <div class="text"><span>Code :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
@@ -46,7 +46,7 @@
                                             @endif
                                         </div>
                                         <div class="clear-fix"></div>
-                                    </div>
+                                    </div> -->
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Note :</span></div>
                                         <div class="content">
