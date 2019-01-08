@@ -307,7 +307,7 @@
                             <div class="row">
                               <div class="col-12">
                                 <div class="modal-content">
-                                  <div class="partner_thank"> 
+                                  <div class="partner_thank popup-thankyou"> 
                                     <div class="modal-header">
                                       <button type="button" class="close" data-dismiss="modal" >&times;</button>
                                       <h3 id="thank_partner__title">Thank You For Your Request!</h3>

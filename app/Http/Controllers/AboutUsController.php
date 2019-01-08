@@ -75,7 +75,7 @@ class AboutUsController extends Controller
         $request->validate(
         [
            'title' => 'required|min:6|max:50',
-           'short_description' => 'required|min:6|max:160',
+           'short_description' => 'required|min:6|max:151',
            'detail_description' => 'required|max:500',
            'image_avatar' => 'mimes:jpeg,bmp,png,jpg,gif',
            'image_signature' => 'mimes:jpeg,bmp,png,jpg,gif',
