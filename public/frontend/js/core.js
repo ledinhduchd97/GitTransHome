@@ -212,7 +212,7 @@ jQuery(document).ready(function ($) {
   $('.mobile__menu li a').click(function () {
     var id = $(this).attr('href');
     removeActive();
-    scrollEle(id);
+    scrollElemb(id);
   });
 // update 07/01
   $('.footer-menu li a').click(function () {
@@ -361,6 +361,8 @@ jQuery(document).ready(function ($) {
   $('.feature-item__wrap i.fa-heart').click(function () {
     $(this).toggleClass('active');
   });
+  // 
+  $("._6lg-").addClass("clode");
 });
 
 function removeActive() {
@@ -378,6 +380,15 @@ function scrollEleft(ele) {
   $("html, body").animate({
     scrollTop: $(ele).offset().top - 144},
   1000);
+}
+// update 08/01
+function scrollElemb(ele){
+  $("html, body").animate({
+    scrollTop: $(ele).offset().top - 70
+  },1000);
+}
+function resize(){
+  $("._6lg-").attr("top","-5px";"left","-5px";);
 }
 
 function scrollHeader() {
