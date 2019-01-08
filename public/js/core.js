@@ -55,23 +55,23 @@ jQuery(document).ready(function (e) {
         messages: {
             fullname: {
                 required: "* Full name must be fill out",
-                maxlength: jQuery.validator.format("* The fullname must be not over 100 character"),
+                maxlength: jQuery.validator.format("* The fullname must be not over 100 characters"),
                 regex: "* The fullname must be in correct format"
             },
             email: {
                 required: "* Full name must be fill out",
-                maxlength: jQuery.validator.format("* The fullname must be not over 50 character"),
+                maxlength: jQuery.validator.format("* The fullname must be not over 50 characters"),
                 regex: "* The Email must be in correct format"
             },
             username: {
                 required: "* Full name must be fill out",
-                maxlength: jQuery.validator.format("* The fullname must be not over 50 character"),
+                maxlength: jQuery.validator.format("* The fullname must be not over 50 characters"),
                 regex: "* The fullname must be in correct format"
             },
             password: {
                 required: "* Full name must be fill out",
-                minlength: jQuery.validator.format("* First name must be at least 6 character"),
-                maxlength: jQuery.validator.format("* The fullname must be not over 50 character")
+                minlength: jQuery.validator.format("* First name must be at least 6 characters"),
+                maxlength: jQuery.validator.format("* The fullname must be not over 50 characters")
             },
             confirm: {
                 required: "* Full name must be fill out"
@@ -144,18 +144,18 @@ jQuery(document).ready(function (e) {
         messages: {
             housename: {
                 required: "Full name must be fill out",
-                maxlength: jQuery.validator.format("The housename must be not over 100 character")
+                maxlength: jQuery.validator.format("The housename must be not over 100 characters")
             },
             note: {
-                maxlength: jQuery.validator.format("The note must be not over 250 character")
+                maxlength: jQuery.validator.format("The note must be not over 250 characters")
             },
             phone: {
                 required: "Full name must be fill out",
-                maxlength: jQuery.validator.format("The housename must be not over 13 character"),
+                maxlength: jQuery.validator.format("The housename must be not over 13 characters"),
                 regex: "The phone must be in correct format"
             },
             address: {
-                maxlength: jQuery.validator.format("The housename must be not over 250 character"),
+                maxlength: jQuery.validator.format("The housename must be not over 250 characters"),
                 required: "Address must be fill out"
             },
             bedroom: {
@@ -179,15 +179,15 @@ jQuery(document).ready(function (e) {
                 number: "The price must be a number"
             },
             desc: {
-                maxlength: jQuery.validator.format("The description must be not over 250 character")
+                maxlength: jQuery.validator.format("The description must be not over 250 characters")
             },
             name2: {
                 required: "Brokerage must be fill out",
-                maxlength: jQuery.validator.format("The brokerage must be not over 100 character")
+                maxlength: jQuery.validator.format("The brokerage must be not over 100 characters")
             },
             agent: {
                 required: "Agent must be fill out",
-                maxlength: jQuery.validator.format("The agent must be not over 100 character")
+                maxlength: jQuery.validator.format("The agent must be not over 100 characters")
             },
             built: {
                 required: "Year built must be fill out",

@@ -1319,7 +1319,7 @@ input {
 }
 
 .table--base p.address {
-  max-width: 21ch;
+  max-width: 10ch;
   display: inline-block;
   overflow: hidden;
   display: -webkit-box;
@@ -1369,7 +1369,7 @@ input {
   overflow: hidden;
 }
 .table--base p.email,.table--base p.partner,.table--base p.status {
-  max-width: 20ch;
+  max-width: 10ch;
   display: inline-block;
   overflow: hidden;
   display: -webkit-box;

@@ -104,7 +104,7 @@
                     <p>{{(($partners->currentPage()-1)* $partners->perPage()) + ($key+1)}}</p>
                   </td>
                   <td>
-                    <p class=name>{{$partner->fullname}}</p>
+                    <p class="name">{{$partner->fullname}}</p>
                   </td>
                   <td>
                     <p class="email">{{$partner->email}}</p>
@@ -114,7 +114,7 @@
                   </td>
                   <td>
                     @if(isset($partner->address))
-                    <p>{{$partner->address}}</p>
+                    <p class="address">{{$partner->address}}</p>
                     @else
                     <p> - <p>
                     @endif
@@ -124,14 +124,14 @@
                   </td>
                   <td>
                     @if(isset($partner->partner_type))
-                    <p>{{$partner->partner_type}}</p>
+                    <p class="partner">{{$partner->partner_type}}</p>
                     @else
                     <p> - <p>
                     @endif
                   </td>
                   <td>
                     @if(isset($partner->status))
-                    <p>{{$partner->status}}</p>
+                    <p class="status">{{$partner->status}}</p>
                     @else
                     <p> - <p>
                     @endif

@@ -1,28 +1,28 @@
 /* ==============================================================
 
-Project:	xxx - Creative Coming Soon Template
-Info:		https://themeforest.net/item/xxx
-Version:	1.0
-Author:		3F-Team
-Profile:	https://themeforest.net/user/3ftheme
+Project:  xxx - Creative Coming Soon Template
+Info:   https://themeforest.net/item/xxx
+Version:  1.0
+Author:   3F-Team
+Profile:  https://themeforest.net/user/3ftheme
 
 -----------------------------------------------------------------
-					*** TABLE OF CONTENTS ***
+          *** TABLE OF CONTENTS ***
 -----------------------------------------------------------------
 
-	1.	Fonts
-	2.	General
-	3.	xxx
-	4.	xxx
-	5.	xxx
-	6.	xxx
-	7.	xxx
-	8.	xxx
-	8.	xxx
-	9.  xxx
-	10.	xxx
-	11.	xxx
-	12.	xxx
+  1.  Fonts
+  2.  General
+  3.  xxx
+  4.  xxx
+  5.  xxx
+  6.  xxx
+  7.  xxx
+  8.  xxx
+  8.  xxx
+  9.  xxx
+  10. xxx
+  11. xxx
+  12. xxx
 
 =============================================================*/
 /*********************
@@ -464,10 +464,6 @@ label.error {
 .line-clame__base2{
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .slider-video .owl-nav {
@@ -1439,10 +1435,6 @@ ul.link li a {
   line-height: 25px;
   font-family: 'opensans', sans-serif;
   letter-spacing: 0.4px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .about-us__content--description p {
@@ -3771,19 +3763,6 @@ ul.link li a {
     margin-left: 15px;
     margin-right: 15px;
   }
-  /* direction */
-  .direction3{
-    max-width: 20ch;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  .detail .direction a{
-    display: inline-block !important;
-    line-height: 40px;
-    height: 40px;
-    vertical-align: middle;
-  }
 }
 
 @media screen and (max-width: 414px) {
@@ -3890,17 +3869,18 @@ ul.link li a {
   font-size: 36px;
   font-family: 'opensans',sans-serif;
 }
-
+.popup-thankyou p{
+   display: inline;
+}
 .modal-thanks .modal-body{
   font-size: 20px;
   color: #222;
 }
 @media screen and (max-width:380px){
-  ._j68
-  {
-    width:300px !important;
+   .promptHeaderContainer{
+     width:300px !important;
     left: 70px !important;
-  }
+ }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,7 +34,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Full name :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="fullname" value="{{ $partner->fullname }}" required="required" maxlength="64" readonly/>
+                                        <input class="border--base padding--base" type="text" name="fullname" value="{{ $partner->fullname }}" required="required" maxlength="64"/>
                                         @if($errors->has('fullname'))
                                             <p class="text-danger">{{ $errors->first('fullname') }}</p>
                                         @endif
@@ -44,7 +44,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Email :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="email" value="{{ $partner->email }}" required="required" maxlength="64" readonly/>
+                                        <input class="border--base padding--base" type="text" name="email" value="{{ $partner->email }}" required="required" maxlength="64"/>
                                         @if($errors->has('email'))
                                             <p class="text-danger">{{ $errors->first('email') }}</p>
                                         @endif
@@ -64,7 +64,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="phone" name="phone"  value="{{ $partner->phone }}" required="required" readonly/>
+                                        <input class="border--base padding--base" type="phone" name="phone"  value="{{ $partner->phone }}" required="required"/>
                                         @if($errors->has('phone'))
                                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                                         @endif

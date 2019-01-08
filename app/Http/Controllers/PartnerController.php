@@ -142,7 +142,7 @@ class PartnerController extends Controller
     public function addPartner(Request $request) {
         $rules = [
             'fullname' => 'required|max:50',
-            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
+            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|max:191',
             'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
@@ -217,7 +217,7 @@ class PartnerController extends Controller
     {
         $rules = [
             'fullname' => 'required|max:50',
-            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
+            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|max:191',
             'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
