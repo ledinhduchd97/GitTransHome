@@ -1429,12 +1429,13 @@ ul.link li a {
   line-height: 43px;
   letter-spacing: 0.6px;
 }
-
+/* 08/01 */
 .about-us__content--description {
   color: #666;
   line-height: 25px;
   font-family: 'opensans', sans-serif;
   letter-spacing: 0.4px;
+  text-align: justify;
 }
 
 .about-us__content--description p {
@@ -1903,8 +1904,9 @@ ul.link li a {
 .free-cash__how-we-buy .col-lg-4.col-sm-4:last-child .how_we--item {
   padding-left: 40px;
 }
-
+/* update 08/01 */
 .free-cash__how-we-buy .col-lg-4.col-sm-4:last-child .how_we--item h4 {
+  margin-top: 45px;
   word-spacing: 2px;
 }
 
@@ -2487,9 +2489,6 @@ ul.link li a {
   .container {
     max-width: 1200px;
   }
-  .home{
-    padding-top: 125px;
-  }
 }
 
 @media (min-width: 1920px) {
@@ -2610,7 +2609,7 @@ ul.link li a {
   }
 }
 @media only screen and (width: 1199px){
-  .home{
+  .home, .detail, .free-cash{
     padding-top: 115px !important;
   }
 }
@@ -2618,7 +2617,7 @@ ul.link li a {
   .logo img{
     height: 70px !important;
   }
-  .home{
+  .home, .detail, .free-cash{
     padding-top: 115px;
   }
   .slider-video .owl-nav{
@@ -2752,6 +2751,10 @@ ul.link li a {
     -webkit-order: 1;
     order: 1;
   }
+  /* 08/01 */
+  .partner__warp p{
+    text-align: justify;
+  }
   .partner {
     padding: 40px 0;
   }
@@ -2861,6 +2864,7 @@ ul.link li a {
   }
   .banner-item__wrap3--time {
     font-size: 18px;
+    /* margin-top: 20px; */
   }
   .banner-item__wrap3--title {
     font-size: 26px;
@@ -2938,7 +2942,7 @@ ul.link li a {
 }
 
 @media only screen and (max-width: 767px) {
-  .home{
+  .home, .detail, .free-cash{
     padding-top: 70px;
   }
   .about-us__img {
@@ -3066,8 +3070,12 @@ ul.link li a {
   .feature {
     padding: 50px 0;
   }
-  .home{
+  .home, .detail, .free-cash{
     padding-top: 70px;
+  }
+  .direction, .direction3{
+    line-height: 40px !important;
+    height: 40px !important;
   }
   .about-us__content--title,
   .our-video__title h2,
@@ -3315,7 +3323,7 @@ ul.link li a {
     font-size: 30px;
     margin-bottom: 0;
   }
-  .home{
+  .home, .detail{
     padding-top: 125px;
   }
   .free-cash .modal-header h4 {
@@ -3337,6 +3345,9 @@ ul.link li a {
 }
 
 @media screen and (max-width: 1024px) {
+  .home, .detail{
+    padding-top: 115px;
+  }
   .free-cash .modal-content {
     max-width: 960px;
   }
@@ -3829,10 +3840,28 @@ ul.link li a {
   .sell__content p {
     font-size: 9px;
   }
+  #modal-partner-thank .modal-content{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .partner_thank .close{
+    top: -60px;
+    right: -15px;
+  }
+ .popup-thankyou p{
+    font-size: 13px;
+    line-height: 1;
+  }
+  .partner_thank .modal-header span{
+    font-size: 13px;
+  }
+  .partner__img--wrap{
+    display: initial;
+  }
 }
 
 @media screen and (max-width: 991px){
-  .home{
+  .home, .detail, .free-cash{
     padding-top: 70px;
   }
   .sell__content .btn-getsell {
@@ -3901,4 +3930,31 @@ ul.link li a {
   max-width: 150ch;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+/* direction update 08/01 */
+.direction3{
+  vertical-align: middle;
+  max-width: 15ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block !important;
+  margin: 0 auto;
+  line-height: 78px;
+  height: 78px;
+  white-space: nowrap;
+}
+/* res footer menu 08/01 */
+@media screen and (max-width:575px){
+  .footer__menu{
+    margin: 0;
+    margin-top: 25px;
+  }
+  .footer__contact{
+    margin-top: 25px;
+  }
+}
+/* 08/01 */
+.clode{
+  top: -5px !important;
+  left: -5px !important;
 }

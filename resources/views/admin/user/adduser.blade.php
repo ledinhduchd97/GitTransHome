@@ -148,7 +148,7 @@
                 <div class="text"><span>
                      Date of birth (<span class="required">*</span>):</span></div>
                 <div class="content date--wrap myDate"><i class="far fa-calendar-alt"></i>
-                  <input class="myDatePicker border--base padding--base" required id="birthday" type="text" value="" name="birthday" autocomplete="off"/>
+                  <input class="myDatePicker border--base padding--base dateofbirth" required id="birthday" type="text" value="" name="birthday" autocomplete="off"/>
                   <div class="error-birthday">
                     @if(sizeof($errors) != 0)
                       @if($errors)

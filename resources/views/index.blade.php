@@ -240,7 +240,7 @@
                               <p class="name-room">bedrooms</p></span><span>
                               <p class="number">{{$house->number_bathroom}}</p>
                               <p class="name-room">bathrooms</p></span><span>
-                              <p class="number">{{$house->area_gross_floor}} sq</p>
+                              <p class="number">{{$house->area_gross_floor}} Sqrt</p>
                               <p class="name-room">living rooms</p></span></div>
                           <p class="price">{{ $house->unit }} {{ $house->price }}</p><a class="btn btn-primary btn-play btn-base" href=""><span>play</span></a>
                         </div>

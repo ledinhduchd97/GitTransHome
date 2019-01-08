@@ -101,14 +101,14 @@
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__from-date date--wrap"><span>Start day</span>
                                                                         <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="startDay_partner" type="date"/>
+                                                                            <input class="padding--base border--base padding--date" id="startDay_partner" type="date" name="date_from"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__to-date date--wrap"><span>Finish day</span>
                                                                         <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="endDay_partner" type="date"/>
+                                                                            <input class="padding--base border--base padding--date" id="endDay_partner" type="date" name="date_to"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
