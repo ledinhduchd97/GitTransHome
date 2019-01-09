@@ -255,6 +255,7 @@ jQuery(document).ready(function ($) {
         required: true,
         minlength: 10,
         maxlength: 15,
+        regex: /^[0-9-+s()]*$/
       } 
     },
     messages: {
@@ -262,8 +263,8 @@ jQuery(document).ready(function ($) {
         required: 'First name must be filled out',
         maxlength: jQuery.validator.format('First name must be not over 10 characters'),
         minlength: jQuery.validator.format('First name must be at least 1 characters'),
-        regex: 'The first name must be in the correct format' },
-
+        regex: 'The first name must be in the correct format' 
+      },
       email: {
         required: 'Email must be filled out',
         regex: 'The email must be in the correct format' },
@@ -272,6 +273,7 @@ jQuery(document).ready(function ($) {
         required: 'The phone must be filled out',
         minlength: jQuery.validator.format('The phone must be at least 10 characters'),
         maxlength: jQuery.validator.format('The phone must be not over 15 characters'),
+        regex: 'The phone format is invalid'
       } 
     } 
   });
@@ -318,7 +320,8 @@ jQuery(document).ready(function ($) {
       patner_phone: {
         required: true,
         minlength:10,
-        maxlength: 15, 
+        maxlength: 15,
+        regex: /^[0-9-+s()]*$/ 
       } 
     },
 
@@ -336,7 +339,8 @@ jQuery(document).ready(function ($) {
         required: "The phone must be fill out",
         number: "The phone must be the number",
         minlength:jQuery.validator.format("The phone must be at least 10 characters"),
-        maxlength: jQuery.validator.format("The phone must be not over 15 characters"), 
+        maxlength: jQuery.validator.format("The phone must be not over 15 characters"),
+        regex: 'The phone format is invalid'
       } 
     } 
   });
