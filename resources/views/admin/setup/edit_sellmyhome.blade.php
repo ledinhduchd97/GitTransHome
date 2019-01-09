@@ -156,7 +156,7 @@
                   <div class="setup-freecash__item">
                     <div class="text"><span>Description 2 :</span></div>
                     <div class="content">
-                    	<textarea class="description_2" name="description_2" rows="10" required maxlength="250">@if(isset($sellmyhome->description_2)){{$sellmyhome->description_2}}@endif</textarea>
+                    	<textarea class="description_2" name="description_2" rows="5" required maxlength="250">@if(isset($sellmyhome->description_2)){{$sellmyhome->description_2}}@endif</textarea>
                     </div>
                     <div class="clear-fix"></div>
                   </div>
