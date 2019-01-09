@@ -656,8 +656,8 @@ label.error {
 
 .footer__col--title img {
   display: block;
-  /*height: 34px;
-  width: 100%;*/
+  height: 34px;
+  width: 100%;
 }
 
 .footer__col--title h3 {
@@ -836,12 +836,12 @@ ul.link li a {
 
 .logo {
   margin-left: -15px;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .logo img {
   vertical-align: text-bottom;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .header.fixed {
@@ -1648,6 +1648,10 @@ ul.link li a {
   text-align: center;
 }
 
+/* update 09/01 */
+.how_we__table-infor tr:first-child th{
+  font-weight: 700;
+}
 .how_we__table-infor tr td,
 .how_we__table-infor tr th {
   font-size: 20px;
@@ -3267,8 +3271,8 @@ ul.link li a {
   }
   .footer__col--title img {
     display: inline;
-    height: 34px;
-    width: 100%;
+    /* height: 34px; */
+    width: 70%;
   }
   .footer__col--title h3 {
     text-align: center;

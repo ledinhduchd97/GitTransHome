@@ -2204,6 +2204,7 @@ input[type="file"]{
 
 .setup-freecash__top--title {
   color: #222;
+  font-size: 30px;
 }
 
 .setup-freecash__wrap {
@@ -2224,18 +2225,18 @@ input[type="file"]{
 
 .setup-freecash__item .text {
   float: left;
-  width: 30%;
+  width: 25%;
   font-weight: 700;
   font-size: 16px;
 }
 
-.setup-freecash__item .text > span {
+/* .setup-freecash__item .text > span {
   margin-left: 10px;
-}
+} */
 
 .setup-freecash__item .content {
   float: left;
-  width: 70%;
+  width: 75%;
   position: relative;
   padding: 0 15px;
 }
@@ -2246,6 +2247,12 @@ input[type="file"]{
 
 .setup-freecash--lv2 {
   margin-top: 20px;
+}
+.setup-freecash--lv2 .text{
+  width: 35%;
+}
+.setup-freecash--lv2 .content{
+  width: 65%;
 }
 
 .setup-freecash__table {
@@ -2261,8 +2268,10 @@ input[type="file"]{
   text-align: center;
   border: 1px solid #ddd;
 }
+/* 09/01 */
 .description_2{
   width: 100%;
+  resize: none;
 }
 .setup-freecash__item i.fa-plus-square{
   float: right;
