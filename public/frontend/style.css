@@ -836,7 +836,7 @@ ul.link li a {
 
 .logo {
   margin-left: -15px;
-  /* height: 100px; */
+  height: 100px;
 }
 
 .logo img {
@@ -2618,6 +2618,9 @@ ul.link li a {
   .logo img{
     height: 80px;
   }
+  .logo{
+    height: 80px;
+  }
 }
 @media only screen and (width: 1199px){
   .home, .detail, .free-cash{
@@ -2626,6 +2629,9 @@ ul.link li a {
 }
 @media only screen and (max-width: 1199px) {
   .logo img{
+    height: 70px !important;
+  }
+  .logo{
     height: 70px !important;
   }
   .home, .detail, .free-cash{
@@ -2692,6 +2698,7 @@ ul.link li a {
   }
   .logo{
     margin-left: 0;
+    height: 70px;
   }
   .footer__menu{
     margin: 0 30px;
@@ -3327,6 +3334,9 @@ ul.link li a {
   .logo img{
     height: 80px;
   }
+  .logo{
+    height: 80px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3351,6 +3361,9 @@ ul.link li a {
     font-size: 20px;
   }
   .logo img{
+    height: 70px;
+  }
+  .logo{
     height: 70px;
   }
 }
@@ -3971,4 +3984,8 @@ ul.link li a {
 .clode{
   top: -5px !important;
   left: -5px !important;
+}
+/* 09/01 */
+.downloads-single, .downloads, .pip-btn{
+  display: none;
 }
