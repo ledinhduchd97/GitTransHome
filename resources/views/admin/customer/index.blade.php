@@ -144,7 +144,7 @@
                             </td>
                             <td>
                                 <div class="table-icon"><a href="{{ route('admin.customers.show', ['id' => $customer->id]) }}"><i
-                                                class="far fa-eye" title="Detail"></i></a>
+                                                class="far fa-eye" title="Detail"></p></a>
                                     <a class="recycle" data-url="{{ route('admin.customers.destroy', ['id' => $customer->id]) }}"
                                        data-toggle="modal" data-target="#exampleModal">
                                         <i class="fas fa-trash-alt" title="Recycle"></i>

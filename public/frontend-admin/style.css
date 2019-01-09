@@ -1290,7 +1290,7 @@ input {
 .danhsachtk__table tr td:nth-child(3) p,
 .danhsachtk__table tr td:nth-child(6) p{
   /* max-width: 100px; */
-  width: 17ch;
+  /* width: 17ch; */
   overflow: hidden;
   text-overflow: ellipsis;
   /* display: inline-block; */

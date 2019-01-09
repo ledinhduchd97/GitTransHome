@@ -150,7 +150,7 @@
                             </td>
                             <td>
                                 @if(isset($task->customer->last_name))
-                                    <p>{{ $task->customer->last_name }}</p>
+                                    <p class="name">{{ $task->customer->last_name }}</p>
                                 @else
                                     <p>-</p>
                                 @endif

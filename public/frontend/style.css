@@ -950,6 +950,7 @@ ul.link li a {
   line-height: 25px;
   margin-bottom: 30px;
   padding-right: 30px;
+  text-align: justify;
 }
 
 .partner__img--wrap {
@@ -1101,7 +1102,7 @@ ul.link li a {
 
 .direction .active {
   color: #222;
-  display: inline !important;
+  display: inline-block !important;
 }
 
 .direction .angle_right {
@@ -1650,18 +1651,20 @@ ul.link li a {
 
 /* update 09/01 */
 .how_we__table-infor tr:first-child th{
-  font-weight: 700;
+  font-weight: 600;
+  color: #222;
+  padding:15px;
 }
 .how_we__table-infor tr td,
 .how_we__table-infor tr th {
   font-size: 20px;
   height: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #828282;
   width: 33.33%;
 }
 
 .how_we__table-infor tr:nth-child(even) {
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .feature {
@@ -2062,8 +2065,9 @@ ul.link li a {
 .free-cash__sell p.how_we__table-desc {
   margin: 0 auto;
   width: 71%;
-  text-align: center;
-  color: #666666;
+  text-align: justify;
+  /* color: #666666; */
+  color:#4f4f4f;
   margin-bottom: 30px;
   line-height: 42px;
   font-size: 20px;
@@ -2568,6 +2572,9 @@ ul.link li a {
     padding: 0;
     right: 0;
   }
+  .home, .detail, .free-cash{
+    padding-top: 125px;
+  }
   .banner-item__wrap3 {
     margin: auto;
     left: 0;
@@ -2626,17 +2633,17 @@ ul.link li a {
   .home, .detail, .free-cash{
     padding-top: 115px !important;
   }
-}
-@media only screen and (max-width: 1199px) {
   .logo img{
     height: 70px !important;
   }
   .logo{
     height: 70px !important;
   }
-  .home, .detail, .free-cash{
-    padding-top: 115px;
-  }
+}
+@media only screen and (max-width: 1199px) {
+  /* .home, .detail, .free-cash{
+    padding-top: 115px !important;
+  } */
   .slider-video .owl-nav{
     top: -77px;
   }
@@ -3267,6 +3274,11 @@ ul.link li a {
   .form-login--item i {
     line-height: 45px;
   }
+  /* 09/01 */
+  .other_house--item__content2{
+    width: auto !important;
+    height: auto !important;
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -3344,6 +3356,10 @@ ul.link li a {
     font-size: 30px;
     margin-bottom: 0;
   }
+  .free-cash__title h2{
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
   .home, .detail{
     padding-top: 125px;
   }
@@ -3360,11 +3376,17 @@ ul.link li a {
   .how_we__table-infor tr th {
     font-size: 20px;
   }
+  /* 09/01 */
   .logo img{
-    height: 70px;
+    height: 80px;
   }
   .logo{
-    height: 70px;
+    height: 80px;
+  }
+  /* 09/01 */
+  .other_house--item__content2{
+    width: 80%;
+    height: 120px;
   }
 }
 
@@ -3395,6 +3417,10 @@ ul.link li a {
   }
   .free-cash .modal-header h3 {
     font-size: 24px;
+  }
+  .free-cash__title h2{
+    font-size: 24px !important;
+    line-height: 36px !important; 
   }
   .free-cash .modal-header h4 {
     font-size: 18px;
@@ -3567,8 +3593,8 @@ ul.link li a {
     width: 100%;
     margin-top: 45px;
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 30px;
+    /* font-size: 18px;
+    line-height: 30px; */
   }
   .free-cash__sell p.how_we__table-desc {
     width: 90%;
@@ -3641,6 +3667,16 @@ ul.link li a {
     height: 50px;
     line-height: 50px;
   }
+  /* 09/01 */
+  .free-cash__title h2{
+    font-size: 18px !important;
+    line-height: 32px !important;
+  }
+  .free-cash .modal-header h3, .free-cash__sell h3{
+    font-size: 18px;
+    line-height: 32px;
+  }
+  /* 09/01 */
 }
 
 @media screen and (max-width: 736px) {
@@ -3651,8 +3687,8 @@ ul.link li a {
     font-size: 14px;
   }
   .free-cash__sell h3 {
-    font-size: 18px;
-    line-height: 30px;
+    /* font-size: 18px;
+    line-height: 30px; */
   }
   .free-cash__sell p.how_we__table-desc {
     width: 100%;
@@ -3695,9 +3731,9 @@ ul.link li a {
     font-size: 14px;
   }
   .free-cash__sell h3 { 
-    font-size: 16px;
+    /* font-size: 16px; */
     margin-top: 40px;
-    line-height: 25px;
+    /* line-height: 25px; */
   }
   .free-cash__sell p.how_we__table-desc {
     line-height: 22px;
@@ -3821,12 +3857,21 @@ ul.link li a {
     font-size: 11px;
     line-height: 25px;
   }
-  .free-cash__sell h3 {
-    font-size: 14px;
-    line-height: 22px;
+  /* 09/01 */
+  .free-cash__sell h3, .free-cash .modal-header h3 {
+    font-size: 16px;
+    line-height: 24px;
     margin-top: 35px;
     margin-bottom: 15px;
   }
+  .free-cash__title h2{
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+  .free-cash__search form input::placeholder{
+    font-size: 11px;
+  }
+  /* 09/01 */
   .free-cash__sell p.how_we__table-desc {
     font-size: 11px;
     line-height: 18px;
@@ -3898,7 +3943,7 @@ ul.link li a {
     width: auto;
     margin: 0;
   }
-  /* 09/01 */
+  /*  */
 }
 
 @media screen and (max-width: 991px){
@@ -3921,6 +3966,19 @@ ul.link li a {
   .sell__content h1 {
     font-size: 19px;
     margin-top: 10px;
+  }
+  /* 09/01 */
+  .other_house--item__content2{
+    height: 100px;
+  }
+  .partner__des{
+    padding: 0;
+  }
+  .logo{
+    height: 70px;
+  }
+  .logo img{
+    height: 70px;
   }
 }
 
@@ -3955,6 +4013,7 @@ ul.link li a {
 
 /*# sourceMappingURL=style.css.map */
 /* freecash title update 07/01*/
+/* 09/01 */
 .free-cash__title h2{
   margin: 0 auto;
   font-size: 36px;
@@ -3968,9 +4027,10 @@ ul.link li a {
   word-spacing: 5px;
   display: -webkit-box;
   overflow: hidden;
-  max-width: 150ch;
+  max-width: 35ch;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  padding: 0 30px;
 }
 /* direction update 08/01 */
 .direction3{
@@ -3994,12 +4054,30 @@ ul.link li a {
     margin-top: 25px;
   }
 }
+
 /* 08/01 */
 .clode{
   top: -5px !important;
   left: -5px !important;
 }
+
 /* 09/01 */
 .downloads-single, .downloads, .pip-btn{
   display: none;
+}
+
+/* 09/01 */
+.how_we__table-title{
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 50ch;
+}
+/* 09/01 */
+.how_we__table-infor tr:nth-child(odd){
+  background: #f3f3f3;
+}
+.free-cash__sell{
+  background: #ddd;
 }
