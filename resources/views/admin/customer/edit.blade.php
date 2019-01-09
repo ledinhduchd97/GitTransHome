@@ -113,7 +113,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Customer type :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="type" value="{{ $customer->type }}" required="required" maxlength="255"/>
+                                        <input class="border--base padding--base" type="text" name="type" value="{{ $customer->type }}" required="required" maxlength="250"/>
                                     </div>
                                     <div class="clear-fix"></div>
                                 </div>

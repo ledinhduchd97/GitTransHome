@@ -128,7 +128,7 @@ class HouseController extends Controller
     {   
         $request->validate([
            'name' => 'required|max:100',
-            'code' => 'required|max:10',
+            // 'code' => 'required|max:10',
             'note' => 'max:250',
             'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'address' => 'required|max:250',
@@ -159,7 +159,7 @@ class HouseController extends Controller
         ]);
         $house = House::create([
             'name' => $request->name,
-            'code' => $request->code,
+            // 'code' => $request->code,
             'note' => $request->note,
             'user_id' => $request->user_id,
             'address' => $request->address,
@@ -262,7 +262,7 @@ class HouseController extends Controller
     {
         $request->validate([
            'name' => 'required|max:100',
-            'code' => 'required|max:10',
+            // 'code' => 'required|max:10',
             'note' => 'max:250',
             'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
             'address' => 'required|max:250',
@@ -290,7 +290,7 @@ class HouseController extends Controller
         ]);
         $house = House::findOrFail($house);  
         $house->name = $request->name;
-        $house->code = $request->code;
+        // $house->code = $request->code;
         $house->note = $request->note;
         $house->address = $request->address;
         $house->phone = $request->phone;

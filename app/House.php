@@ -8,7 +8,7 @@ class House extends Model
 {
     protected $fillable = [
         'name',
-        'code',
+        // 'code',
         'user_id',
         'address', 
         'number_bedroom',
