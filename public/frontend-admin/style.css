@@ -2272,6 +2272,9 @@ input[type="file"]{
 .description_2{
   width: 100%;
   resize: none;
+  border-radius: 5px;
+  border-color: #ddd;
+  padding: 10px 20px;
 }
 .setup-freecash__item i.fa-plus-square{
   float: right;
