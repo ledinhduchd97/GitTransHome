@@ -3885,6 +3885,20 @@ ul.link li a {
   .partner__img--wrap{
     display: initial;
   }
+  /* 09/01 */
+  .banner-item__wrap3 .rooms span{
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  .banner-item__wrap3 .rooms span p.name-room{
+    margin: 0;
+  }
+  .banner-item__wrap3 .rooms span p span{
+    width: auto;
+    margin: 0;
+  }
+  /* 09/01 */
 }
 
 @media screen and (max-width: 991px){
