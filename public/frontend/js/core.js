@@ -249,6 +249,7 @@ jQuery(document).ready(function ($) {
       },
       email: {
         required: true,
+        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       },
       phone: {
         required: true,
@@ -311,7 +312,8 @@ jQuery(document).ready(function ($) {
         maxlength: 50 },
 
       patner_email: {
-        required: true
+        required: true,
+        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       },
       patner_phone: {
         required: true,
@@ -327,7 +329,8 @@ jQuery(document).ready(function ($) {
         maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
 
       patner_email: {
-        required: "Email must be fill out"
+        required: "Email must be fill out",
+        regex: "The email must be in the correct format"
       },
       patner_phone: {
         required: "The phone must be fill out",

@@ -68,7 +68,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Email :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="email" required="required"/>
+                                        <input class="border--base padding--base" type="text" name="email" required="required" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
                                         @if($errors->has('email'))
                                             <p class="text-danger" style="font-size: 8px;">{{ $errors->first('email') }}</p>
                                         @endif

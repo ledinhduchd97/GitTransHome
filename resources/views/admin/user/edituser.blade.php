@@ -55,7 +55,7 @@
                 <div class="text"><span>
                      Email (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="email" type="text" value="{{$user->email}}" name="email"/>
+                  <input class="border--base padding--base" id="email" type="text" value="{{$user->email}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
                   <div class="error-email">
                     @if(sizeof($errors) != 0)
                       @if($errors)
