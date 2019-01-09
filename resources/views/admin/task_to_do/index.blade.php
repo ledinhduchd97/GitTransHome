@@ -129,7 +129,11 @@
                     @foreach($tasks as $key => $task)
                         <tr>
                             <td>
-                                <p>{{(($tasks->currentPage()-1)* $tasks->perPage()) + ($key+1)}}</p>
+                                @if(isset($task->customer->id))
+                                    <a class="customer-link" href="{{route('admin.customers.show',['customer'=> $task->customer->id])}}" title="Detail Customer">{{(($tasks->currentPage()-1)* $tasks->perPage()) + ($key+1)}}</a>
+                                @else
+                                    <p title="Detail Customer">{{(($tasks->currentPage()-1)* $tasks->perPage()) + ($key+1)}}</p>
+                                @endif
                             </td>
                             <td>
                                 <p class="name">{{ $task->age }} days</p>

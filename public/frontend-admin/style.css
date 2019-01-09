@@ -2191,3 +2191,82 @@ input[type="file"]{
 .picker .pc-select .pc-list input[type=search]{
   width: 98%;
 }
+/*
+*/
+.customer-link{
+  text-decoration: underline !important;
+}
+/*sell my home*/
+.setup-freecash__top {
+  background: #fff;
+  padding: 10px 25px;
+}
+
+.setup-freecash__top--title {
+  color: #222;
+}
+
+.setup-freecash__wrap {
+  max-width: 75%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.setup-freecash--padding {
+  padding: 0 15px;
+}
+
+.setup-freecash__item {
+  margin-top: 20px;
+}
+
+.setup-freecash__item .text {
+  float: left;
+  width: 30%;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.setup-freecash__item .text > span {
+  margin-left: 10px;
+}
+
+.setup-freecash__item .content {
+  float: left;
+  width: 70%;
+  position: relative;
+  padding: 0 15px;
+}
+
+.setup-freecash__item .content input {
+  width: 100%;
+}
+
+.setup-freecash--lv2 {
+  margin-top: 20px;
+}
+
+.setup-freecash__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.setup-freecash__table tr {
+  border: 1px solid #ddd;
+}
+
+.setup-freecash__table tr td {
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.description_2{
+  width: 100%;
+}
+.setup-freecash__item i.fa-plus-square{
+  float: right;
+  position: relative;
+  top: 10px;
+  font-size: 25px;
+}

@@ -1,14 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\HeaderFooter;
-use App\PageFreecash;
-use App\SetUp;
-use App\Sellmyhome;
+
 use App\TableInfo;
 use Illuminate\Http\Request;
 
-class FreecashController extends Controller
+class TableInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +14,7 @@ class FreecashController extends Controller
      */
     public function index()
     {
-        $hf = HeaderFooter::get()->first();
-        $freecashes = PageFreecash::get()->first();
-        $setup = SetUp::get()->first();
-        $sellmyhome = Sellmyhome::get()->first();
-        $tables = TableInfo::all();
-        return view('freecash',compact('hf','freecashes','setup','sellmyhome','tables'));
+        //
     }
 
     /**
@@ -49,10 +41,10 @@ class FreecashController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\TableInfo  $tableInfo
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(TableInfo $tableInfo)
     {
         //
     }
@@ -60,10 +52,10 @@ class FreecashController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\TableInfo  $tableInfo
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(TableInfo $tableInfo)
     {
         //
     }
@@ -72,10 +64,10 @@ class FreecashController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\TableInfo  $tableInfo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, TableInfo $tableInfo)
     {
         //
     }
@@ -83,10 +75,10 @@ class FreecashController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\TableInfo  $tableInfo
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(TableInfo $tableInfo)
     {
         //
     }

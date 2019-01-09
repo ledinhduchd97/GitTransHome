@@ -12,7 +12,7 @@ class SetUp extends Model
         'logo_header',
         'logo_footer',
         'thank_you',
-        'sell_my_home',
+        // 'sell_my_home',
         'phone',
         'email',
         'lisence',

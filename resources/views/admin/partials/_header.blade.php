@@ -34,8 +34,12 @@
             <li class="{{ Route::currentRouteNamed('admin.aboutus.*') ? 'active' : '' }}">
                 <a href="{{ route('admin.aboutus.edit') }}"> <i class="menu-icon fa fa-male"></i>About Us</a>
             </li>
-            <li class="{{ Route::currentRouteNamed('admin.setups.*') ? 'active' : '' }}">
-                <a href="{{ route('admin.setups.edit', ['id' => 1]) }}"> <i class="menu-icon fa fa-cog"></i>Set up</a>
+            <li class="menu-item-has-children dropdown {{ Route::currentRouteNamed('admin.setups.*') ? 'active' : '' }}">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cog"></i>Set up</a>
+                <ul class="sub-menu children dropdown-menu">
+                    <li><i class="fas fa-globe-americas"></i><a href="{{ route('admin.setups.edit', ['id' => 1]) }}"">Over View</a></li>
+                    <li><i class="fas fa-wrench"></i><a href="{{route('admin.sellmyhome.edit',['sellmyhome' => 1])}}">Sell my home</a></li>
+                </ul>
             </li>
             @if(Auth::user()->position == 1)
             <li class="{{ Route::currentRouteNamed('admin.user.*') ? 'active' : '' }}">
