@@ -62,7 +62,7 @@ Route::group(['prefix' => 'admin','middleware' => ['checklogin']], function() {
 	Route::put('/aboutus','AboutUsController@update')->name('admin.aboutus.update');
 
 	//Setup
-	Route::get('/setups/sellmyhome/{sellmyhome}',"SetUpController@editSellmyhome")->name('admin.sellmyhome.edit');
+	Route::get('/setups/sellmyhome/{sellmyhome}',"SetUpController@editSellmyhome")->name('admin.setups.sellmyhome.edit');
 	Route::put('/update/sellmyhome/{sellmyhome}',"SetUpController@updateSellmyhome")->name('admin.sellmyhome.update');
 	Route::resource("setups", "SetUpController", ['as' => 'admin']);
 	

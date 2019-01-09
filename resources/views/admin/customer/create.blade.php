@@ -115,7 +115,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Client Type :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="type" required="required"/>
+                                        <input class="border--base padding--base" type="text" name="type" required="required" maxlength="250"/>
                                         @if($errors->has('type'))
                                             <p class="text-danger" style="font-size: 8px;">{{ $errors->first('type') }}</p>
                                         @endif

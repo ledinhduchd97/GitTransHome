@@ -34,4 +34,12 @@ class CustomerTaskToDo extends Model
             case 1: return "Waiting";
         }
     }
+    public function getDeadlineAttribute($value)
+    {
+        return date("Y-m-d", strtotime($value));
+    }
+    public function getCreatedAtAttribute($value)
+    {
+        return date("Y-m-d", strtotime($value));
+    }
 }

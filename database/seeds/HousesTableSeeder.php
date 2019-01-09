@@ -14,7 +14,7 @@ class HousesTableSeeder extends Seeder
         for($i = 1 ; $i< 5 ; $i++)
         {
             DB::table('houses')->insert([
-                'code' => 'TH00'.$i,
+                // 'code' => 'TH00'.$i,
                 'user_id' => 1,
                 'name' => 'Home in LA',
                 'address' => 'Ha Noi, Viet Nam',

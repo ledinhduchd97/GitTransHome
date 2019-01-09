@@ -249,7 +249,7 @@ jQuery(document).ready(function ($) {
       },
       email: {
         required: true,
-      }
+      },
       phone: {
         required: true,
         minlength: 10,

@@ -8,6 +8,7 @@ use View;
 use App\Tasktodo;
 use App\CustomerTaskToDo;
 use App\PartnerTaskToDos;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // URL::forceScheme('https');
         Schema::defaultStringLength(191);
         $notification = Tasktodo::where('status',0)->count();
         $tasks = Tasktodo::where('status',0)->get();
