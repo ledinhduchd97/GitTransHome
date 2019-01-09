@@ -105,13 +105,13 @@ class PartnerController extends Controller
     public function store(Request $request)
     {  
         $rules = [
-            'patner_fullname' => 'required|min:6|max:50',
-            'patner_email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
-            'patner_phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
+            'patner_fullname' => 'required|min:1|max:50',
+            'patner_email' => 'required',
+            'patner_phone' => 'required|min:10|max:15|regex:/^[0-9 \(\)-]+$/',
         ];
         $messages = [
             'patner_fullname.required' => 'Fullname can not be empty',
-            'patner_fullname.min' => 'Fullname contains at least 6 characters',
+            'patner_fullname.min' => 'Fullname contains at least 1 characters',
             'patner_fullname.max' => 'Fullname not more than 50 characters',
             'patner_email.required' => 'Email can not be empty',
             'patner_phone.required' => 'Phone can not be empty'
@@ -142,8 +142,8 @@ class PartnerController extends Controller
     public function addPartner(Request $request) {
         $rules = [
             'fullname' => 'required|max:50',
-            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|max:191',
-            'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
+            'email' => 'required|max:191',
+            'phone' => 'required|min:10|max:15|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
             'partner_type' => 'required|max:255',
@@ -217,8 +217,8 @@ class PartnerController extends Controller
     {
         $rules = [
             'fullname' => 'required|max:50',
-            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/|max:191',
-            'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
+            'email' => 'required|max:191',
+            'phone' => 'required|min:10|max:15|regex:/^[0-9 \(\)-]+$/',
             'date_of_birth' => 'required',
             'address' => 'required|max:255',
             'partner_type' => 'required|max:255',

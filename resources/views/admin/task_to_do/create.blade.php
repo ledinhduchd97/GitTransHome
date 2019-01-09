@@ -169,6 +169,7 @@
       </div>
 @endsection
 @section('script')
+      
       <script type="text/javascript" src="{{asset('frontend-admin/picker.min.js')}}"></script>
       <script>
         $('#ex-search').picker({search : true});

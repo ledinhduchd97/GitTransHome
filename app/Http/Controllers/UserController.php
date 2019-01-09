@@ -99,7 +99,7 @@ class UserController extends Controller
         // dd($request);
         $request->validate([
             'fullname' => 'required|max:30|regex:/^[a-zA-Z ]+$/',
-            'email' => 'required|max:49|regex:/^[\w.+\-]+@gmail\.com$/|unique:users',
+            'email' => 'required|max:49|unique:users',
             'username' => 'required|min:3|max:50|unique:users|regex:/^[a-zA-Z0-9._]+$/',
             'password' => 'required|min:6|max:18',
             'confirm' => 'required|same:password',
@@ -113,7 +113,6 @@ class UserController extends Controller
             'fullname.required' => '* Full name must be fill out',
             'fullname.max' => '* The fullname must be not over 30 characterss',
             'fullname.regex' => '* The fullname must be in correct format',
-            'email.required' => '* Email must be fill out',
             'email.max' => 'The Email must be not over 50 characterss',
             'email.regex' => '* The email must be in the correct default format (@gmail.com)',
             'email.unique' => '* The Email is already used',
@@ -215,7 +214,7 @@ class UserController extends Controller
         if ($request->password == "" && $request->confirm == "") {
             $request->validate([
                 'fullname' => 'required|max:30|regex:/^[a-zA-Z ]+$/',
-                'email' => 'required|max:50|regex:/^[\w.+\-]+@gmail\.com$/',
+                'email' => 'required|max:50',
                 'username' => 'required|min:3|max:50|regex:/^[a-zA-Z0-9._]+$/',
                 'phone' => 'required|min:10|max:13|regex:/^[0-9 \(\)-]+$/',
                 'birthday' => 'required',
@@ -230,12 +229,9 @@ class UserController extends Controller
                 'email.required' => '* Email must be fill out',
                 'email.max' => 'The Email must be not over 50 characters',
                 'email.email' => '* The Email must be in correct format',
-                'email.regex' => '* The email must be in the correct default format (@gmail.com)',
-                // 'email.unique' => '* The Email is already used',
                 'username.required' => '* Username must be fill out',
                 'username.min' => '* Username must be at least 3 characters',
                 'username.max' => '* The Username must be not over 50 characters',
-                // 'username.unique' => '* The Username is already used',
                 'username.regex' => '* The Username must be in correct format',
                 'phone.required' => '* Phone must be fill out',
                 'phone.regex' => '* The phone must be in correct format',
@@ -250,7 +246,7 @@ class UserController extends Controller
         {
             $request->validate([
             'fullname' => 'required|max:99|regex:/^[a-zA-Z]+$/',
-            'email' => 'required|max:50|regex:/^[\w.+\-]+@gmail\.com$/',
+            'email' => 'required|max:50',
             'username' => 'required|min:3|max:50|regex:/^[a-zA-Z0-9._]+$/',
             'password' => 'required|min:6|max:18',
             'confirm' => 'required|same:password',
@@ -266,12 +262,9 @@ class UserController extends Controller
                 'fullname.regex' => '* The fullname must be in correct format',
                 'email.required' => '* Email must be fill out',
                 'email.max' => 'The Email must be not over 50 characters',
-                'email.regex' => '* The email must be in the correct default format (@gmail.com)',
-                // 'email.unique' => '* The Email is already used',
                 'username.required' => '* Username must be fill out',
                 'username.min' => '* Username must be at least 3 characters',
                 'username.max' => '* The Username must be not over 50 characters',
-                // 'username.unique' => '* The Username is already used',
                 'username.regex' => '* The Username must be in correct format',
                 'password.required' => '* Password must be fill out',
                 'password.min' => '* Password must be at least 6 characters',

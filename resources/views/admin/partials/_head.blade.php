@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="{{asset('frontend-admin/assets/css/cs-skin-elastic.css')}}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
 <link rel="stylesheet" href="{{asset('frontend-admin/assets/scss/style.css')}}">
 <link href="{{asset('frontend-admin/assets/css/lib/vector-map/jqvmap.min.css')}}" rel="stylesheet">

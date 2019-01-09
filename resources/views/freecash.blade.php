@@ -81,7 +81,7 @@
                   @endif
                   @if(isset($sellmyhome->description_2))
                   <p class="how_we__table-desc">{{$sellmyhome->description_2}}</p>
-                  @endif
+                  @endif 
                   <table class="how_we__table-infor col-md-12">
                     @if(isset($tables))
                       @foreach($tables as $table)
@@ -113,7 +113,7 @@
                                   <label id="error-first_name" class="error" for="first_name"></label>
                                 </div>
                                 <div class="form__infor--item"><i class="fas fa-envelope"></i>
-                                  <input id="email" type="email" value="{{ request()->email }}" name="email" placeholder="Email *"/>
+                                  <input id="email" type="text" value="{{ request()->email }}" name="email" placeholder="Email *"/>
                                   <label id="error-email" class="error" for="email"></label>
                                 </div>
                                 <div class="form__infor--item"><i class="fas fa-phone"></i>
