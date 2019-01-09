@@ -284,7 +284,7 @@
                                           <input id="patner_fullname" type="text" name="patner_fullname" placeholder="Full name"/>
                                         </div>
                                         <div class="form-infor_patner--item"><i class="fas fa-envelope"></i>
-                                          <input id="patner_email" type="email" name="patner_email" placeholder="Email *"/>
+                                          <input id="patner_email" type="text" name="patner_email" placeholder="Email *"/>
                                         </div>
                                         <div class="form-infor_patner--item"><i class="fas fa-phone"></i>
                                           <input id="patner_phone" type="tel" name="patner_phone" placeholder="Phone"/>

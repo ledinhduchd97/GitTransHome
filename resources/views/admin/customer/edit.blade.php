@@ -66,7 +66,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Email :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="email" name="email"  value="{{ $customer->email }}" required="required"/>
+                                        <input class="border--base padding--base" type="text" name="email"  value="{{ $customer->email }}" required="required"/>
                                         @if($errors->has('email'))
                                             <p class="text-danger">{{ $errors->first('email') }}</p>
                                         @endif
@@ -76,7 +76,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $customer->phone }}" required="required" pattern="^([0-9]{3})[0-9]{4}\-[0-9]{3}"/>
+                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $customer->phone }}" required="required"/>
                                         @if($errors->has('phone'))
                                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                                         @endif

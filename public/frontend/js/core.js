@@ -249,12 +249,11 @@ jQuery(document).ready(function ($) {
       },
       email: {
         required: true,
-        regex: /^[\w.+\-]+@gmail\.com$/ },
-
+      }
       phone: {
         required: true,
         minlength: 10,
-        maxlength: 13,
+        maxlength: 15,
       } 
     },
     messages: {
@@ -271,7 +270,7 @@ jQuery(document).ready(function ($) {
       phone: {
         required: 'The phone must be filled out',
         minlength: jQuery.validator.format('The phone must be at least 10 characters'),
-        maxlength: jQuery.validator.format('The phone must be not over 13 characters'),
+        maxlength: jQuery.validator.format('The phone must be not over 15 characters'),
       } 
     } 
   });
@@ -309,17 +308,15 @@ jQuery(document).ready(function ($) {
     rules: {
       patner_fullname: {
         required: true,
-        minlength: 6,
         maxlength: 50 },
 
       patner_email: {
-        required: true,
-        regex: /^[a-zA-z0-9.]{1,32}@gmail.com$/ },
-
+        required: true
+      },
       patner_phone: {
         required: true,
         minlength:10,
-        maxlength: 13, 
+        maxlength: 15, 
       } 
     },
 
@@ -327,18 +324,16 @@ jQuery(document).ready(function ($) {
     messages: {
       patner_fullname: {
         required: "Full name must be fill out",
-        minlength: jQuery.validator.format("The fullname must be at least 6 characters"),
         maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
 
       patner_email: {
-        required: "Email must be fill out",
-        regex: "The email must be in the correct default format (@gmail.com)" },
-
+        required: "Email must be fill out"
+      },
       patner_phone: {
         required: "The phone must be fill out",
         number: "The phone must be the number",
         minlength:jQuery.validator.format("The phone must be at least 10 characters"),
-        maxlength: jQuery.validator.format("The phone must be not over 13 characters"), 
+        maxlength: jQuery.validator.format("The phone must be not over 15 characters"), 
       } 
     } 
   });

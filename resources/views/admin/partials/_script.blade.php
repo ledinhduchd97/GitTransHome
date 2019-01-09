@@ -23,6 +23,7 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{asset('frontend-admin/js/jsnew.js')}}"></script>
 <script src="{{asset('frontend-admin/js/core.js')}}"></script>
+<script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
 <script>
     ( function ( $ ) {

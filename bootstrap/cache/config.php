@@ -9,7 +9,7 @@
     'timezone' => 'Asia/Ho_Chi_Minh',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:c/4zozDjajT9U/hUWWe8sOZ4uDN/y2cYMEme8lWMtGQ=',
+    'key' => 'base64:OIs8TF4AbY8oQYfhrDRk7QDVpZVUqdGkJ9OY3qbvuOk=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -173,7 +173,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework/cache/data',
+        'path' => 'G:\\3F\\GitTransHome\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -213,15 +213,15 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'db_tranhomes',
+        'database' => 'db_transhome',
         'prefix' => '',
       ),
       'mysql' => 
       array (
         'driver' => 'mysql',
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_tranhomes',
+        'database' => 'db_transhome',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -234,9 +234,9 @@
       'pgsql' => 
       array (
         'driver' => 'pgsql',
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_tranhomes',
+        'database' => 'db_transhome',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -247,9 +247,9 @@
       'sqlsrv' => 
       array (
         'driver' => 'sqlsrv',
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_tranhomes',
+        'database' => 'db_transhome',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -278,12 +278,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\app',
+        'root' => 'G:\\3F\\GitTransHome\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\app/public',
+        'root' => 'G:\\3F\\GitTransHome\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -316,7 +316,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\resources\\views/vendor/mail',
+        0 => 'G:\\3F\\GitTransHome\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -396,7 +396,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework/sessions',
+    'files' => 'G:\\3F\\GitTransHome\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -416,9 +416,9 @@
   array (
     'paths' => 
     array (
-      0 => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\resources\\views',
+      0 => 'G:\\3F\\GitTransHome\\resources\\views',
     ),
-    'compiled' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework\\views',
+    'compiled' => 'G:\\3F\\GitTransHome\\storage\\framework\\views',
   ),
   'image' => 
   array (
