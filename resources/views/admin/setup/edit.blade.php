@@ -123,7 +123,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="email" class="control-label col-sm-2 text">Email</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->email }}" id="email" name="email" required maxlength="100">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->email }}" id="email" name="email" required maxlength="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('email') }}</p>
                         @endif

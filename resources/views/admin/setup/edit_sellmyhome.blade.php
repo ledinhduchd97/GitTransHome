@@ -38,21 +38,21 @@
                   <div class="setup-freecash__item">
                     <div class="text"><span>Note : </span></div>
                     <div class="content">
-                      <input class="border--base padding--base" type="text" name="note" id="setup_note" required="required" maxlength="100" @if(isset($sellmyhome->note)) value="{{$sellmyhome->note}}" @endif />
+                      <input class="border--base padding--base" type="text" name="note" id="setup_note" required="required" maxlength="101" @if(isset($sellmyhome->note)) value="{{$sellmyhome->note}}" @endif />
                     </div>
                     <div class="clear-fix"></div>
                   </div>
                   <div class="setup-freecash__item">
                     <div class="text"><span>Title 1 : </span></div>
                     <div class="content">
-                      <input class="border--base padding--base" type="text" name="title_1" id="setup_title1" required="required" maxlength="64" @if(isset($sellmyhome->title_1)) value="{{$sellmyhome->title_1}}" @endif/>
+                      <input class="border--base padding--base" type="text" name="title_1" id="setup_title1" required="required" maxlength="65" @if(isset($sellmyhome->title_1)) value="{{$sellmyhome->title_1}}" @endif/>
                     </div>
                     <div class="clear-fix"></div>
                   </div>
                   <div class="setup-freecash__item">
                     <div class="text"><span>Description 1 :</span></div>
                     <div class="content">
-                      <input class="border--base padding--base" type="text" name="description_1" id="setup_description" required="required" maxlength="100" @if(isset($sellmyhome->description_1)) value="{{$sellmyhome->description_1}}" @endif/>
+                      <input class="border--base padding--base" type="text" name="description_1" id="setup_description" required="required" maxlength="101" @if(isset($sellmyhome->description_1)) value="{{$sellmyhome->description_1}}" @endif/>
                     </div>
                     <div class="clear-fix"></div>
                   </div>
@@ -76,14 +76,14 @@
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Title image 1 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_1" required="required" maxlength="64" @if(isset($sellmyhome->title_image_1)) value="{{$sellmyhome->title_image_1}}" @endif />
+                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_1" required="required" maxlength="65" @if(isset($sellmyhome->title_image_1)) value="{{$sellmyhome->title_image_1}}" @endif />
                         </div>
                         <div class="clear-fix"></div>
                       </div>
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Description image 1 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_1" required="required" maxlength="100" @if(isset($sellmyhome->description_image_1)) value="{{$sellmyhome->description_image_1}}" @endif/>
+                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_1" required="required" maxlength="101" @if(isset($sellmyhome->description_image_1)) value="{{$sellmyhome->description_image_1}}" @endif/>
                         </div>
                         <div class="clear-fix"></div>
                       </div>
@@ -104,14 +104,14 @@
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Title image 2 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_2" required="required" maxlength="64" @if(isset($sellmyhome->title_image_2)) value="{{$sellmyhome->title_image_2}}" @endif />
+                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_2" required="required" maxlength="65" @if(isset($sellmyhome->title_image_2)) value="{{$sellmyhome->title_image_2}}" @endif />
                         </div>
                         <div class="clear-fix"></div>
                       </div>
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Description image 2 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_2" required="required" maxlength="100" @if(isset($sellmyhome->description_image_2)) value="{{$sellmyhome->description_image_2}}" @endif/>
+                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_2" required="required" maxlength="101" @if(isset($sellmyhome->description_image_2)) value="{{$sellmyhome->description_image_2}}" @endif/>
                         </div>
                         <div class="clear-fix"></div>
                       </div>
@@ -132,14 +132,14 @@
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Title image 3 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_3" required="required" maxlength="64" @if(isset($sellmyhome->title_image_3)) value="{{$sellmyhome->title_image_3}}" @endif/>
+                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_3" required="required" maxlength="65" @if(isset($sellmyhome->title_image_3)) value="{{$sellmyhome->title_image_3}}" @endif/>
                         </div>
                         <div class="clear-fix"></div>
                       </div>
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Description image 3 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_3" maxlength="100" @if(isset($sellmyhome->description_image_3)) value="{{$sellmyhome->description_image_3}}" @endif/>
+                          <input class="border--base padding--base setup_step--description" type="text" id="setup_step--description" name="description_image_3" maxlength="101" @if(isset($sellmyhome->description_image_3)) value="{{$sellmyhome->description_image_3}}" @endif/>
                         </div>
                         <div class="clear-fix"></div>
                       </div>
@@ -149,14 +149,14 @@
                   <div class="setup-freecash__item">
                     <div class="text"><span>Title 2 : </span></div>
                     <div class="content">
-                      <input class="border--base padding--base" type="text" name="title_2" id="setup_title2" required="required" maxlength="100" @if(isset($sellmyhome->title_2)) value="{{$sellmyhome->title_2}}" @endif/>
+                      <input class="border--base padding--base" type="text" name="title_2" id="setup_title2" required="required" maxlength="101" @if(isset($sellmyhome->title_2)) value="{{$sellmyhome->title_2}}" @endif/>
                     </div>
                     <div class="clear-fix"></div>
                   </div>
                   <div class="setup-freecash__item">
                     <div class="text"><span>Description 2 :</span></div>
                     <div class="content">
-                    	<textarea class="description_2" name="description_2" rows="5" required maxlength="250">@if(isset($sellmyhome->description_2)){{$sellmyhome->description_2}}@endif</textarea>
+                    	<textarea class="description_2" name="description_2" rows="5" required maxlength="251">@if(isset($sellmyhome->description_2)){{$sellmyhome->description_2}}@endif</textarea>
                     </div>
                     <div class="clear-fix"></div>
                   </div>
@@ -168,13 +168,13 @@
                           @if($i == 0)
                           <tr>
                             <td>
-                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="50" />
+                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="51" />
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="50"/>
+                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="51"/>
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="50"/>
+                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="51"/>
                             </td>
                             <td>
                               <!-- <i class="fas fa-trash-alt"></i> -->
@@ -183,13 +183,13 @@
                           @else
                           <tr>
                             <td>
-                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="50" />
+                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="51" />
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="50"/>
+                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="51"/>
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="50"/>
+                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="51"/>
                             </td>
                             <td>
                               <i class="fas fa-trash-alt"></i>
@@ -240,13 +240,13 @@
       $(".setup-freecash__table").append(`
             <tr>
               <td>
-                <input class="border--base padding--base" name="column_1[]" type="text"/>
+                <input class="border--base padding--base" name="column_1[]" type="text" maxlength="51"/>
               </td>
               <td>
-                <input class="border--base padding--base" name="column_2[]" type="text"/>
+                <input class="border--base padding--base" name="column_2[]" type="text" maxlength="51"/>
               </td>
               <td>
-                <input class="border--base padding--base" name="column_3[]" type="text"/>
+                <input class="border--base padding--base" name="column_3[]" type="text" maxlength="51"/>
               </td>
               <td>
                 <i class="fas fa-trash-alt"></i>
