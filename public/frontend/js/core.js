@@ -362,7 +362,7 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass('active');
   });
   // 
-  $("._6lg-").addClass("clode");
+  // $("._6lg-").addClass("clode");
 });
 
 function removeActive() {
@@ -386,9 +386,6 @@ function scrollElemb(ele){
   $("html, body").animate({
     scrollTop: $(ele).offset().top - 70
   },1000);
-}
-function resize(){
-  $("._6lg-").attr("top","-5px";"left","-5px";);
 }
 
 function scrollHeader() {
