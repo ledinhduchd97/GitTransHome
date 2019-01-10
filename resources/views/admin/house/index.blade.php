@@ -91,14 +91,14 @@
                             <div class="house-top__from-date date--wrap"><span>Start day</span>
                                 <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
                                     <input class=" padding--date border--base" id="startDay" type="date"
-                                           name="start_day date_from" value="{{ request()->start_day }}"/>
+                                           name="date_from" value="{{ request()->date_from }}"/>
                                 </div>
                             </div>
                         </div>
                         <div class="col-25 fleft">
                             <div class="house-top__to-date date--wrap"><span>Finish day</span>
                                 <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                    <input class=" padding--date border--base" id="endDay" type="date" name="end_day date_to" value="{{ request()->end_day }}"/>
+                                    <input class=" padding--date border--base" id="endDay" type="date" name="date_to" value="{{ request()->date_to }}"/>
                                 </div>
                             </div>
                         </div>

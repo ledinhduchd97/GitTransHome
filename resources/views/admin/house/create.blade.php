@@ -181,9 +181,9 @@
                                         <input class="border--base padding--base" id="price" type="text" title="price is a number" pattern="^[0-9]+$" required value=""
                                                name="price"/><span class="unit-text">Unit :</span>
                                         <select class="border--base padding--base" id="unit" name="unit">
-                                            <option value="0">€</option>
+                                            <!-- <option value="0">€</option> -->
                                             <option value="1">$</option>
-                                            <option value="2">£</option>
+                                            <!-- <option value="2">£</option> -->
                                         </select>
                                         <div class="error-price">
                                             @if(sizeof($errors) != 0)

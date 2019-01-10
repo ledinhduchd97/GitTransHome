@@ -51,7 +51,7 @@
                       <option value="2" {{ request()->status===2 ? "selected" : ""}}>Not activated</option>
                     </select>
                   </div>
-                  <div class="col-25 fleft">
+                  <!-- <div class="col-25 fleft">
                     <div class="tk-top__from-date date--wrap"><span>Start day</span>
                       <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
                         <input class="padding--date border--base" id="startDay" type="date" name="start_day date_from" style="max-width: 95%;" value="{{ request()->start_day }}"/>
@@ -64,7 +64,7 @@
                         <input class="padding--date border--base" id="endDay" type="date"  name="end_day date_to" style="max-width: 95%;" value="{{ request()->end_day }}"/>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col1 fleft text-right">
                     <button class="btn-filter btn--base padding--base border--base" type="submit" >Filter</button>
                   </div>
