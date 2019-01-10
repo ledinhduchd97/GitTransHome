@@ -2668,27 +2668,27 @@ ul.link li a {
   }
 }
 @media only screen and (width: 1199px){
-  .home, .detail, .free-cash{
-    padding-top: 115px !important;
-  }
-  .logo img{
-    height: 70px !important;
-  }
-  .logo{
-    height: 70px !important;
-  }
-}
-@media only screen and (max-width: 1199px) {
   /* .home, .detail, .free-cash{
     padding-top: 115px !important;
-  } */
-  /* 10/01st */
+  }
   .logo img{
     height: 70px !important;
   }
   .logo{
     height: 70px !important;
+  } */
+}
+@media screen and (max-width: 1199px) {
+  .home, .detail, .free-cash{
+    padding-top: 115px;
   }
+  /* 10/01st */
+  /* .logo img{
+    height: 70px !important;
+  }
+  .logo{
+    height: 70px !important;
+  } */
   .sell__content{
     width: 1024px;
   }
@@ -2717,14 +2717,14 @@ ul.link li a {
   .partner .partner__menu {
     padding-right: 100px;
   }
-  .header__main {
+  /* .header__main {
     line-height: 70px;
     height: 70px;
   }
   .main__menu nav ul li {
     line-height: 70px;
     height: 70px;
-  }
+  } */
   .slider-video .item__video iframe {
     height: 480px;
   }
@@ -3425,7 +3425,7 @@ ul.link li a {
     font-size: 30px !important;
     line-height: 40px !important;
   }
-  .home, .detail{
+  .home, .detail, .free-cash{
     padding-top: 125px;
   }
   .free-cash .modal-header h4 {
@@ -3456,8 +3456,8 @@ ul.link li a {
 }
 
 @media screen and (max-width: 1024px) {
-  .home, .detail{
-    padding-top: 115px;
+  .home, .detail, .free-cash{
+    padding-top: 125px;
   }
   .free-cash .modal-content {
     max-width: 960px;
@@ -4054,6 +4054,10 @@ ul.link li a {
     margin: 0;
     padding-bottom: 15px;
     /* margin-bottom: 50px; */
+  }
+  .header__main{
+    height: 70px;
+    line-height: 70px;
   }
 }
 

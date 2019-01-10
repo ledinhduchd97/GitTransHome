@@ -225,9 +225,9 @@
                     <h3>Recover house</h3>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn--primary" data-dismiss="modal">Close</button>
                     <a id="form-undo" href="">
-                        <button id="btn-undo" type="submit" class="btn btn-primary">Sure</button>
+                        <button id="btn-undo" type="submit" class="btn btn-primary btn--primary">Sure</button>
                     </a>
                 </div>
             </div>
@@ -251,8 +251,8 @@
                         <h3>Delete house</h3>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button id="btn-delete" type="submit" class="btn btn-primary">Sure</button>
+                        <button type="button" class="btn btn-secondary btn--primary" data-dismiss="modal">Close</button>
+                        <button id="btn-delete" type="submit" class="btn btn-primary btn--primary">Sure</button>
                     </div>
                 </form>
             </div>

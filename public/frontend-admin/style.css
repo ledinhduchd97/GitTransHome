@@ -2189,9 +2189,40 @@ input[type="file"]{
   width: 100%;
   max-width: unset !important;
 }
+/* update10/01 */
 .picker .pc-select .pc-list input[type=search]{
-  width: 98%;
+  width: 97.7% !important;
+  height: 38px;
 }
+
+.picker .pc-select .pc-trigger, .picker .pc-select .pc-list{
+  border-radius: 5px;
+  border-color: #ddd !important;
+}
+
+.picker .pc-element:hover, .picker .pc-trigger:hover{
+  background: transparent !important;
+  color: #666 !important;
+}
+
+.picker .pc-select .pc-trigger{
+  padding: 0 20px;
+}
+
+.picker .pc-select .pc-list li{
+  line-height: 35px;
+  height: 35px;
+}
+
+.picker .pc-select .pc-list li:hover{
+  background: #999 !important;
+}
+
+.picker .pc-select .pc-list ul{
+  max-height: 290px !important;
+}
+
+/* 10/01 */
 /*
 */
 .customer-link{

@@ -169,8 +169,8 @@
             </div>
             <div class="modal-footer">
                 <div class="btn-group">
-                    <button type="submit" class="btn btn-primary" style="margin-right: 15px;">Submit</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn--primary" style="margin-right: 15px;border-radius:5px;">Submit</button>
+                    <button type="button" class="btn btn-default btn--primary" data-dismiss="modal" style="border-radius:5px;">Close</button>
                 </div>
             </div>
         </form>
