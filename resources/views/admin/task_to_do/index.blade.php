@@ -236,11 +236,11 @@
                     <h3>Temporary Delete</h3>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn--primary" data-dismiss="modal">Close</button>
                     <form id="delete-form" action="" method="POST">
                         {{ csrf_field() }}
                         {{ method_field("DELETE") }}
-                        <button type="submit" class="btn btn-primary">Sure</button>
+                        <button type="submit" class="btn btn-primary btn--primary">Sure</button>
                     </form>
                 </div>
             </div>
