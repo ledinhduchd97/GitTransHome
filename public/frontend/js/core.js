@@ -352,12 +352,12 @@ jQuery(document).ready(function ($) {
   scrollHeader();
   // keypress enter pop up
 
-  $('#how_we__search').keypress(function (event) {
-    var keycode = event.keyCode ? event.keyCode : event.which;
-    if (keycode == '13') {
-      $('.modal_map').modal('show');
-    }
-  });
+  // $('#how_we__search').keypress(function (event) {
+  //   var keycode = event.keyCode ? event.keyCode : event.which;
+  //   if (keycode == '13') {
+  //     $('.modal_map').modal('show');
+  //   }
+  // });
 
   //click heart
   $('.feature-item__wrap i.fa-heart').click(function () {

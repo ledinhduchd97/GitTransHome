@@ -58,7 +58,7 @@
                                   <option value="2" {{ request()->status===2 ? "selected" : ""}}>Not activated</option>
                                 </select>
                               </div>
-                              <div class="col-25 fleft">
+                              <!-- <div class="col-25 fleft">
                                 <div class="tk-top__from-date date--wrap"><span>Start day</span>
                                   <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
                                     <input class="padding--date border--base" id="startDay" type="date" name="start_day date_from" style="max-width: 95%;" value="{{ request()->start_day }}"/>
@@ -71,7 +71,7 @@
                                     <input class="padding--date border--base" id="endDay" type="date"  name="end_day date_to" style="max-width: 95%;" value="{{ request()->end_day }}"/>
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
                             <div class="col1 fleft">
                                 <button class="btn-filter btn--base padding--base border--base" type="submit">Filter
                                 </button>
@@ -109,19 +109,24 @@
                                 <p>{{(($users->currentPage()-1)* $users->perPage()) + ($key+1)}}</p>
                             </td>
                             <td>
-                                <p class="user">{{$user->username}}</p>
+                                <!-- <p class="user">{{$user->username}}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$user->username}}">
                             </td>
                             <td>
-                                <p class="name">{{$user->fullname}}</p>
+                                <!-- <p class="name">{{$user->fullname}}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$user->fullname}}">
                             </td>
                             <td>
-                                <p>{{$user->phone}}</p>
+                                <!-- <p>{{$user->phone}}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$user->phone}}">
                             </td>
                             <td>
-                                <p>{{$user->birthday}}</p>
+                                <!-- <p>{{$user->birthday}}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$user->birthday}}">
                             </td>
                             <td>
-                                <p>{{$user->email}}</p>
+                                <!-- <p>{{$user->email}}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$user->email}}">
                             </td>
                             <td>
                                 <p>

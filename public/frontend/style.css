@@ -459,6 +459,20 @@ label.error {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 20ch;
+}
+.line-clamp__base{
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  max-width: 20ch;
 }
 
 .line-clame__base2{
@@ -1428,6 +1442,10 @@ ul.link li a {
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 15ch;
 }
 
 .about-us__content--subtitle {
@@ -1436,6 +1454,9 @@ ul.link li a {
   font-size: 20px;
   line-height: 43px;
   letter-spacing: 0.6px;
+  /* display: inline-block; */
+    /* white-space: nowrap;
+    max-width: 50ch; */
 }
 /* 08/01 */
 .about-us__content--description {
@@ -1715,6 +1736,9 @@ ul.link li a {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  max-width: 20ch;
 }
 
 .feature__infor--des {
@@ -1725,6 +1749,9 @@ ul.link li a {
   overflow: hidden;
   line-height: 25px;
   font-family: 'opensans', sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 20ch;
 }
 
 .feature__infor .sale {
@@ -2506,6 +2533,16 @@ ul.link li a {
   }
 }
 
+/* 10/01 st*/
+@media only screen and (width:1200px){
+  .logo{
+    height: 80px;
+  }
+  .logo img{
+    height: 80px;
+  }
+}
+/* 10/01 fn*/
 @media (min-width: 1920px) {
   .sell .bg_img img {
     width: 100%;
@@ -2644,6 +2681,17 @@ ul.link li a {
   /* .home, .detail, .free-cash{
     padding-top: 115px !important;
   } */
+  /* 10/01st */
+  .logo img{
+    height: 70px !important;
+  }
+  .logo{
+    height: 70px !important;
+  }
+  .sell__content{
+    width: 1024px;
+  }
+  /* 10/01fn */
   .slider-video .owl-nav{
     top: -77px;
   }
@@ -2860,6 +2908,9 @@ ul.link li a {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 35ch;
   }
   .partner .partner__menu li {
     margin-top: 15px;
@@ -3115,6 +3166,9 @@ ul.link li a {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    /* display: inline-block;
+    white-space: nowrap;
+    max-width: 50ch; */
   }
   .banner-item__wrap2 {
     width: 100%;
@@ -3466,7 +3520,7 @@ ul.link li a {
   .sell__content {
     padding: 15px 50px;
     width: 100%;
-    top: 0;
+    /* top: 0; */
     left: 0;
     background-color: transparent;
   }
@@ -3544,9 +3598,9 @@ ul.link li a {
     font-size: 12px;
     vertical-align: middle;
   }
-  #map {
+  /* #map {
     min-height: 350px;
-  }
+  } */
   .free-cash .modal_thanks .modal-body, .free-cash .modal_thanks .modal-header {
     padding: 0px;
   }
@@ -3796,9 +3850,9 @@ ul.link li a {
 }
 
 @media screen and (max-width: 480px) {
-  #map {
+  /* #map {
     min-height: 300px;
-  }
+  } */
   .free-cash__search form {
     height: 30px;
   }
@@ -3836,6 +3890,11 @@ ul.link li a {
     margin-left: 15px;
     margin-right: 15px;
   }
+  /* 10/01st */
+  .btn-getsell{
+    width: 60%;
+  }
+  /* 10/01fn */
 }
 
 @media screen and (max-width: 414px) {
@@ -3980,6 +4039,11 @@ ul.link li a {
   .logo img{
     height: 70px;
   }
+  .free-cash__row{
+    margin: 0;
+    padding-bottom: 15px;
+    /* margin-bottom: 50px; */
+  }
 }
 
 @media only screen and (max-width: 374px) {
@@ -4031,6 +4095,9 @@ ul.link li a {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   padding: 0 30px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /* direction update 08/01 */
 .direction3{
@@ -4080,4 +4147,8 @@ ul.link li a {
 }
 .free-cash__sell{
   background: #ddd;
+}
+.map_free iframe{
+  width: 100%;
+  height: 100%;
 }

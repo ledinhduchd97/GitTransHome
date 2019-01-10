@@ -91,14 +91,14 @@
                             <div class="house-top__from-date date--wrap"><span>Start day</span>
                                 <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
                                     <input class=" padding--date border--base" id="startDay" type="date"
-                                           name="start_day date_from" value="{{ request()->start_day }}"/>
+                                           name="start_day date_from" value="{{ request()->start_day }}" date="from"/>
                                 </div>
                             </div>
                         </div>
                         <div class="col-25 fleft">
                             <div class="house-top__to-date date--wrap"><span>Finish day</span>
                                 <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                    <input class=" padding--date border--base" id="endDay" type="date" name="end_day date_to" value="{{ request()->end_day }}"/>
+                                    <input class=" padding--date border--base" id="endDay" type="date" name="end_day date_to" value="{{ request()->end_day }}" date="to"/>
                                 </div>
                             </div>
                         </div>
@@ -139,14 +139,38 @@
                     @foreach($houses as $key => $house)
                         <tr>
                             <td>{{(($houses->currentPage()-1)* $houses->perPage()) + ($key+1)}}</td>
-                            <td><p class="name">{{$house->name}}</p></td>
-                            <td><p class="address">{{$house->address}}</p></td>
-                            <td>{{$house->site_area}}</td>
-                            <td>{{$house->area_gross_floor}}</td>
-                            <td>{{ $house->unit }} {{ $house->price }}</td>
-                            <td>{{$house->number_bedroom}}</td>
-                            <td>{{$house->number_bathroom}}</td>
-                            <td>{{$house->created_at}}</td>
+                            <td>
+                                <!-- <p class="name">{{$house->name}}</p> -->
+                                <input type="text" readonly class="inputonly" value="{{$house->name}}">
+                            </td>
+                            <td>
+                                <!-- <p class="address">{{$house->address}}</p> -->
+                                <input type="text" readonly class="inputonly" value="{{$house->address}}">
+                            </td>
+                            <td>
+                                <!-- {{$house->site_area}} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->site_area}}">
+                            </td>
+                            <td>
+                                <!-- {{$house->area_gross_floor}} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->area_gross_floor}}">
+                            </td>
+                            <td>
+                                <!-- {{ $house->unit }} {{ $house->price }} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->unit}} {{$house->price}}">
+                            </td>
+                            <td>
+                                <!-- {{$house->number_bedroom}} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->number_bedroom}}">
+                            </td>
+                            <td>
+                                <!-- {{$house->number_bathroom}} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->number_bathroom}}">
+                            </td>
+                            <td>
+                                <!-- {{$house->created_at}} -->
+                                <input type="text" readonly class="inputonly" value="{{$house->created_at}}">
+                            </td>
                             <td>@if($house->status == 1)
                                     Bought
                                 @else

@@ -1302,6 +1302,7 @@ input {
   width: 100%;
   text-align: center;
   min-width: 914px;
+  table-layout: fixed;
 }
 
 .table--base p {
@@ -1380,7 +1381,7 @@ input {
 
 .table--base th, .table--base td {
   padding: 15px 5px;
-
+  width: 10%;
 }
 
 .table--base th:last-child {
@@ -1396,7 +1397,7 @@ input {
 }
 
 .table--base .table-icon i {
-  padding: 7px;
+  padding: 5px;
   color: #fff;
   background-color: #ea723d;
   -webkit-border-radius: 6px;
@@ -2281,4 +2282,11 @@ input[type="file"]{
   position: relative;
   top: 10px;
   font-size: 25px;
+}
+/* 09/01 */
+.inputonly{
+  max-width: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
 }

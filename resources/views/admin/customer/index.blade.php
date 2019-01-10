@@ -116,27 +116,34 @@
                                 <p>{{(($customers->currentPage()-1)* $customers->perPage()) + ($key+1)}}</p>
                             </td>
                             <td>
-                                <p class="name line">{{$customer->first_name}}</p>
+                                <!-- <p class="name line">{{$customer->first_name}}</p> -->
+                                <input type="text" value="{{$customer->first_name}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="name line">{{$customer->last_name}}</p>
+                                <!-- <p class="name line">{{$customer->last_name}}</p> -->
+                                <input type="text" value="{{$customer->last_name}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="email line">
+                                <!-- <p class="email line">
                                     {{ $customer->email }}
-                                </p>
+                                </p> -->
+                                <input type="text" value="{{$customer->email}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$customer->phone}}</p>
+                                <!-- <p>{{$customer->phone}}</p> -->
+                                <input type="text" value="{{$customer->phone}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="line3">{{$customer->address}}</p>
+                                <!-- <p class="line3">{{$customer->address}}</p> -->
+                                <input type="text" value="{{$customer->address}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="date">{{$customer->created_at}}</p>
+                                <!-- <p class="date">{{$customer->created_at}}</p> -->
+                                <input type="text" value="{{$customer->created_at}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="type1">{{ $customer->type }}</p>
+                                <!-- <p class="type1">{{ $customer->type }}</p> -->
+                                <input type="text" value="{{$customer->type}}" readonly class="inputonly">
                             </td>
                             <td>
                                 <div class="table-icon"><i class="far fa-sticky-note note_popup" data-toggle="modal" data-target="#exampleNote" id-customer="{{$customer->id}}"></i>
@@ -144,7 +151,7 @@
                             </td>
                             <td>
                                 <div class="table-icon"><a href="{{ route('admin.customers.show', ['id' => $customer->id]) }}"><i
-                                                class="far fa-eye" title="Detail"></p></a>
+                                                class="far fa-eye" title="Detail"></i></a>
                                     <a class="recycle" data-url="{{ route('admin.customers.destroy', ['id' => $customer->id]) }}"
                                        data-toggle="modal" data-target="#exampleModal">
                                         <i class="fas fa-trash-alt" title="Recycle"></i>

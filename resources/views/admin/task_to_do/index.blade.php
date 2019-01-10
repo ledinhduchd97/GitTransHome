@@ -136,50 +136,60 @@
                                 @endif
                             </td>
                             <td>
-                                <p class="name">{{ $task->age }} days</p>
+                                <!-- <p class="name">{{ $task->age }} days</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->age}} days">
                             </td>
                             <td>
-                                <p class="name">{{ $task->title }}</p>
+                                <!-- <p class="name">{{ $task->title }}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->title}}">
                             </td>            
                             <td>
                                 @if(isset($task->customer->first_name))
-                                    <p>{{ $task->customer->first_name }}</p>
+                                    <!-- <p>{{ $task->customer->first_name }}</p> -->
+                                    <input type="text" class="inputonly" readonly value="{{$task->first_name}}">
                                 @else
                                     <p>-</p>
                                 @endif
                             </td>
                             <td>
                                 @if(isset($task->customer->last_name))
-                                    <p class="name">{{ $task->customer->last_name }}</p>
+                                    <!-- <p class="name">{{ $task->customer->last_name }}</p> -->
+                                    <input type="text" class="inputonly" readonly value="{{$task->last_name}}">
                                 @else
                                     <p>-</p>
                                 @endif
                             </td>
                             <td>
                                 @if(isset($task->customer->birthday))
-                                    <p>{{ $task->customer->birthday }}</p>
+                                    <!-- <p>{{ $task->customer->birthday }}</p> -->
+                                    <input type="text" class="inputonly" readonly value="{{$task->birthday}}">
                                 @else
                                     <p>-</p>
                                 @endif
                             </td>
                             <td>
                                 @if(isset($task->customer->birthday))
-                                    <p class="type">{{ $task->customer->type }}</p>
+                                    <!-- <p class="type">{{ $task->customer->type }}</p> -->
+                                    <input type="text" class="inputonly" readonly value="{{$task->type}}">
                                 @else
                                     <p>-</p>
                                 @endif
                             </td>
                             <td>
-                                <p class="type">{{ $task->to_do_type }}</p>
+                                <!-- <p class="type">{{ $task->to_do_type }}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->to_do_type}}">
                             </td>
                             <td>
-                                <p>{{ $task->start_task }}</p>
+                                <!-- <p>{{ $task->start_task }}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->start_task}}">
                             </td>
                             <td>
-                                <p>{{ $task->deadline }}</p>
+                                <!-- <p>{{ $task->deadline }}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->deadline}}">
                             </td>
                             <td>
-                                <p>{{ $task->status }}</p>
+                                <!-- <p>{{ $task->status }}</p> -->
+                                <input type="text" class="inputonly" readonly value="{{$task->status}}">
                             </td>
                             <td>
                                 <div class="table-icon"><a href="{{ route('admin.tasks.show', ['id' => $task->id]) }}"><i

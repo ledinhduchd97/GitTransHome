@@ -32,4 +32,10 @@ jQuery(document).ready(function(){
   $("#birthday").datepicker({
     maxDate: new Date()
   });
+  // house update 10/01
+  var datehouse_start = $("input[date='from']");
+  var datehouse_finish = $("input[date='to']");
+  datehouse_start.change(function(){
+    datehouse_finish.attr("min",$(this).val());
+  });
 });

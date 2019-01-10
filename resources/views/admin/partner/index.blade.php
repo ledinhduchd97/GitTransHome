@@ -109,34 +109,41 @@
                     <p>{{(($partners->currentPage()-1)* $partners->perPage()) + ($key+1)}}</p>
                   </td>
                   <td>
-                    <p class="name">{{$partner->fullname}}</p>
+                    <!-- <p class="name">{{$partner->fullname}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->fullname}}">
                   </td>
                   <td>
-                    <p class="email">{{$partner->email}}</p>
+                    <!-- <p class="email">{{$partner->email}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->email}}">
                   </td>
                   <td>
-                    <p>{{$partner->phone}}</p>
+                    <!-- <p>{{$partner->phone}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->phone}}">
                   </td>
                   <td>
                     @if(isset($partner->address))
-                    <p class="address">{{$partner->address}}</p>
+                    <!-- <p class="address">{{$partner->address}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->address}}">
                     @else
                     <p> - <p>
                     @endif
                   </td>
                   <td>
-                    <p>{{$partner->created_at}}</p>
+                    <!-- <p>{{$partner->created_at}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->created_at}}">
                   </td>
                   <td>
                     @if(isset($partner->partner_type))
-                    <p class="partner">{{$partner->partner_type}}</p>
+                    <!-- <p class="partner">{{$partner->partner_type}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->partner_type}}">
                     @else
                     <p> - <p>
                     @endif
                   </td>
                   <td>
                     @if(isset($partner->status))
-                    <p class="status">{{$partner->status}}</p>
+                    <!-- <p class="status">{{$partner->status}}</p> -->
+                    <input type="text" class="inputonly" readonly value="{{$partner->status}}">
                     @else
                     <p> - <p>
                     @endif
