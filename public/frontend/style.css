@@ -2783,13 +2783,23 @@ ul.link li a {
   .partner .partner__menu {
     padding-right: 100px;
   }
-  .partner__wrap [class*="col-"] {
+  /* 10/01 */
+  .partner__wrap [class*="col-"], .about-us [class*="col-"]{
     max-width: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;
     -moz-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+  }
+  .about-us__img{
+    text-align: center;
+  }
+  .about-us__content{
+    margin-top: 30px;
+  }
+  .about-us__content--title{
+    font-size: 32px;
   }
   .partner__wrap {
     display: -webkit-box;

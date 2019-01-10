@@ -2289,4 +2289,5 @@ input[type="file"]{
   border: none;
   background: transparent;
   text-align: center;
+  pointer-events: none;
 }

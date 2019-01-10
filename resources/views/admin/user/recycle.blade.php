@@ -101,19 +101,24 @@
 	                <p>{{(($users->currentPage()-1)* $users->perPage()) + ($key+1)}}</p>
 	              </td>
 	              <td>
-	                <p class="user">{{$user->username}}</p>
+                  <!-- <p class="user">{{$user->username}}</p> -->
+                  <input type="text" value="{{$user->username}}" readonly class="inputonly">
 	              </td>
 	              <td>
-	                <p class="name">{{$user->fullname}}</p>
+                  <!-- <p class="name">{{$user->fullname}}</p> -->
+                  <input type="text" value="{{$user->fullname}}" readonly class="inputonly">
 	              </td>
 	              <td>
-	                <p>{{$user->phone}}</p>
+                  <!-- <p>{{$user->phone}}</p> -->
+                  <input type="text" value="{{$user->phone}}" readonly class="inputonly">
 	              </td>
 	              <td>
-	                <p>{{$user->birthday}}</p>
+                  <!-- <p>{{$user->birthday}}</p> -->
+                  <input type="text" value="{{$user->phone}}" readonly class="inputonly">
 	              </td>
 	              <td>
-	                <p>{{$user->email}}</p>
+                  <!-- <p>{{$user->email}}</p> -->
+                  <input type="text" value="{{$user->email}}" readonly class="inputonly">
 	              </td>
 	              <td>
 	                <p>
