@@ -196,7 +196,7 @@
   // }
 	$(document).ready(function($) {
 		setInterval(function(){
-   			var address = $("#how_we__search").val();
+   		var address = $("#how_we__search").val();
 			if(address == "")
 			{
 				$('#btn-map').attr('data-toggle', '');
