@@ -126,27 +126,34 @@
                                 <p>{{(($customers->currentPage()-1)* $customers->perPage()) + ($key+1)}}</p>
                             </td>
                             <td>
-                                <p class="name">{{$customer->first_name}}</p>
+                                <!-- <p class="name">{{$customer->first_name}}</p> -->
+                                <input type="text" value="{{$customer->first_name}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="name">{{$customer->last_name}}</p>
+                                <!-- <p class="name">{{$customer->last_name}}</p> -->
+                                <input type="text" value="{{$customer->last_name}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="email line">
+                                <!-- <p class="email line">
                                     {{ $customer->email }}
-                                </p>
+                                </p> -->
+                                <input type="text" value="{{$customer->email}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$customer->phone}}</p>
+                                <!-- <p>{{$customer->phone}}</p> -->
+                                <input type="text" value="{{$customer->phone}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$customer->address}}</p>
+                                <!-- <p>{{$customer->address}}</p> -->
+                                <input type="text" value="{{$customer->address}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="date">{{$customer->created_at}}</p>
+                                <!-- <p class="date">{{$customer->created_at}}</p> -->
+                                <input type="text" value="{{$customer->creaeted_at}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="type1">{{ $customer->type }}</p>
+                                <!-- <p class="type1">{{ $customer->type }}</p> -->
+                                <input type="text" value="{{$customer->type}}" readonly class="inputonly">
                             </td>
                             <!-- <td>
                                 <p>{{ $customer->status }}</p>

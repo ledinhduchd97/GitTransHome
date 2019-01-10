@@ -142,28 +142,36 @@
                                 <p>{{(($houses->currentPage()-1)* $houses->perPage()) + ($key+1)}}</p>
                             </td>
                             <td>
-                                <p class="name">{{$house->name}}</p>
+                                <!-- <p class="name">{{$house->name}}</p> -->
+                                <input type="text" value="{{$house->name}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p class="address">{{$house->address}}</p>
+                                <!-- <p class="address">{{$house->address}}</p> -->
+                                <input type="text" value="{{$house->address}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$house->site_area}}</p>
+                                <!-- <p>{{$house->site_area}}</p> -->
+                                <input type="text" value="{{$house->site_area}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$house->area_gross_floor}}</p>
+                                <!-- <p>{{$house->area_gross_floor}}</p> -->
+                                <input type="text" value="{{$house->area_gross_floor}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{ $house->unit }} {{ $house->price }}</p>
+                                <!-- <p>{{ $house->unit }} {{ $house->price }}</p> -->
+                                <input type="text" value="{{$house->price}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$house->number_bedroom}}</p>
+                                <!-- <p>{{$house->number_bedroom}}</p> -->
+                                <input type="text" value="{{$house->number_bedroom}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$house->number_bathroom}}</p>
+                                <!-- <p>{{$house->number_bathroom}}</p> -->
+                                <input type="text" value="{{$house->number_bathroom}}" readonly class="inputonly">
                             </td>
                             <td>
-                                <p>{{$house->created_at}}</p>
+                                <!-- <p>{{$house->created_at}}</p> -->
+                                <input type="text" value="{{$house->created_at}}" readonly class="inputonly">
                             </td>
                             <td>
                                 @if($house->status == 1)

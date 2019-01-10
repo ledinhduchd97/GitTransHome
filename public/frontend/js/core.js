@@ -204,21 +204,10 @@ jQuery(document).ready(function ($) {
     removeActive();
   });
 
-  $('.main__menu li a').click(function () {
-    var id = $(this).attr('href');
-    scrollEle(id);
-  });
-
-  $('.mobile__menu li a').click(function () {
-    var id = $(this).attr('href');
-    removeActive();
-    scrollElemb(id);
-  });
-// update 07/01
-  $('.footer-menu li a').click(function () {
-    var id = $(this).attr('href');
-    scrollEleft(id);
-  });
+  scrollDiv('main__menu',1);
+  scrollDiv('mobile__menu',0);
+  scrollDiv('footer-menu',1);
+  
 
   $(window).on('resize', function () {
     var win = $(this); //this = window
@@ -226,6 +215,7 @@ jQuery(document).ready(function ($) {
       removeActive();
     }
   });
+  // 10/01
 
   //validation
   $.validator.addMethod(
@@ -352,12 +342,6 @@ jQuery(document).ready(function ($) {
   scrollHeader();
   // keypress enter pop up
 
-  // $('#how_we__search').keypress(function (event) {
-  //   var keycode = event.keyCode ? event.keyCode : event.which;
-  //   if (keycode == '13') {
-  //     $('.modal_map').modal('show');
-  //   }
-  // });
 
   //click heart
   $('.feature-item__wrap i.fa-heart').click(function () {
@@ -372,22 +356,30 @@ function removeActive() {
   $('.mobile--bg').removeClass('active');
   $('#wrapper').removeClass('active');
 }
-function scrollEle(ele) {
-  $("html, body").animate({
-    scrollTop: $(ele).offset().top - 144},
-  1000);
-}
+
 // update 07/01
 function scrollEleft(ele) {
   $("html, body").animate({
-    scrollTop: $(ele).offset().top - 144},
+    scrollTop: $(ele).offset().top - $('header').height()},
   1000);
 }
-// update 08/01
-function scrollElemb(ele){
-  $("html, body").animate({
-    scrollTop: $(ele).offset().top - 70
-  },1000);
+
+// update 10/01
+function scrollDiv(obj,device){
+  if(device){
+    $('.'+obj+' li a').click(function(){
+      var id = $(this).attr('href');
+      scrollEleft(id);
+    });
+  }else{
+    
+    $('.'+obj+' li a').click(function(){
+      var id = $(this).attr('href');
+      removeActive();
+      scrollEleft(id);
+    });
+  }
+  
 }
 
 function scrollHeader() {
