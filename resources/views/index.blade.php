@@ -79,7 +79,7 @@
                       </div>
                     </div>
                     <div class="feature__infor">
-                      <p class="feature__infor--time highlight line-clame__base">{{$house->note}}</p>
+                      <p class="feature__infor--time highlight line-clamp__base">{{$house->note}}</p>
                       <h3 class="feature__infor--title">{{$house->name}}</h3>
                       <div class="feature__infor--des">{!!$house->description!!}</div>
                       <p class="sale">For  Sale</p>

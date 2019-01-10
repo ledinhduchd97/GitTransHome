@@ -132,8 +132,8 @@
                         </div>
                         <div class="col-lg-7">
                           <div class="free-cash__row" style="height:100%">
-                            <div id="map" style="width:100%;height:100%">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14894.996624771036!2d105.74365575!3d21.0427206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1547023904313" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <div id="map" style="width:100%;height:100%" class="map_free">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14894.996624771036!2d105.74365575!3d21.0427206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1547023904313" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                           </div>
                         </div>

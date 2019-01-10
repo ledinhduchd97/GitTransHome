@@ -15,9 +15,9 @@
               <div class="col-12 col-md-4">
                 <div class="information__house--desc">
                   <div class="information__house--desc2">
-                    <h3 class="information__house--time link-base">{{$house->note}}</h3>
-                    <h1 class="information__house--title">{{$house->name}}</h1>
-                    <p class="information__house--address">{{$house->address}}</p>
+                    <h3 class="information__house--time link-base line-clamp__base">{{$house->note}}</h3>
+                    <h1 class="information__house--title line-clamp__base">{{$house->name}}</h1>
+                    <p class="information__house--address line-clamp__base">{{$house->address}}</p>
                   </div>
                 </div>
               </div>

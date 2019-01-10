@@ -237,7 +237,8 @@
                                                 @foreach($tasks as $task)
                                                 <tr>
                                                     <td>
-                                                        <p>{{$task->title}}</p>
+                                                        <!-- <p>{{$task->title}}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->title}}">
                                                     </td>
                                                     <!-- <td>
                                                         <p>{{ $task->age }}</p>
@@ -246,19 +247,24 @@
                                                         <p>{{ $task->update }}</p>
                                                     </td> -->
                                                     <td>
-                                                        <p>{{ $task->type }}</p>
+                                                        <!-- <p>{{ $task->type }}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->type}}">
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->deadline }}</p>
+                                                        <!-- <p>{{ $task->deadline }}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->deadline}}">
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->ranking}}</p>
+                                                        <!-- <p>{{ $task->ranking}}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->ranking}}">
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->note}}</p>
+                                                        <!-- <p>{{ $task->note}}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->note}}">
                                                     </td>
                                                     <td>
-                                                        <p>{{ $task->status}}</p>
+                                                        <!-- <p>{{ $task->status}}</p> -->
+                                                        <input type="text" class="inputonly" readonly value="{{$task->status}}">
                                                     </td>
                                                     <td>
                                                         <div class="table-icon">
