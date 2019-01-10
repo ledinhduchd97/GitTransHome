@@ -36,9 +36,9 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>First name :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="first_name" value="{{ $customer->first_name }}" required="required" maxlength="64" />
+                                        <input class="border--base padding--base" type="text" name="first_name" value="{{ $errors->has('first_name') ? old('first_name') : $customer->first_name }}" required="required" maxlength="64" />
                                         @if($errors->has('first_name'))
-                                            <p class="text-danger">{{ $errors->first('first_name') }}</p>
+                                            <p class="text-danger" style="font-size: 8px;">{{ $errors->first('first_name') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -46,7 +46,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Last name :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="last_name" value="{{ $customer->last_name }}" required="required" maxlength="64"/>
+                                        <input class="border--base padding--base" type="text" name="last_name" value="{{ $errors->has('last_name') ? old('last_name') : $customer->last_name }}" required="required" maxlength="64"/>
                                         @if($errors->has('last_name'))
                                             <p class="text-danger">{{ $errors->first('last_name') }}</p>
                                         @endif
@@ -56,7 +56,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Date of birth :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base dateofbirth" type="date" value="{{ transformDateToInputDate($customer->birthday) }}" name="birthday" required="required"/>
+                                        <input class="border--base padding--base dateofbirth" type="date" value="{{$errors->has('birthday') ? old('birthday') : transformDateToInputDate($customer->birthday) }}" name="birthday" required="required"/>
                                         @if($errors->has('birthday'))
                                             <p class="text-danger">{{ $errors->first('birthday') }}</p>
                                         @endif
@@ -66,7 +66,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Email :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="email"  value="{{ $customer->email }}" required="required" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
+                                        <input class="border--base padding--base" type="text" name="email"  value="{{ $errors->has('email') ? old('email') : $customer->email }}" required="required" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
                                         @if($errors->has('email'))
                                             <p class="text-danger">{{ $errors->first('email') }}</p>
                                         @endif
@@ -76,7 +76,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $customer->phone }}" required="required"/>
+                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $errors->has('email') ? old('email') : $customer->email }}" required="required"/>
                                         @if($errors->has('phone'))
                                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                                         @endif

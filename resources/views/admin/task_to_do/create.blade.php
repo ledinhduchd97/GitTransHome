@@ -43,9 +43,16 @@
                 <div class="content">
                   <select class="padding--base border--base customer_id"  name="customer_id" id="ex-search">
                     @if(isset($customers))
-                      @foreach($customers as $customer)
-                      <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
-                      @endforeach
+                      @if(old('customer_id'))
+                          @foreach($customers as $customer)
+                            <option value="{{$customer->id}}" {{$customer->id == old('customer_id') ? 'selected' : ''}}>{{$customer->first_name}} {{$customer->last_name}}</option>
+                          @endforeach
+                      @else
+                          @foreach($customers as $customer)
+                            <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
+                          @endforeach
+                      @endif
+                      
                     @endif
                   </select>
                   @if(sizeof($errors) != 0)
@@ -150,7 +157,11 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Assigned to  :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="text"  value="{{ old('assigned') != null ? old('assigned')  : "Tranhomes"}}" name="assigned"/>
+                  @if($errors->has('assigned'))
+                    <input class="border--base padding--base" type="text"  value="{{ old('assigned') }}" name="assigned"/>
+                  @else
+                    <input class="border--base padding--base" type="text"  value="Tranhomes" name="assigned"/>
+                  @endif
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('assigned')}}</p>
