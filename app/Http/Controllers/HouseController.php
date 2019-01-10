@@ -27,8 +27,8 @@ class HouseController extends Controller
         $name = $request->get('name', NULL);
         $price = $request->get('price',NULL);
         $status = $request->get('status',NULL);
-        $start_day = $request->get('start_day');
-        $end_day = $request->get('end_day');
+        $start_day = $request->get('date_from');
+        $end_day = $request->get('date_to');
         $houses = (new House)->newQuery();
         if ($site_area != NULL) 
         {
@@ -73,8 +73,8 @@ class HouseController extends Controller
         $name = $request->get('name', NULL);
         $price = $request->get('price',NULL);
         $status = $request->get('status',NULL);
-        $start_day = $request->get('start_day');
-        $end_day = $request->get('end_day');
+        $start_day = $request->get('date_from');
+        $end_day = $request->get('date_to');
         $houses = (new House)->newQuery();
         if ($site_area != NULL) 
         {
