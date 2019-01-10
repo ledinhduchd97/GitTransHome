@@ -81,7 +81,7 @@ class SetUpController extends Controller
             'logo_header' => 'mimes:jpeg,bmp,png,jpg,gif',
             'logo_footer' => 'mimes:jpeg,bmp,png,jpg,gif',
             // 'sell_my_home' => 'required',
-            'phone' => 'required|min:10|max:15|regex:/^[0-9 \(\)-]+$/',
+            'phone' => 'required|min:10|max:16|regex:/^[0-9 \(\)-]+$/',
             'email' => 'required|max:100',
             'lisence' => 'required|max:250',
             'address' => 'required|max:250',

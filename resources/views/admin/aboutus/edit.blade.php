@@ -24,7 +24,7 @@
                             <div class="about_us-view__row">
                                 <p class="text">Title</p>
                                 <input class="content padding--base border--base" name="title" type="text"
-                                       value="{{$aboutus->title}}" placeholder="Enter the title here"
+                                       value="{{$errors->has('title') ? old('title') : $aboutus->title}}" placeholder="Enter the title here"
                                        required="required"/>
                                 @if($errors->has('title'))
                                     <p class="text-danger">{{ $errors->first('title') }}</p>
@@ -33,7 +33,7 @@
                             <div class="about_us-view__row">
                                 <p class="text">Short description</p>
                                 <input class="content padding--base border--base" type="text"
-                                       value="{{$aboutus->short_description}}" name="short_description"
+                                       value="{{ $errors->has('short_description') ? old('short_description') : $aboutus->short_description }}" name="short_description"
                                        placeholder="Short description" required="required" minlength="150"/>
                                 @if($errors->has('short_description'))
                                     <p class="text-danger">{{ $errors->first('short_description') }}</p>
@@ -44,7 +44,7 @@
                                 <form action="" id="edito">
                                     <textarea id="editor" class="content padding--base border--base" name="detail_description"
                                             cols="30" rows="4" placeholder="Short description"
-                                            required="required">{{$aboutus->detail_description}}</textarea>
+                                            required="required">{{$errors->has('detail_description') ? old('detail_description') : $aboutus->detail_description}}</textarea>
                                     @if($errors->has('detail_description'))
                                         <p class="text-danger">{{ $errors->first('detail_description') }}</p>
                                     @endif    

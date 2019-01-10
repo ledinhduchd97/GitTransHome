@@ -35,7 +35,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Title :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="title" value="{{ $task->title }}" required="required" />
+                                        <input class="border--base padding--base" type="text" name="title" value="{{ $errors->has('title') ? old('title') : $task->title }}" required="required" />
                                         @if($errors->has('title'))
                                             <p class="text-danger">{{ $errors->first('title') }}</p>
                                         @endif
@@ -65,7 +65,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>To do type :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="type"  value="{{ $task->type }}" required="required" />
+                                        <input class="border--base padding--base" type="text" name="type"  value="{{ $errors->has('type') ? old('type') : $task->type }}" required="required" />
                                         @if($errors->has('type'))
                                             <p class="text-danger">{{ $errors->first('type') }}</p>
                                         @endif
@@ -75,7 +75,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Date :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" name="created_at" value="{{ getDateFromDateTime($task->created_at) }}" required="required" />
+                                        <input class="border--base padding--base" type="date" name="created_at" value="{{ $errors->has('created_at') ? old('created_at') : getDateFromDateTime($task->created_at) }}" required="required" />
                                         @if($errors->has('created_at'))
                                             <p class="text-danger">{{ $errors->first('created_at') }}</p>
                                         @endif
@@ -85,7 +85,10 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Deadline :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" name="deadline" value="{{ getDateFromDateTime($task->deadline) }}" required="required"/>
+                                        <input class="border--base padding--base" type="date" name="deadline" value="{{ $errors->has('deadline') ? old('deadline') : getDateFromDateTime($task->deadline) }}" required="required"/>
+                                        @if($errors->has('deadline'))
+                                            <p class="text-danger">{{ $errors->first('deadline') }}</p>
+                                        @endif
                                     </div>
                                     <div class="clear-fix"></div>
                                 </div>
@@ -93,8 +96,13 @@
                                     <div class="text"><span>Ranking :</span></div>
                                     <div class="content">
                                         <select class="border--base padding--base" name="ranking" id="ranking">
-                                            <option value="0" {{ $task->ranking=="Low" ? "selected": ""}}>Low</option>
-                                            <option value="1" {{ $task->ranking=="High" ? "selected" : ""}}>High</option>
+                                            @if(old('ranking'))
+                                                <option value="0" {{ old('ranking')=="0" ? "selected": ""}}>Low</option>
+                                                <option value="1" {{ old('ranking')=="1" ? "selected" : ""}}>High</option>
+                                            @else
+                                                <option value="0" {{ $task->ranking=="Low" ? "selected": ""}}>Low</option>
+                                                <option value="1" {{ $task->ranking=="High" ? "selected" : ""}}>High</option>
+                                            @endif
                                         </select>
                                         @if($errors->has('ranking'))
                                             <p class="text-danger">{{ $errors->first('ranking') }}</p>
@@ -106,7 +114,7 @@
                                     <div class="text"><span>
                                  Note (<span class="required">*</span>):</span></div>
                                     <div class="content">
-                                        <textarea class="border--base padding--base" id="note" type="text" name="note" style="width: 90%;">{{ $task->note }}</textarea>
+                                        <textarea class="border--base padding--base" id="note" type="text" name="note" style="width: 90%;">{{ $errors->has('note') ? old('note') : $task->note }}</textarea>
                                         <div class="error-username">
                                             @if(sizeof($errors) != 0)
                                                 @if($errors)
@@ -121,8 +129,13 @@
                                     <div class="text"><span>Status :</span></div>
                                     <div class="content">
                                         <select class="border--base padding--base" name="status" id="status">
-                                            <option value="0" {{ $task->status=="Done" ? "selected": ""}}>Done</option>
-                                            <option value="1" {{ $task->status=="Waiting" ? "selected" : ""}}>Waiting</option>
+                                            @if(old('status'))
+                                               <option value="0" {{ old('status')=="0" ? "selected": ""}}>Done</option>
+                                               <option value="1" {{ old('status')=="1" ? "selected": ""}}>Waiting</option> 
+                                            @else
+                                                <option value="0" {{ $task->status=="Done" ? "selected": ""}}>Done</option>
+                                                <option value="1" {{ $task->status=="Waiting" ? "selected" : ""}}>Waiting</option>
+                                            @endif
                                         </select>
                                         @if($errors->has('status'))
                                             <p class="text-danger">{{ $errors->first('status') }}</p>

@@ -40,7 +40,7 @@
                 <div class="text"> <span>
                      Full name (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="fullname" type="text" value="{{$user->fullname}}" name="fullname"/>
+                  <input class="border--base padding--base" id="fullname" type="text" value="{{ $errors->has('fullname') ? old('fullname') ? $user->fullname }}" name="fullname"/>
                     <div class="error-fullname">
                       @if(sizeof($errors) != 0)
                         @if($errors)
@@ -55,7 +55,7 @@
                 <div class="text"><span>
                      Email (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="email" type="text" value="{{$user->email}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
+                  <input class="border--base padding--base" id="email" type="text" value="{{$errors->has('email') ? old('email') ? $user->email}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" $errors->has('fullname') ? old('fullname') ? $user->fullname/>
                   <div class="error-email">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -70,7 +70,7 @@
                 <div class="text"><span>
                      Username (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="username" type="text" value="{{$user->username}}" name="username"/>
+                  <input class="border--base padding--base" id="username" type="text" value="{{$errors->has('username') ? old('username') ? $user->email}}" name="username"/>
                   <div class="error-username">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -129,7 +129,7 @@
                 <div class="text"><span>
                      Phone (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="phone" type="text" value="{{$user->phone}}" name="phone"/>
+                  <input class="border--base padding--base" id="phone" type="text" value="{{$errors->has('phone') ? old('phone') ? $user->phone}}" name="phone"/>
                   <div class="error-phone">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -144,7 +144,7 @@
                 <div class="text"><span>
                      Date of birth (<span class="required">*</span>):</span></div>
                 <div class="content date--wrap myDate"><i class="far fa-calendar-alt"></i>
-                  <input class="myDatePicker border--base padding--base" id="birthday" type="text" value="{{$user->birthday}}" name="birthday"/>
+                  <input class="myDatePicker border--base padding--base" id="birthday" type="text" value="{{$errors->has('birthday') ? old('birthday') ? $user->birthday}}" name="birthday"/>
                   <div class="error-birthday">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -159,7 +159,7 @@
                 <div class="text"><span>
                      Address (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="account-address border--base padding--base" id="address" type="text" name="address" value="{{$user->address}}" />
+                  <input class="account-address border--base padding--base" id="address" type="text" name="address" value="{{$errors->has('address') ? old('address') ? $user->address}}" />
                   <div class="error-address">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -175,9 +175,15 @@
                      Status (<span class="required">*</span>):</span></div>
                 <div class="content">
                   <select class="account-position border--base padding--base" id="status" name="status">
-                    <option <?php if($user->status == 2) echo('selected') ?> value="2">Not Actived</option>
-                    <option <?php if($user->status == 1) echo('selected') ?> value="1">Display</option>
-                    <option <?php if($user->status == 0) echo('selected') ?> value="0">Hidden</option>
+                    @if(old('status'))
+                      <option <?php if( old('status') == '2') echo('selected') ?> value="2">Not Actived</option>
+                      <option <?php if( old('status') == '1') echo('selected') ?> value="1">Display</option>
+                      <option <?php if( old('status') == '0') echo('selected') ?> value="0">Hidden</option>
+                    @else
+                      <option <?php if($user->status == 2) echo('selected') ?> value="2">Not Actived</option>
+                      <option <?php if($user->status == 1) echo('selected') ?> value="1">Display</option>
+                      <option <?php if($user->status == 0) echo('selected') ?> value="0">Hidden</option>
+                    @endif
                   </select>
                   <div class="error-position">
                     @if(sizeof($errors) != 0)
@@ -194,13 +200,13 @@
                      Position (<span class="required">*</span>):</span></div>
                 <div class="content">
                   <select class="account-position border--base padding--base" id="position" name="position">
-                  @if($user->position == 1)
-                    <option value="1">Admin</option>
-                    <option value="2">Member</option>
-                  @else
-                    <option value="2">Member</option>
-                    <option value="1">Admin</option>
-                  @endif
+                    @if(old('position'))
+                        <option {{old('position') == '1' ? 'selected' : ''}} value="1">Admin</option>
+                        <option {{old('position') == '2' ? 'selected' : ''}} value="2">Member</option>
+                    @else
+                        <option {{$user->position == 1 ? 'selected' : ''}} value="1">Admin</option>
+                        <option {{$user->position == 2 ? 'selected' : ''}} value="2">Member</option>
+                    @endif
                   </select>
                   <div class="error-position">
                     @if(sizeof($errors) != 0)

@@ -38,7 +38,7 @@
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" name="first_name" value="{{ $errors->has('first_name') ? old('first_name') : $customer->first_name }}" required="required" maxlength="64" />
                                         @if($errors->has('first_name'))
-                                            <p class="text-danger" style="font-size: 8px;">{{ $errors->first('first_name') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('first_name') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -48,7 +48,7 @@
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" name="last_name" value="{{ $errors->has('last_name') ? old('last_name') : $customer->last_name }}" required="required" maxlength="64"/>
                                         @if($errors->has('last_name'))
-                                            <p class="text-danger">{{ $errors->first('last_name') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('last_name') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -58,7 +58,7 @@
                                     <div class="content">
                                         <input class="border--base padding--base dateofbirth" type="date" value="{{$errors->has('birthday') ? old('birthday') : transformDateToInputDate($customer->birthday) }}" name="birthday" required="required"/>
                                         @if($errors->has('birthday'))
-                                            <p class="text-danger">{{ $errors->first('birthday') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('birthday') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -68,7 +68,7 @@
                                     <div class="content">
                                         <input class="border--base padding--base" type="text" name="email"  value="{{ $errors->has('email') ? old('email') : $customer->email }}" required="required" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
                                         @if($errors->has('email'))
-                                            <p class="text-danger">{{ $errors->first('email') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('email') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -76,9 +76,9 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $errors->has('email') ? old('email') : $customer->email }}" required="required"/>
+                                        <input class="border--base padding--base" type="tel" name="phone" value="{{ $errors->has('phone') ? old('phone') : $customer->phone }}" required="required" pattern="^[0-9-+()]*$" minlength="10" maxlength="15"/>
                                         @if($errors->has('phone'))
-                                            <p class="text-danger">{{ $errors->first('phone') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('phone') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -86,9 +86,9 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Address :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="address" value="{{ $customer->address }}" required="required" maxlength="250" pattern="[a-zA-Z0-9]\-\/"/>
+                                        <input class="border--base padding--base" type="text" name="address" value="{{ $errors->has('address') ? old('address') : $customer->address }}" required="required" maxlength="250" pattern="[a-zA-Z0-9]\-\/"/>
                                         @if($errors->has('address'))
-                                            <p class="text-danger">{{ $errors->first('address') }}</p>
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('address') }}</p>
                                         @endif
                                     </div>
                                     <div class="clear-fix"></div>
@@ -113,7 +113,10 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Customer type :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="type" value="{{ $customer->type }}" required="required" maxlength="250"/>
+                                        <input class="border--base padding--base" type="text" name="type" value="{{ $errors->has('type') ? old('type') : $customer->type }}" required="required" maxlength="250"/>
+                                        @if($errors->has('type'))
+                                            <p class="text-danger" style="font-size: 9px;">{{ $errors->first('type') }}</p>
+                                        @endif
                                     </div>
                                     <div class="clear-fix"></div>
                                 </div>

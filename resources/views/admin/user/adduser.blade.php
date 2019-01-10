@@ -40,7 +40,7 @@
                 <div class="text"> <span>
                      Full name (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" required id="fullname" type="text" value="" name="fullname"/>
+                  <input class="border--base padding--base" required id="fullname" type="text" value="{{old('fullname')}}" name="fullname"/>
                     <div class="error-fullname">
                       @if(sizeof($errors) != 0)
                         @if($errors)
@@ -55,7 +55,7 @@
                 <div class="text"><span>
                      Email (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="email" type="email" required value="" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
+                  <input class="border--base padding--base" id="email" type="email" required value="{{old('email')}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
                   <div class="error-email">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -70,7 +70,7 @@
                 <div class="text"><span>
                      Username (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="username" required type="text" value="" name="username"/>
+                  <input class="border--base padding--base" id="username" required type="text" value="{{old('username')}}" name="username"/>
                   <div class="error-username">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -85,7 +85,7 @@
                 <div class="text"><span>
                       Password (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="password" type="password" required name="password"/>
+                  <input class="border--base padding--base" id="password" type="password"  required name="password"/>
                   <div class="error-password">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -100,7 +100,7 @@
                 <div class="text"><span>
                      Confirm password(<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="confirm" required type="password" name="confirm"/>
+                  <input class="border--base padding--base" id="confirm" required  type="password" name="confirm"/>
                   <div class="error-confirm">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -115,9 +115,9 @@
                 <div class="text"><span>
                      Gender (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="sex-male" id="sex-male" required type="radio" name="sex" value="1" />
+                  <input class="sex-male" id="sex-male" required type="radio" name="sex" value="1" {{ old('sex') == '1' ? 'checked' : '' }} />
                   <label for="sex-male">Male</label>
-                  <input class="sex-female" id="sex-female" required type="radio" name="sex" value="0"/>
+                  <input class="sex-female" id="sex-female" required type="radio" name="sex" value="0" {{ old('sex') == '0' ? 'checked' : '' }} />
                   <label for="sex-female">Female</label>
                   <div class="error-sex">
                     @if(sizeof($errors) != 0)
@@ -133,7 +133,7 @@
                 <div class="text"><span>
                      Phone (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="phone" required type="text" value="" name="phone"/>
+                  <input class="border--base padding--base" id="phone" required type="text" value="{{old('phone')}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$"/>
                   <div class="error-phone">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -148,7 +148,7 @@
                 <div class="text"><span>
                      Date of birth (<span class="required">*</span>):</span></div>
                 <div class="content date--wrap myDate"><i class="far fa-calendar-alt"></i>
-                  <input class="myDatePicker border--base padding--base dateofbirth" required id="birthday" type="text" value="" name="birthday" autocomplete="off"/>
+                  <input class="myDatePicker border--base padding--base dateofbirth" required id="birthday" type="text" value="{{old('birthday')}}" name="birthday" autocomplete="off"/>
                   <div class="error-birthday">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -163,7 +163,7 @@
                 <div class="text"><span>
                      Address (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="account-address border--base padding--base" required id="address" type="text" name="address"/>
+                  <input class="account-address border--base padding--base" value="{{old('address')}}" required id="address" type="text" name="address"/>
                   <div class="error-address">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -180,8 +180,8 @@
                 <div class="content">
                   <select class="account-position border--base padding--base" id="position" required name="position">
                     <option value="">--- Position ---</option>
-                    <option value="2">Member</option>
-                    <option value="1">Admin</option>
+                    <option value="2" {{ old('position')=='2' ? 'selected' : '' }}>Member</option>
+                    <option value="1" {{ old('position')=='1' ? 'selected' : '' }}>Admin</option>
                   </select>
                   <div class="error-position">
                     @if(sizeof($errors) != 0)

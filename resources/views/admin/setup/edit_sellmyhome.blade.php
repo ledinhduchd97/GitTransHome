@@ -69,7 +69,7 @@
                             <button type="button" class="position-absolute close text-black" style="top: 10px; right: 10px;">&times;</button>
                         </div>
                         <div class="content">
-                          <input class="setup_image" type="file" id="setup_image1" name="image_1" onchange="loadFile_1(event)"/>
+                          <input class="setup_image" type="file" id="setup_image1" accept="image/*" name="image_1" onchange="loadFile_1(event)"/>
                         </div>
                         <div class="clear-fix"></div>
                       </div>
@@ -92,7 +92,7 @@
                         <div class="text"><span>Image 2 : </span></div>
                         <div class="position-relative images">
                             @if(isset($sellmyhome->image_2))
-                              <img  class="image" id="image_2"  src="{{asset($sellmyhome->image_2)}}" alt="">
+                              <img  class="image" id="image_2"  src="{{asset($sellmyhome->image_2)}}" accept="image/*" alt="">
                             @endif
                             <button type="button" class="position-absolute close text-black" style="top: 10px; right: 10px;">&times;</button>
                         </div>
@@ -104,7 +104,7 @@
                       <div class="setup-freecash--lv2">
                         <div class="text"><span>Title image 2 : </span></div>
                         <div class="content">
-                          <input class="border--base padding--base setup_step--title" type="text" id="setup_step--title" name="title_image_2" required="required" maxlength="65" @if(isset($sellmyhome->title_image_2)) value="{{$sellmyhome->title_image_2}}" @endif />
+                          <input class="border--base padding--base setup_step--title" type="text"  id="setup_step--title" name="title_image_2" required="required" maxlength="65" @if(isset($sellmyhome->title_image_2)) value="{{$sellmyhome->title_image_2}}" @endif />
                         </div>
                         <div class="clear-fix"></div>
                       </div>
@@ -120,7 +120,7 @@
                         <div class="text"><span>Image 3 : </span></div>
                         <div class="position-relative images">
                             @if(isset($sellmyhome->image_3))
-                            <img class="image"  id="image_3" src="{{asset($sellmyhome->image_3)}}" alt="">
+                            <img class="image"  id="image_3" src="{{asset($sellmyhome->image_3)}}" accept="image/*" alt="">
                             @endif
                             <button type="button" class="position-absolute close text-black" style="top: 10px; right: 10px;">&times;</button>
                         </div>

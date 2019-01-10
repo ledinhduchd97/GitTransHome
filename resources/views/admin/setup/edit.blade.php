@@ -40,7 +40,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label class="control-label col-sm-2 text" for="website_name">Website name:</label>    
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" id="website_name" value="{{ $setup->website_name }}" name="website_name" required maxlength="25">
+                        <input type="text" class="form-control border--base padding--base" id="website_name" value="{{ $errors->first('website_name') ? old('website_name') : $setup->website_name }}" name="website_name" required maxlength="25">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('website_name') }}</p>
                         @endif
@@ -50,7 +50,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label class="control-label col-sm-2 text" for="description">Description:</label>
                     <div class="col-sm-10 content">
-                        <textarea class="form-control" name="description" required maxlength="250">{{ $setup->description }}</textarea>
+                        <textarea class="form-control" name="description" required maxlength="250">{{ $errors->first('description') ? old('description') : $setup->description }}</textarea>
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('description') }}</p>
                         @endif
@@ -90,7 +90,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label class="control-label col-sm-2 text">Thank you:</label>
                     <div class="col-sm-10 content">
-                        <textarea name="thank_you" id="news" cols="30" rows="10">{{$setup->thank_you}}</textarea>
+                        <textarea name="thank_you" id="news" cols="30" rows="10">{{$errors->first('thank_you') ? old('thank_you') : $setup->thank_you}}</textarea>
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('thank_you') }}</p>
                         @endif
@@ -113,7 +113,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="phone" class="control-label col-sm-2 text">Phone number</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->phone }}" id="phone" name="phone">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('phone') ? old('phone') : $setup->phone }}" id="phone" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                         @endif
@@ -123,7 +123,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="email" class="control-label col-sm-2 text">Email</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->email }}" id="email" name="email" required maxlength="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('email') ? old('email') : $setup->email }}" id="email" name="email" required maxlength="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('email') }}</p>
                         @endif
@@ -133,7 +133,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="address" class="control-label col-sm-2 text">Address</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->address }}" id="address" name="address" required maxlength="250">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('address') ? old('address') : $setup->address }}" id="address" name="address" required maxlength="250">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('address') }}</p>
                         @endif
@@ -143,7 +143,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="lisence" class="control-label col-sm-2 text">License</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->lisence }}" id="lisence" name="lisence" required maxlength="250">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('lisence') ? old('lisence') : $setup->lisence }}" id="lisence" name="lisence" required maxlength="250">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('lisence') }}</p>
                         @endif
@@ -157,7 +157,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="facebook" class="control-label col-sm-2 text">Facebook</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->facebook }}" id="facebook" name="facebook" required>
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('facebook') ? old('facebook') : $setup->facebook }}" id="facebook" name="facebook" required>
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('facebook') }}</p>
                         @endif
@@ -167,7 +167,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="instagram" class="control-label col-sm-2 text">Instagram</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->instagram }}" id="instagram" name="instagram" required>
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('instagram') ? old('instagram') : $setup->instagram }}" id="instagram" name="instagram" required>
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('instagram') }}</p>
                         @endif
@@ -177,7 +177,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="twitter" class="control-label col-sm-2 text">Twitter</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $setup->twitter }}" id="twitter" name="twitter" required>
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('twitter') ? old('twitter') : $setup->twitter }}" id="twitter" name="twitter" required>
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('twitter') }}</p>
                         @endif

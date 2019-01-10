@@ -21,21 +21,21 @@
                 <div class="about_us-view__left">
                   <div class="about_us-view__row">
                     <p class="text">Title</p>
-                    <input class="content padding--base border--base" name="title" type="text" value="{{$partner->title}}" placeholder="Title"/>
+                    <input class="content padding--base border--base" name="title" type="text" value="{{ $errors->has('title') ? old('title') : $partner->title}}" placeholder="Title"/>
                     @if($errors->has('title'))
                         <p class="text-danger">{{ $errors->first('title') }}</p>
                     @endif
                   </div>
                   <div class="about_us-view__row">
                     <p class="text">Short description</p>
-                    <input class="content padding--base border--base" type="text" value="{{$partner->short_desc}}" name="short_desc" placeholder="Detail description" />
+                    <input class="content padding--base border--base" type="text" value="{{ $errors->has('short_desc') ? old('short_desc') : $partner->short_desc }}" name="short_desc" placeholder="Detail description" />
                     @if($errors->has('short_desc'))
                         <p class="text-danger">{{ $errors->first('short_desc') }}</p>
                     @endif
                   </div>
                   <div class="about_us-view__row">
                     <p class="text">Detail description</p>
-                    <textarea id="editor" class="content padding--base border--base" name="detail_desc" cols="30" rows="4" placeholder="Short description" >{{$partner->detail_desc}}</textarea>
+                    <textarea id="editor" class="content padding--base border--base" name="detail_desc" cols="30" rows="4" placeholder="Short description" >{{ $errors->has('detail_desc') ? old('detail_desc') : $partner->detail_desc }}</textarea>
                     @if($errors->has('detail_desc'))
                       <p class="text-danger">{{ $errors->first('detail_desc') }}</p>
                     @endif

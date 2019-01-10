@@ -43,7 +43,7 @@
                         <div class="text"> <span>
                      Title task (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="title" type="text" value="" name="title"/>
+                            <input class="border--base padding--base" id="title" type="text" value="{{old('title')}}" name="title" required />
                             <div class="error-fullname">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -90,7 +90,7 @@
                         <div class="text"><span>
                      Type (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="type" type="text" value="" name="type"/>
+                            <input class="border--base padding--base" id="type" type="text" value="{{old('type')}}" name="type" required/>
                             <div class="error-username">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -105,8 +105,8 @@
                         <div class="text"><span>
                      Date (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="created_at" type="date" value=""
-                                   name="created_at"/>
+                            <input class="border--base padding--base" id="created_at" type="date" value="{{old('created_at')}}"
+                                   name="created_at" required/>
                             <div class="error-username">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -121,7 +121,14 @@
                         <div class="text"><span>
                      Deadline (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" name="deadline" id="created_at" type="date">
+                            <input class="border--base padding--base" name="deadline" value="{{old('deadline')}}" id="date" type="date" required/>
+                            <div class="error-sex">
+                                @if(sizeof($errors) != 0)
+                                    @if($errors)
+                                        <p style="color:red; font-size: 10px;">{{$errors->first('deadline')}}</p>
+                                    @endif
+                                @endif
+                            </div>
                         </div>
                         <div class="clear-fix"></div>
                     </div>
@@ -129,10 +136,10 @@
                         <div class="text"><span>
                      Ranking (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <select class="account-position border--base padding--base" id="ranking" name="ranking">
+                            <select class="account-position border--base padding--base" id="ranking" name="ranking" required>
                                 <option value="">--- Ranking ---</option>
-                                <option value="0">Normal</option>
-                                <option value="1">Low</option>
+                                <option value="0" {{old('ranking') == '0' ? 'selected' : ''}}>Normal</option>
+                                <option value="1" {{old('ranking') == '1' ? 'selected' : ''}}>Low</option>
                             </select>
                             <div class="error-sex">
                                 @if(sizeof($errors) != 0)
@@ -148,7 +155,7 @@
                         <div class="text"><span>
                      Note (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <textarea class="border--base padding--base" id="note" type="text" name="note" style="width: 100%;"></textarea>
+                            <textarea class="border--base padding--base" id="note" type="text" name="note" style="width: 100%;">{{old('note')}}</textarea>
                             <div class="error-username">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -163,10 +170,10 @@
                         <div class="text"><span>
                      Status (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <select class="account-position border--base padding--base" id="status" name="status">
+                            <select class="account-position border--base padding--base" id="status" name="status" required>
                                 <option value="">--- Status ---</option>
-                                <option value="0">Done</option>
-                                <option value="1">Waiting</option>
+                                <option value="0" {{old('status') == '0' ? 'selected' : ''}}>Done</option>
+                                <option value="1" {{old('status') == '1' ? 'selected' : ''}}>Waiting</option>
                             </select>
                             <div class="error-sex">
                                 @if(sizeof($errors) != 0)
@@ -180,7 +187,7 @@
                     </div>
                     <div class="edit-tk__content--row text-center">
                         <button class="btn-submit btn--primary padding--base" type="submit" id="btn-adduser">Submit</button>
-                        <a class="btn-cancel btn--primary padding--base" href="{{route('admin.partner.index')}}">Cancel</a>
+                        <a class="btn-cancel btn--primary padding--base" href="{{route('admin.customers.show',['customers' => request()->customer_id ])}}">Cancel</a>
                     </div>
                 </form>
             </div>
