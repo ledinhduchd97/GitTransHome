@@ -166,26 +166,26 @@
                                                         <div class="tk-top__options">
                                                             <form action="{{ route('admin.partner.show', ['partner' => $partner->id]) }}">
                                                                 <div class="col2 fleft">
-                                                                    <input class="customer_search padding--base border--base" id="customer_search" type="search" name="customer_search" placeholder="Search keywords ..."/>
+                                                                    <input class="customer_search padding--base border--base" id="customer_search" type="search" name="customer_search" value="{{request()->customer_search}}" placeholder="Search keywords ..."/>
                                                                 </div>
                                                                 <div class="col2 fleft">
                                                                     <select class="customer-status padding--base border--base" id="customer-status" name="status">
                                                                         <option value="">--- Status ---</option>
-                                                                        <option value="1">Done</option>
-                                                                        <option value="0">Waiting</option>
+                                                                        <option {{ request()->status == '1' ? 'selected' : '' }} value="1">Done</option>
+                                                                        <option {{ request()->status == '0' ? 'selected' : '' }} value="0">Waiting</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__from-date date--wrap"><span>Start day</span>
                                                                         <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="startDay" type="date" name="date_from"/>
+                                                                            <input class="padding--base border--base padding--date" id="startDay" type="date" name="date_from" value="{{request()->date_from}}"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-25 fleft">
                                                                     <div class="tk-top__to-date date--wrap"><span>Finish day</span>
                                                                         <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                                                                            <input class="padding--base border--base padding--date" id="endDay" type="date" name="date_to"/>
+                                                                            <input class="padding--base border--base padding--date" id="endDay" type="date" name="date_to" value="{{request()->date_to}}"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>

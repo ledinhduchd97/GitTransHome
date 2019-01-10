@@ -1457,6 +1457,7 @@ ul.link li a {
   /* display: inline-block; */
     /* white-space: nowrap;
     max-width: 50ch; */
+  line-height: 36px;
 }
 /* 08/01 */
 .about-us__content--description {

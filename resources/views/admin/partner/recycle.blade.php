@@ -50,14 +50,14 @@
                     <div class="col-25 fleft">
                       <div class="tk-top__from-date date--wrap"><span>Start day</span>
                         <div class="fromDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                          <input name="start_day" class="padding--base border--base padding--date" id="startDay" type="date" value="{{ request()->start_day }}"/>
+                          <input name="date_from" class="padding--base border--base padding--date" id="startDay" type="date" value="{{ request()->date_from }}"/>
                         </div>
                       </div>
                     </div>
                     <div class="col-25 fleft">
                       <div class="tk-top__to-date date--wrap"><span>Finish day</span>
                         <div class="toDate date--wrap2 myDate"><i class="far fa-calendar-alt"></i>
-                          <input name="end_day" class="padding--base border--base padding--date" id="endDay" type="date" value="{{ request()->end_day }}"/>
+                          <input name="date_to" class="padding--base border--base padding--date" id="endDay" type="date" value="{{ request()->date_to }}"/>
                         </div>
                       </div>
                     </div>

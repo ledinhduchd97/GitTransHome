@@ -30,8 +30,8 @@ class PartnerController extends Controller
         $partners = (new Partner)->newQuery();
         $key = $request->keyword;
         $status = $request->status;
-        $start = $request->start_day;
-        $end = $request->end_day;
+        $start = $request->date_from;
+        $end = $request->date_to;
         if($request->keyword != null)
         {
             $partners = $partners->where('fullname','like', '%'.$request->keyword.'%');
@@ -41,13 +41,13 @@ class PartnerController extends Controller
         {
             $partners = $partners->where('status','like', '%'.$request->status.'%');
         }
-        if($request->start_day != null)
+        if($request->date_from != null)
         {
-            $partners = $partners->where('created_at','>',$request->start_day);
+            $partners = $partners->where('created_at','>',$request->date_from);
         }
-        if($request->end_day != null)
+        if($request->date_to != null)
         {
-            $partners = $partners->where('created_at','<',$request->end_day);
+            $partners = $partners->where('created_at','<',$request->date_to);
         }
 
         $partners = $partners->where('status_recycle',1)->orderBy('created_at', 'desc')->paginate(20);
@@ -62,8 +62,8 @@ class PartnerController extends Controller
         $partners = (new Partner)->newQuery();
         $key = $request->keyword;
         $status = $request->status;
-        $start = $request->start_day;
-        $end = $request->end_day;
+        $start = $request->date_from;
+        $end = $request->date_to;
         if($request->keyword != null)
         {
             $partners = $partners->where('fullname','like', '%'.$request->keyword.'%');
@@ -72,13 +72,13 @@ class PartnerController extends Controller
         {
             $partners = $partners->where('status',$request->status);
         }
-        if($request->start_day != null)
+        if($request->date_from != null)
         {
-            $partners = $partners->where('created_at','>',$request->start_day);
+            $partners = $partners->where('created_at','>',$request->date_from);
         }
-        if($request->end_day != null)
+        if($request->date_to != null)
         {
-            $partners = $partners->where('created_at','<',$request->end_day);
+            $partners = $partners->where('created_at','<',$request->date_to);
         }
         $partners = $partners->where('status_recycle',0)->orderBy('created_at', 'desc')->paginate(20);
         $partners->withPath("?keyword=$key&status=$status&start_day=$start&end_day=$end");

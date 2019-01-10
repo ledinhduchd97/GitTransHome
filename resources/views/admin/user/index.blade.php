@@ -46,16 +46,16 @@
                             <div class="col2 fleft">
                                 <select class="tk-position padding--base border--base" id="tk-position" name="position" >
                                   <option value="">--- Position ---</option>
-                                  <option value="2" {{ request()->position==2 ? "selected" : ""}}>Member</option>
-                                  <option value="1" {{ request()->position==1? "selected" : ""}}>Admin</option>
+                                  <option value="2" {{ request()->position=='2' ? "selected" : ""}}>Member</option>
+                                  <option value="1" {{ request()->position=='1'? "selected" : ""}}>Admin</option>
                                 </select>
                               </div>
                               <div class="col2 fleft">
                                 <select class="tk-status padding--base border--base" id="tk-status" name="status" >
                                   <option value="">--- Status ---</option>
-                                  <option value="0" {{ request()->status===0 ? "selected" : ""}}>Hidden</option>
-                                  <option value="1" {{ request()->status===1 ? "selected" : ""}}>Display</option>
-                                  <option value="2" {{ request()->status===2 ? "selected" : ""}}>Not activated</option>
+                                  <option value="0" {{ request()->status=='0' ? "selected" : ""}}>Hidden</option>
+                                  <option value="1" {{ request()->status=='1' ? "selected" : ""}}>Display</option>
+                                  <option value="2" {{ request()->status=='2' ? "selected" : ""}}>Not activated</option>
                                 </select>
                               </div>
                               <!-- <div class="col-25 fleft">

@@ -50,8 +50,8 @@
                             <div class="col2 fleft">
                                 <select class="tk-status padding--base border--base" id="tk-status" name="status">
                                     <option value="">--- Status ---</option>
-                                    <option value="0">Waiting</option>
-                                    <option value="1">Done</option>
+                                    <option {{ request()->status == '0' ? 'selected' : '' }} value="0">Waiting</option>
+                                    <option {{ request()->status == '1' ? 'selected' : '' }} value="1">Done</option>
                                 </select>
                             </div>
                             <div class="col-25 fleft">
@@ -150,7 +150,7 @@
                                 @endif
                             </td>
                             <td>
-                                @if(isset($task->customer->birthday))
+                                @if(isset($task->customer->type))
                                     <p class="type">{{ $task->customer->type }}</p>
                                 @else
                                     <p>-</p>

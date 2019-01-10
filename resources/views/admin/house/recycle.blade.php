@@ -83,8 +83,8 @@
                         <div class="col-25 fleft">
                             <select class="house-status padding--base border--base" id="house-status" name="status">
                                 <option value="">--- Status ---</option>
-                                <option value="1" {{ request()->status===1 ? "selected" : ""}}>Bought</option>
-                                <option value="0" {{ request()->status===0 ? "selected" : ""}}>New</option>
+                                <option value="1" {{ request()->status=='1' ? "selected" : ""}}>Bought</option>
+                                <option value="0" {{ request()->status=='0' ? "selected" : ""}}>New</option>
                             </select>
                         </div>
                         <div class="col-25 fleft">
