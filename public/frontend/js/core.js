@@ -13,6 +13,7 @@
 
 "use strict";
 jQuery(document).ready(function ($) {
+
   // Window on load
   $(window).on('load', function () {
 
@@ -142,30 +143,31 @@ jQuery(document).ready(function ($) {
     $('.small-item.active').removeClass('active');
     $(this).addClass('active');
   });
-  var get_price = $(".btn-get_price");
-  var modal_map = $(".modal_map");
+  // var get_price = $(".btn-get_price");
+  // var modal_map = $(".modal_map");
 
-  get_price.click(function (e) {
-    $('#form__infor').valid({
-      onsubmit: true });
+  // get_price.click(function (e) {
+  //   $('#form__infor').valid({
+  //     onsubmit: true });
 
-    // if ($('#form__infor').valid() == true) {// here you check if validation returned true or false 
-    //   modal_map.modal('hide');
-    //   get_price.attr('data-target', '.modal_thanks');
-    // }
-  });
+  //   if ($('#form__infor').valid() == true) {// here you check if validation returned true or false 
+  //     modal_map.modal('hide');
+  //     get_price.attr('data-target', '.modal_thanks');
+  //   }
+  // });
   // form infor partner
   var send_partner = $(".btn-send__patner");
   var infor_patner = $('#infor_patner');
-  send_partner.click(function (e) {
-    $('#form-infor_patner').valid({
-      onsubmit: true });
+  // send_partner.click(function (e) {
+  //   $('#form-infor_patner').valid({
+  //     onsubmit: true 
+  //   });
 
-    if ($('#form-infor_patner').valid() == true) {// here you check if validation returned true or false 
-      infor_patner.modal('hide');
-      send_partner.attr('data-target', '#modal-partner-thank');
-    }
-  });
+  //   if ($('#form-infor_patner').valid() == true) {// here you check if validation returned true or false 
+  //     infor_patner.modal('hide');
+  //     send_partner.attr('data-target', '#modal-partner-thank');
+  //   }
+  // });
   // modal_map.modal('hide')
 
   //btn-show-all
@@ -228,45 +230,45 @@ jQuery(document).ready(function ($) {
 
 
   // go it
-  $('#form__infor').validate({
+  // $('#form__infor').validate({
 
-    rules: {
-      first_name: {
-        required: true,
-        maxlength: 10,
-        minlength: 1
-        // regex: /G[a-b].*/i
-      },
-      email: {
-        required: true,
-        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      },
-      phone: {
-        required: true,
-        minlength: 10,
-        maxlength: 15,
-        regex: /^[0-9-+s()]*$/
-      } 
-    },
-    messages: {
-      first_name: {
-        required: 'First name must be filled out',
-        maxlength: jQuery.validator.format('First name must be not over 10 characters'),
-        minlength: jQuery.validator.format('First name must be at least 1 characters'),
-        regex: 'The first name must be in the correct format' 
-      },
-      email: {
-        required: 'Email must be filled out',
-        regex: 'The email must be in the correct format' },
+  //   rules: {
+  //     first_name: {
+  //       required: true,
+  //       maxlength: 10,
+  //       minlength: 1
+  //       // regex: /G[a-b].*/i
+  //     },
+  //     email: {
+  //       required: true,
+  //       regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //     },
+  //     phone: {
+  //       required: true,
+  //       minlength: 10,
+  //       maxlength: 15,
+  //       regex: /^[0-9-+s()]*$/
+  //     } 
+  //   },
+  //   messages: {
+  //     first_name: {
+  //       required: 'First name must be filled out',
+  //       maxlength: jQuery.validator.format('First name must be not over 10 characters'),
+  //       minlength: jQuery.validator.format('First name must be at least 1 characters'),
+  //       regex: 'The first name must be in the correct format' 
+  //     },
+  //     email: {
+  //       required: 'Email must be filled out',
+  //       regex: 'The email must be in the correct format' },
 
-      phone: {
-        required: 'The phone must be filled out',
-        minlength: jQuery.validator.format('The phone must be at least 10 characters'),
-        maxlength: jQuery.validator.format('The phone must be not over 15 characters'),
-        regex: 'The phone format is invalid'
-      } 
-    } 
-  });
+  //     phone: {
+  //       required: 'The phone must be filled out',
+  //       minlength: jQuery.validator.format('The phone must be at least 10 characters'),
+  //       maxlength: jQuery.validator.format('The phone must be not over 15 characters'),
+  //       regex: 'The phone format is invalid'
+  //     } 
+  //   } 
+  // });
 
 
 
@@ -293,47 +295,49 @@ jQuery(document).ready(function ($) {
       password: {
         required: "Password must be fill out",
         minlength: jQuery.validator.format('The password must be at least 6 characters'),
-        maxlength: jQuery.validator.format('The password must be not over 18 characters') } } });
-
-
-
-  $('#form-infor_patner').validate({
-    rules: {
-      patner_fullname: {
-        required: true,
-        maxlength: 50 },
-
-      patner_email: {
-        required: true,
-        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      },
-      patner_phone: {
-        required: true,
-        minlength:10,
-        maxlength: 15,
-        regex: /^[0-9-+s()]*$/ 
+        maxlength: jQuery.validator.format('The password must be not over 18 characters') } 
       } 
-    },
+    });
 
 
-    messages: {
-      patner_fullname: {
-        required: "Full name must be fill out",
-        maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
 
-      patner_email: {
-        required: "Email must be fill out",
-        regex: "The email must be in the correct format"
-      },
-      patner_phone: {
-        required: "The phone must be fill out",
-        number: "The phone must be the number",
-        minlength:jQuery.validator.format("The phone must be at least 10 characters"),
-        maxlength: jQuery.validator.format("The phone must be not over 15 characters"),
-        regex: 'The phone format is invalid'
-      } 
-    } 
-  });
+  // $('#form-infor_patner').validate({
+  //   rules: {
+  //     patner_fullname: {
+  //       required: true,
+  //       maxlength: 50 },
+
+  //     patner_email: {
+  //       required: true,
+  //       regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //     },
+  //     patner_phone: {
+  //       required: true,
+  //       minlength:10,
+  //       maxlength: 15,
+  //       regex: /^[0-9-+s()]*$/ 
+  //     } 
+  //   },
+
+
+  //   messages: {
+  //     patner_fullname: {
+  //       required: "Full name must be fill out",
+  //       maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
+
+  //     patner_email: {
+  //       required: "Email must be fill out",
+  //       regex: "The email must be in the correct format"
+  //     },
+  //     patner_phone: {
+  //       required: "The phone must be fill out",
+  //       number: "The phone must be the number",
+  //       minlength:jQuery.validator.format("The phone must be at least 10 characters"),
+  //       maxlength: jQuery.validator.format("The phone must be not over 15 characters"),
+  //       regex: 'The phone format is invalid'
+  //     } 
+  //   } 
+  // });
 
 
 

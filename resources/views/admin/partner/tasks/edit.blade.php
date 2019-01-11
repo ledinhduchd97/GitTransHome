@@ -75,7 +75,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Date :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" name="created_at" value="{{ $errors->has('created_at') ? old('created_at') : getDateFromDateTime($task->created_at) }}" required="required" readonly/>
+                                        <input class="border--base padding--base" type="date" name="created_at" value="{{ $errors->has('created_at') ? old('created_at') : $task->created_at_day($task->created_at) }}" required="required" readonly/>
                                         @if($errors->has('created_at'))
                                             <p class="text-danger">{{ $errors->first('created_at') }}</p>
                                         @endif
@@ -85,7 +85,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Deadline :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="date" name="deadline" value="{{ $errors->has('deadline') ? old('deadline') :getDateFromDateTime($task->deadline) }}" required="required"/>
+                                        <input class="border--base padding--base" type="date" name="deadline" value="{{ $errors->has('deadline') ? old('deadline') : $task->deadline_day($task->deadline) }}" required="required"/>
                                         @if($errors->has('deadline'))
                                             <p class="text-danger">{{ $errors->first('deadline') }}</p>
                                         @endif

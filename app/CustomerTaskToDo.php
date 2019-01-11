@@ -36,9 +36,17 @@ class CustomerTaskToDo extends Model
     }
     public function getDeadlineAttribute($value)
     {
-        return date("Y-m-d", strtotime($value));
+        return date("m-d-Y", strtotime($value));
     }
     public function getCreatedAtAttribute($value)
+    {
+        return date("m-d-Y", strtotime($value));
+    }
+    public function deadline_day($value)
+    {
+        return date("Y-m-d", strtotime($value));
+    }
+    public function created_at_day($value)
     {
         return date("Y-m-d", strtotime($value));
     }
