@@ -115,6 +115,7 @@
                                 <div class="form__infor--item"><i class="fas fa-envelope"></i>
                                   <input id="email" type="text" value="{{ request()->email }}" name="email" placeholder="Email *"/>
                                   <label id="error-email" class="error" for="email"></label>
+                                  <label id="check-email" style="font-size: 9px; color: red !important; position: absolute; z-index: 9; width: 100%; text-align: left; left: 0; bottom: -20px;" for="email"></label>
                                 </div>
                                 <div class="form__infor--item"><i class="fas fa-phone"></i>
                                   <input id="phone" type="tel" value="{{ request()-> phone}}" name="phone" placeholder="Phone"/>
@@ -142,9 +143,9 @@
                   </div>
                 </div>
               </div>
-              <div class="modal_thanks modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_thanks__title" aria-hidden="true">
+              <div class="modal_thanks modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_thanks__title" aria-hidden="true" id="model_thanks">
                 <div class="modal-dialog modal-lg">
-                  <div class="modal-content modal-thanks"><a class="close btn btn-base" aria-label="Close" href="{{ route('get.index') }}"><span aria-hidden="true">&times;</span></a>
+                  <div class="modal-content modal-thanks"><a id="close_thank" class="close btn btn-base" aria-label="Close" href="{{ route('get.index') }}"><span aria-hidden="true">&times;</span></a>
                     <div class="container">
                       <div class="modal-header">
                         <h3 id="modal_thanks__title">Thank You For Your Request!</h3>
@@ -168,32 +169,6 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
   </script>
 	<script type="text/javascript">
-  //   function initMap() {
-  //   var map = new google.maps.Map(document.getElementById('map'), {
-  //     zoom: 8,
-  //     center: {lat: -34.397, lng: 150.644}
-  //   });
-  //   var geocoder = new google.maps.Geocoder();
-  //   geocodeAddress(geocoder, map);
-  //   document.getElementById('btn-map').addEventListener('click', function() {
-  //     geocodeAddress(geocoder, map);
-  //   });
-  // }
-
-  // function geocodeAddress(geocoder, resultsMap) {
-  //   var address = document.getElementById('how_we__search').value;
-  //   geocoder.geocode({'address': address}, function(results, status) {
-  //     if (status === 'OK') {
-  //       resultsMap.setCenter(results[0].geometry.location);
-  //       var marker = new google.maps.Marker({
-  //         map: resultsMap,
-  //         position: results[0].geometry.location
-  //       });
-  //     } else {
-  //       alert('Geocode was not successful for the following reason: ' + status);
-  //     }
-  //   });
-  // }
 	$(document).ready(function($) {
 		setInterval(function(){
    		var address = $("#how_we__search").val();
@@ -226,19 +201,58 @@
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
       	});
+    var get_price = $(".btn-get_price");
+    var modal_map = $(".modal_map");
+    $('#form__infor').validate({
+    rules: {
+      first_name: {
+        required: true,
+        maxlength: 10,
+        minlength: 1
+        // regex: /G[a-b].*/i
+      },
+      email: {
+        required: true,
+        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      },
+      phone: {
+        required: true,
+        minlength: 10,
+        maxlength: 15,
+        regex: /^[0-9-+s()]*$/
+      } 
+    },
+    messages: {
+      first_name: {
+        required: 'First name must be filled out',
+        maxlength: jQuery.validator.format('First name must be not over 10 characters'),
+        minlength: jQuery.validator.format('First name must be at least 1 characters'),
+        regex: 'The first name must be in the correct format' 
+      },
+      email: {
+        required: 'Email must be filled out',
+        regex: 'The email must be in the correct format' 
+      },
+      phone: {
+        required: 'The phone must be filled out',
+        minlength: jQuery.validator.format('The phone must be at least 10 characters'),
+        maxlength: jQuery.validator.format('The phone must be not over 15 characters'),
+        regex: 'The phone format is invalid'
+      } 
+    } 
+  });
     $("#email").keyup(function(event) {
       var data = $(this).val();
-      console.log(data);
       $.ajax({
         url: '{{route('post.email.customers')}}',
         type: 'POST',
         dataType: 'JSON',
         data: {email: data},
         success: function (data){
-          $("#error-email").text('');
+          $("#check-email").text('');
         },
         error: function (error){
-          $("#error-email").text(error.responseJSON.message);
+          $("#check-email").text(error.responseJSON.message);
         },
       })
     });
@@ -253,26 +267,29 @@
         email : _email,
         phone : _phone 
       };
-      $(".message-error").html("");
-      axios.post("{{route('post.addcustomer')}}", data)
-      .then(res => {
-        $('.modal_thanks').modal('show'); 
-        $('.modal_map').modal('hide');
-      })
-      .catch(err => {
-        var errArr = err.response.data.message;
-        if("email" in errArr) {
-          $("#error-email").text(errArr["email"][0]);
+      $.ajax({
+        type:'POST',
+          url: '{{route('post.addcustomer')}}', 
+          dataType: 'json',
+          data:data,
+          success: function(data){
+          },
+        });
+        if ($('#form__infor').valid() == true) {// here you check if validation returned true or false
+          // if()
+          let name = $("#error-first_name").text();
+          let email = $("#error-email").text();
+          let phone = $("#error-phone").text();
+          let check = $("#check-email").text();
+          if(name == '' && email == '' && phone == '' && check=='')
+          {
+            modal_map.modal('hide');
+            get_price.attr('data-target', '.modal_thanks');
+          }
         }
-
-        if("phone" in errArr) {
-          $("#error-phone").text(errArr["phone"][0]);
-        }
-        if("first_name" in errArr) {
-          $("#error-first_name").text(errArr["first_name"][0]);
-        } 
       });
-    });
-        
+      $('#model_thanks').on('hidden.bs.modal', function () {
+        get_price.attr('data-target', '');
+      });
 	</script>
 @endsection

@@ -281,7 +281,7 @@
                                     <div class="modal-body">
                                       <form class="form-infor_patner" id="form-infor_patner" action="">
                                         <div class="form-infor_patner--item"><i class="fas fa-user"></i>
-                                          <input id="patner_fullname" type="text" name="patner_fullname" placeholder="Full name"/>
+                                          <input id="patner_fullname" type="text" name="patner_fullname" placeholder="Full name" required  />
                                         </div>
                                         <div class="form-infor_patner--item"><i class="fas fa-envelope"></i>
                                           <input id="patner_email" type="text" name="patner_email" placeholder="Email *"/>
@@ -309,7 +309,7 @@
                                 <div class="modal-content">
                                   <div class="partner_thank popup-thankyou"> 
                                     <div class="modal-header">
-                                      <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                                      <button type="button" id="close_thank" class="close" data-dismiss="modal" >&times;</button>
                                       <h3 id="thank_partner__title">Thank You For Your Request!</h3>
                                       <span>{!!$setup->thank_you!!}<span style="color: #ea723d">{{ $setup->phone }}</span></span>
                                     </div>
@@ -342,7 +342,45 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
              }
         });
+    var infor_patner = $('#infor_patner');
+    $('#form-infor_patner').validate({
+    rules: {
+      patner_fullname: {
+        required: true,
+        maxlength: 50 },
+
+      patner_email: {
+        required: true,
+        regex: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      },
+      patner_phone: {
+        required: true,
+        minlength:10,
+        maxlength: 15,
+        regex: /^[0-9-+s()]*$/ 
+      } 
+    },
+    messages: {
+      patner_fullname: {
+        required: "Full name must be fill out",
+        maxlength: jQuery.validator.format('The fullname must be not over 50 characters') },
+
+      patner_email: {
+        required: "Email must be fill out",
+        regex: "The email must be in the correct format"
+      },
+      patner_phone: {
+        required: "The phone must be fill out",
+        number: "The phone must be the number",
+        minlength:jQuery.validator.format("The phone must be at least 10 characters"),
+        maxlength: jQuery.validator.format("The phone must be not over 15 characters"),
+        regex: 'The phone format is invalid'
+        } 
+      } 
+    });
+
     $("#add-partner").click(function(event) {
+      var that = $(this);
       var _fullname = $("#patner_fullname").val();
       var _email = $("#patner_email").val();
       var _phone = $("#patner_phone").val();
@@ -352,10 +390,29 @@
                 dataType: 'json',
                 data:{ patner_fullname : _fullname, patner_email : _email , patner_phone : _phone },
                 success: function(data){
-                    console.log(data.responseJSON.message);
+                    // console.log(data.responseJSON.message);
                 },
               });
-        });
-        
+        if ($('#form-infor_patner').valid() == true) {// here you check if validation returned true or false
+          let fullname = $("#patner_fullname-error").text();
+          let email = $("#patner_email-error").text();
+          let phone = $("#patner_phone-error").text();
+          if(fullname == "" && email == "" && phone == "")
+          {
+            infor_patner.modal('hide');
+            that.attr('data-target', '#modal-partner-thank');  
+          }
+          else
+          {
+            that.attr('data-target', '');
+          }
+        }
+      });
+    $('#modal-partner-thank').on('hidden.bs.modal', function () {
+      $("#add-partner").attr('data-target', '');
+    })
+    $("#close_thank").click(function(event) {
+      $("#add-partner").attr('data-target', '');
+    });
   </script>
 @endsection

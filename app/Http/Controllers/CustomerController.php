@@ -66,7 +66,7 @@ class CustomerController extends Controller
     {
         $request->validate(
             [
-               'first_name' => 'required|max:65|regex:/^[a-zA-Z ]+$/',
+                'first_name' => 'required|max:65|regex:/^[a-zA-Z ]+$/',
                 'last_name' => 'required|max:65|regex:/^[a-zA-Z ]+$/',
                 'birthday' => 'required',
                 'email' => 'required|unique:customers',
