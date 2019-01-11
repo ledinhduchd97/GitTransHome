@@ -29,7 +29,7 @@
                                         <input type="hidden" value="{{Auth::id()}}" name="user_update">
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{ $errors->has('name') ? old('name') : $house->name }}" name="name" required />
+                                                   value="{{ $errors->has('name') ? old('name') : $house->name }}" name="name" required maxlength="100" />
                                             @if($errors->has('name'))
                                                 <p class="text-danger">{{ $errors->first('name') }}</p>
                                             @endif
@@ -51,7 +51,7 @@
                                         <div class="text"><span>Note :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$errors->has('note') ? old('note') : $house->note}}" name="note" required/>
+                                                   value="{{$errors->has('note') ? old('note') : $house->note}}" name="note" required maxlength="250"/>
                                             @if($errors->has('note'))
                                                 <p class="text-danger">{{ $errors->first('note') }}</p>
                                             @endif
@@ -73,7 +73,7 @@
                                         <div class="text"><span>Address :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$errors->has('address') ? old('address') : $house->address}}" name="address" required/>
+                                                   value="{{$errors->has('address') ? old('address') : $house->address}}" name="address" required  maxlength="250"/>
                                             @if($errors->has('address'))
                                                 <p class="text-danger">{{ $errors->first('address') }}</p>
                                             @endif
@@ -84,7 +84,7 @@
                                         <div class="text"><span>Area :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$errors->has('area') ? old('area') : $house->area}}" name="area" required/>
+                                                   value="{{$errors->has('area') ? old('area') : $house->area}}" name="area" required maxlength="190"/>
                                             @if($errors->has('area'))
                                                 <p class="text-danger">{{ $errors->first('area') }}</p>
                                             @endif
@@ -97,7 +97,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Number_bedroom :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text"
+                                            <input class="border--base padding--base" type="number"
                                                    value="{{$errors->has('number_bedroom') ? old('number_bedroom') : $house->number_bedroom}}" name="number_bedroom" required/>
                                             @if($errors->has('number_bedroom'))
                                                 <p class="text-danger">{{ $errors->first('number_bedroom') }}</p>
@@ -108,7 +108,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Number_bathroom :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text"
+                                            <input class="border--base padding--base" type="number"
                                                    value="{{$errors->has('number_bathroom') ? old('number_bathroom') : $house->number_bathroom}}" name="number_bathroom" required/>
                                             @if($errors->has('number_bathroom'))
                                                 <p class="text-danger">{{ $errors->first('number_bathroom') }}</p>
@@ -119,7 +119,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Living Area :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text"
+                                            <input class="border--base padding--base" type="number"
                                                    value="{{$errors->has('site_area') ? old('site_area') : $house->site_area}}" name="site_area" required/>
                                             @if($errors->has('site_area'))
                                                 <p class="text-danger">{{ $errors->first('site_area') }}</p>
@@ -130,7 +130,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Lot Size :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text"
+                                            <input class="border--base padding--base" type="number"
                                                    value="{{$errors->has('area_gross_floor') ? old('area_gross_floor') : $house->area_gross_floor}}" name="area_gross_floor" required/>
                                             @if($errors->has('area_gross_floor'))
                                                 <p class="text-danger">{{ $errors->first('area_gross_floor') }}</p>
@@ -141,12 +141,12 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>Price :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" id="price" type="text"
+                                            <input class="border--base padding--base" id="price" type="number"
                                                    value="{{$errors->has('price') ? old('price') : $house->price}}" name="price" required/><span class="unit-text">Unit :</span>
                                             <select class="border--base padding--base" id="unit" name="unit" required>
-                                                    <!-- <option value="0" {{$house->get_value_unit($house->unit) == 0?"selected":""}}>€</option> -->
+                                                    
                                                     <option value="1" {{$house->get_value_unit($house->unit) == 1?"selected":""}}>$</option>
-                                                    <!-- <option value="2" {{$house->get_value_unit($house->unit) == 2?"selected":""}}>£</option> -->
+                                                    
                                             </select>
                                             @if($errors->has('unit'))
                                                 <p class="text-danger">{{ $errors->first('unit') }}</p>
@@ -236,7 +236,7 @@
                                         <div class="text"><span>Description :</span></div>
                                         <div class="content">
                                             <textarea class="border--base padding--base" id="desc" name="description"
-                                                      cols="30" rows="10" value="">{{$errors->has('description') ? old('description') : $house->description}}</textarea>
+                                                      cols="30" rows="10" maxlength="250">{{$errors->has('description') ? old('description') : $house->description}}</textarea>
                                             @if($errors->has('description'))
                                                 <p class="text-danger">{{ $errors->first('description') }}</p>
                                             @endif
@@ -249,7 +249,7 @@
                                             <div class="text"><span>Brokerage Name :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$errors->has('brokerage') ? old('brokerage') : $house->brokerage}}" name="brokerage" required/>
+                                                       value="{{$errors->has('brokerage') ? old('brokerage') : $house->brokerage}}" name="brokerage" required maxlength="100"/>
                                                 @if($errors->has('brokerage'))
                                                     <p class="text-danger">{{ $errors->first('brokerage') }}</p>
                                                 @endif
@@ -260,7 +260,7 @@
                                             <div class="text"><span>Agent :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$errors->has('agent') ? old('agent') : $house->agent}}" name="agent" required/>
+                                                       value="{{$errors->has('agent') ? old('agent') : $house->agent}}" name="agent" required maxlength="100"/>
                                                 @if($errors->has('agent'))
                                                     <p class="text-danger">{{ $errors->first('agent') }}</p>
                                                 @endif
@@ -282,7 +282,7 @@
                                             <div class="text"><span>MLS Number :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$errors->has('mls') ? old('mls') : $house->mls}}" name="mls" required/>
+                                                       value="{{$errors->has('mls') ? old('mls') : $house->mls}}" name="mls" required maxlength="25"/>
                                                 @if($errors->has('mls'))
                                                     <p class="text-danger">{{ $errors->first('mls') }}</p>
                                                 @endif
@@ -293,7 +293,7 @@
                                             <div class="text"><span>Zipcode :</span></div>
                                             <div class="content">
                                                 <input class="border--base padding--base" type="text"
-                                                       value="{{$errors->has('zipcode') ? old('zipcode') : $house->zipcode}}" name="zipcode" required/>
+                                                       value="{{$errors->has('zipcode') ? old('zipcode') : $house->zipcode}}" name="zipcode" required maxlength="10"/>
                                                 @if($errors->has('zipcode'))
                                                     <p class="text-danger">{{ $errors->first('zipcode') }}</p>
                                                 @endif

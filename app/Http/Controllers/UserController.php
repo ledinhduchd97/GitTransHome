@@ -218,8 +218,8 @@ class UserController extends Controller
                 'username' => 'required|min:3|max:50|regex:/^[a-zA-Z0-9._]+$/',
                 'phone' => 'required|min:10|max:16|regex:/^[0-9 \(\)-]+$/',
                 'birthday' => 'required',
-                'address' => 'required',
-                'position' => 'required',
+                'address' => 'required|max:191',
+                'position' => 'required|numeric',
                 'status' => 'required|numeric'
             ],
             [

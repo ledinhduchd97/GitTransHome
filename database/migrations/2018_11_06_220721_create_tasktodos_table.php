@@ -15,7 +15,7 @@ class CreateTasktodosTable extends Migration
     {
         Schema::create('tasktodos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->text('title');
             // $table->string('customer_name');
             // $table->string('birthday')->nullable();
             // $table->string('client_type')->nullable();
@@ -25,7 +25,7 @@ class CreateTasktodosTable extends Migration
             $table->string('age')->nullable();
             // $table->string('update')->nullable();
             $table->dateTime('deadline');
-            $table->string('note');
+            $table->text('note');
             $table->tinyInteger('ranking'); //Độ quan trọng của công việc
             $table->tinyInteger('status'); //Trạng thái
             $table->string('assigned'); //tên nhà đầu tư
