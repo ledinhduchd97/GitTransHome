@@ -12,7 +12,7 @@
     <div class="customer_edit content-wrap content-wrap2" id="customer_edit">
         <div class="add-customer add-customer-wrap">
             <div class="add-customer__top">
-                <h2 class="add-customer__top--title">Edit Customer</h2>
+                <h2 class="add-customer__top--title">Edit Task to do</h2>
             </div>
 
             <div class="add-customer__main">
@@ -24,7 +24,7 @@
                                 {{ csrf_field() }}
                                 {{ method_field('PUT') }}
                                 <div class="add-customer--left__title">
-                                    <h3>Edit Task</h3>
+                                    <h3>Edit Task to do</h3>
                                 </div>
                                 <div class="message-adduser" style="text-align: center;">
                                     <p class="text-success">

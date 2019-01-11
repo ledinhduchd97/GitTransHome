@@ -168,13 +168,13 @@
                           @if($i == 0)
                           <tr>
                             <td>
-                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="51" />
+                              <input class="border--base padding--base" name="column_1[]" type="text" value="{{$table_infos[$i]->column_1}}" maxlength="50" />
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="51"/>
+                              <input class="border--base padding--base" name="column_2[]" type="text" value="{{$table_infos[$i]->column_2}}" maxlength="50"/>
                             </td>
                             <td>
-                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="51"/>
+                              <input class="border--base padding--base" name="column_3[]" type="text" value="{{$table_infos[$i]->column_3}}" maxlength="50"/>
                             </td>
                             <td>
                               <!-- <i class="fas fa-trash-alt"></i> -->

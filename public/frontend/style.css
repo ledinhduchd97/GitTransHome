@@ -459,7 +459,7 @@ label.error {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  display: inline-block;
+  display: block;
   white-space: nowrap;
   max-width: 20ch;
 }
@@ -1579,7 +1579,7 @@ ul.link li a {
   margin: 25px 0 31px;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -2666,6 +2666,11 @@ ul.link li a {
   .logo{
     height: 80px;
   }
+  /* 11/01 */
+  .banner-item__wrap3{
+    margin-top: 20px; 
+  }
+  /* 11/01 */
 }
 @media only screen and (width: 1199px){
   /* .home, .detail, .free-cash{
@@ -2679,7 +2684,13 @@ ul.link li a {
   } */
 }
 @media screen and (max-width: 1199px) {
-  .home, .detail, .free-cash{
+  .home{
+    padding-top: 115px;
+  }
+  .detail{
+    padding-top: 115px;
+  }
+  .free-cash{
     padding-top: 115px;
   }
   /* 10/01st */
@@ -2742,6 +2753,16 @@ ul.link li a {
     margin-left: 50px;
     margin-right: 50px;
   }
+  /* 11/01 */
+  .information__house h4{
+    line-height: 139px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-content{
+    max-width: 960px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -2785,7 +2806,15 @@ ul.link li a {
     padding-right: 100px;
   }
   /* 10/01 */
-  .partner__wrap [class*="col-"], .about-us [class*="col-"]{
+  .partner__wrap [class*="col-"] {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .about-us [class*="col-"]{
     max-width: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;
@@ -2913,7 +2942,7 @@ ul.link li a {
   .partner__subtitle {
     font-size: 18px;
     margin: 15px 0;
-    -o-text-overflow: ellipsis;
+    /* -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -2921,7 +2950,7 @@ ul.link li a {
     overflow: hidden;
     display: inline-block;
     white-space: nowrap;
-    max-width: 35ch;
+    max-width: 35ch; */
   }
   .partner .partner__menu li {
     margin-top: 15px;
@@ -2977,18 +3006,20 @@ ul.link li a {
   }
   .information__house h4 {
     display: inline-table;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0px;
     right: 0;
-    bottom: 0;
-    margin: auto;
+    bottom: 0; */
+    margin: 0;
     padding: 0;
     font-size: 20px;
-    width: 100%;
+    vertical-align: middle;
+    line-height: 139px;
+    /* width: 100%; */
   }
   .information__house--price {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 100%;
     text-align: center;
@@ -3029,15 +3060,26 @@ ul.link li a {
 }
 
 @media only screen and (max-width: 767px) {
-  .home, .detail, .free-cash{
+  .home{
     padding-top: 70px;
   }
+/* 11/01 */
+  .detail{
+    padding-top: 70px;
+  }
+
+  .free-cash{
+    padding-top: 70px;
+  }
+  /* 11/01 */
   .about-us__img {
     margin-left: 0;
   }
+
   .banner-item__wrap3 {
     padding: 0 20px;
   }
+  
   .about-us [class*="col-"] {
     max-width: 100%;
     -webkit-box-flex: 0;
@@ -3344,6 +3386,11 @@ ul.link li a {
     width: auto !important;
     height: auto !important;
   }
+  /* 11/01 */
+  .information__house--price h4{
+    line-height: 129px;
+  }
+  /* 11/01 */
 }
 
 @media only screen and (max-width: 520px) {
@@ -3450,7 +3497,7 @@ ul.link li a {
   }
   /* 09/01 */
   .other_house--item__content2{
-    width: 80%;
+    width: 78%;
     height: 120px;
   }
 }
@@ -3758,6 +3805,7 @@ ul.link li a {
   .free-cash__sell p.how_we__table-desc {
     width: 100%;
     line-height: 22px;
+    font-size: 14px;
   }
   .how_we--item h4 {
     font-size: 16px;
@@ -4017,9 +4065,20 @@ ul.link li a {
 }
 
 @media screen and (max-width: 991px){
-  .home, .detail, .free-cash{
+  .home{
     padding-top: 70px;
   }
+  /* 11/01 */
+  .detail{
+    padding-top: 70px;
+  }
+  .free-cash{
+    padding-top: 70px;
+  }
+  .banner-item__wrap3{
+    margin-top: 85px;
+  }
+  /* 11/01 */
   .sell__content .btn-getsell {
     margin-top: 10px;
   }
@@ -4166,4 +4225,14 @@ ul.link li a {
 .map_free iframe{
   width: 100%;
   height: 100%;
+}
+/* 11/01 */
+@media screen and (max-width:360px){
+  #modal-partner-thank .modal-content{
+    padding: 45px 15px;
+  }
+
+  .infor-patner .close{
+    top: -42px;
+  }
 }

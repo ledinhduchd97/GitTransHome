@@ -38,7 +38,7 @@
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="edit-tk__content--row">
                 <div class="text"> <span>
-                     Full name (<span class="required">*</span>):</span></div>
+                     Full name :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" required id="fullname" type="text" value="{{old('fullname')}}" name="fullname" required maxlength="30" pattern="^[A-Za-z -+()]*$"/>
                     <div class="error-fullname">
@@ -53,7 +53,7 @@
                 <div class="clear-fix"></div>
                 <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Email (<span class="required">*</span>):</span></div>
+                     Email :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" id="email" type="email" required value="{{old('email')}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required maxlength="50"/>
                   <div class="error-email">
@@ -68,7 +68,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Username (<span class="required">*</span>):</span></div>
+                     Username :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" id="username" required type="text" value="{{old('username')}}" name="username" required minlength="3" maxlength="50"/>
                   <div class="error-username">
@@ -83,7 +83,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                      Password (<span class="required">*</span>):</span></div>
+                      Password :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" id="password" type="password"  required name="password" minlength="6" maxlength="18"/>
                   <div class="error-password">
@@ -98,7 +98,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Confirm password(<span class="required">*</span>):</span></div>
+                     Confirm password :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" id="confirm" required  type="password" name="confirm" minlength="6" maxlength="18"/>
                   <div class="error-confirm">
@@ -113,7 +113,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Gender (<span class="required">*</span>):</span></div>
+                     Gender :</span></div>
                 <div class="content">
                   <input class="sex-male" id="sex-male" required type="radio" name="sex" value="1" {{ old('sex') == '1' ? 'checked' : '' }} />
                   <label for="sex-male">Male</label>
@@ -131,7 +131,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Phone (<span class="required">*</span>):</span></div>
+                     Phone :</span></div>
                 <div class="content">
                   <input class="border--base padding--base" id="phone" required type="text" value="{{old('phone')}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$"/>
                   <div class="error-phone">
@@ -146,7 +146,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Date of birth (<span class="required">*</span>):</span></div>
+                     Date of birth :</span></div>
                 <div class="content date--wrap myDate"><i class="far fa-calendar-alt"></i>
                   <input class="myDatePicker border--base padding--base dateofbirth" required id="birthday" type="text" value="{{old('birthday')}}" name="birthday" autocomplete="off" required />
                   <div class="error-birthday">
@@ -161,7 +161,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Address (<span class="required">*</span>):</span></div>
+                     Address :</span></div>
                 <div class="content">
                   <input class="account-address border--base padding--base" value="{{old('address')}}" required id="address" type="text" name="address" required maxlength="190" />
                   <div class="error-address">
@@ -176,7 +176,7 @@
               </div>
               <div class="edit-tk__content--row">
                 <div class="text"><span>
-                     Position (<span class="required">*</span>):</span></div>
+                     Position :</span></div>
                 <div class="content">
                   <select class="account-position border--base padding--base" id="position" required name="position">
                     <option value="">--- Position ---</option>

@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title','Task to do')
+@section('title','Tasks to do')
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css"
