@@ -146,7 +146,7 @@
                             <td>
                                 @if(isset($task->customer->first_name))
                                     <!-- <p>{{ $task->customer->first_name }}</p> -->
-                                    <input type="text" class="inputonly" readonly value="{{$task->first_name}}">
+                                    <input type="text" class="inputonly" readonly value="{{$task->customer->first_name}}">
                                 @else
                                     <p>-</p>
                                 @endif
@@ -154,7 +154,7 @@
                             <td>
                                 @if(isset($task->customer->last_name))
                                     <!-- <p class="name">{{ $task->customer->last_name }}</p> -->
-                                    <input type="text" class="inputonly" readonly value="{{$task->last_name}}">
+                                    <input type="text" class="inputonly" readonly value="{{$task->customer->last_name}}">
                                 @else
                                     <p>-</p>
                                 @endif
@@ -162,15 +162,15 @@
                             <td>
                                 @if(isset($task->customer->birthday))
                                     <!-- <p>{{ $task->customer->birthday }}</p> -->
-                                    <input type="text" class="inputonly" readonly value="{{$task->birthday}}">
+                                    <input type="text" class="inputonly" readonly value="{{$task->customer->birthday}}">
                                 @else
                                     <p>-</p>
                                 @endif
                             </td>
                             <td>
-                                @if(isset($task->customer->birthday))
+                                @if(isset($task->customer->type))
                                     <!-- <p class="type">{{ $task->customer->type }}</p> -->
-                                    <input type="text" class="inputonly" readonly value="{{$task->type}}">
+                                    <input type="text" class="inputonly" readonly value="{{$task->customer->type}}">
                                 @else
                                     <p>-</p>
                                 @endif

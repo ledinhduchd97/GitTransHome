@@ -118,7 +118,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Note :</span></div>
                 <div class="content">
-                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description" required maxlength="250" >{!!$errors->has('note') ? old('note') : ($tasktodo->note) !!}</textarea>
+                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description" maxlength="250" >{!!$errors->has('note') ? old('note') : ($tasktodo->note) !!}</textarea>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('note')}}</p>

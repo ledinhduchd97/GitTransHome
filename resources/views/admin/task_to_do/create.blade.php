@@ -66,7 +66,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>To do type :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="text" value="{{old('to_do_type')}}" name="to_do_type" required pattern="^[A-Za-z0-9 ]*$" maxlength="250" />
+                  <input class="border--base padding--base" type="text" value="{{old('to_do_type')}}" name="to_do_type"  pattern="^[A-Za-z0-9 ]*$" maxlength="250" />
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('to_do_type')}}</p>
