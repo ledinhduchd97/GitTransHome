@@ -38,4 +38,20 @@ class PartnerTaskToDos extends Model
             case 0: return "Waiting";
         }
     }
+    public function getDeadlineAttribute($value)
+    {
+        return date("m-d-Y", strtotime($value));
+    }
+    public function getCreatedAtAttribute($value)
+    {
+        return date("m-d-Y", strtotime($value));
+    }
+    public function deadline_day($value)
+    {
+        return date("Y-m-d", strtotime($value));
+    }
+    public function created_at_day($value)
+    {
+        return date("Y-m-d", strtotime($value));
+    }
 }
