@@ -119,7 +119,7 @@
                                     <div class="text"><span>Number_bedroom :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="number" value="{{old('number_bedroom')}}"
-                                               name="number_bedroom" required/>
+                                               name="number_bedroom" required min="0"/>
                                         <div class="error-number_bedroom">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -134,7 +134,7 @@
                                     <div class="text"><span>Number_bathroom :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="number" value="{{old('number_bathroom')}}"
-                                               name="number_bathroom" required/>
+                                               name="number_bathroom" required min="0"/>
                                         <div class="error-number_bathroom">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -149,7 +149,7 @@
                                     <div class="text"><span>Living Area :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="number" value="{{old('site_area')}}"
-                                               name="site_area" required />
+                                               name="site_area" required min="0" />
                                         <div class="error-site_area">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -164,7 +164,7 @@
                                     <div class="text"><span>Lot Size :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" type="number" value="{{old('area_gross_floor')}}"
-                                               name="area_gross_floor" required/>
+                                               name="area_gross_floor" required min="0"/>
                                         <div class="error-area_gross_floor">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -179,7 +179,7 @@
                                     <div class="text"><span>Price :</span></div>
                                     <div class="content">
                                         <input class="border--base padding--base" id="price" type="number" title="price is a number"  required value="{{old('price')}}"
-                                               name="price"/><span class="unit-text">Unit :</span>
+                                               name="price" min="0"/><span class="unit-text">Unit :</span>
                                         <select class="border--base padding--base" id="unit" name="unit">
                                             <!-- <option value="0">€</option> -->
                                             <option value="1">$</option>
