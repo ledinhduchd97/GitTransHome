@@ -15,7 +15,7 @@ class CreatePartnerNotesTable extends Migration
     {
         Schema::create('partner_notes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('content');
+            $table->text('content');
             $table->integer('partner_id')->unsigned()->index()->nullable();
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->timestamps();

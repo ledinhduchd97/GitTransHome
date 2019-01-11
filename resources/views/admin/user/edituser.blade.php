@@ -40,7 +40,7 @@
                 <div class="text"> <span>
                      Full name (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="fullname" type="text" value="{{ $errors->has('fullname') ? old('fullname') ? $user->fullname }}" name="fullname"/>
+                  <input class="border--base padding--base" id="fullname" type="text" value="{{ $errors->has('fullname') ? old('fullname') : $user->fullname }}" name="fullname" required maxlength="30" pattern="^[A-Za-z -+()]*$" />
                     <div class="error-fullname">
                       @if(sizeof($errors) != 0)
                         @if($errors)
@@ -55,7 +55,7 @@
                 <div class="text"><span>
                      Email (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="email" type="text" value="{{$errors->has('email') ? old('email') ? $user->email}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" $errors->has('fullname') ? old('fullname') ? $user->fullname/>
+                  <input class="border--base padding--base" id="email" type="text" value="{{$errors->has('email') ? old('email') : $user->email}}" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required maxlength="50" />
                   <div class="error-email">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -70,7 +70,7 @@
                 <div class="text"><span>
                      Username (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="username" type="text" value="{{$errors->has('username') ? old('username') ? $user->email}}" name="username"/>
+                  <input class="border--base padding--base" id="username" type="text" value="{{$errors->has('username') ? old('username') : $user->username}}" name="username" required minlength="3" maxlength="50" />
                   <div class="error-username">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -85,7 +85,7 @@
                 <div class="text"><span>
                       Password (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="password" type="text" name="password" value="" />
+                  <input class="border--base padding--base" id="password" type="text" name="password" value="" minlength="6" maxlength="18" />
                   <div class="error-password">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -100,7 +100,7 @@
                 <div class="text"><span>
                      Confirm password(<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="confirm" type="text" name="confirm"/>
+                  <input class="border--base padding--base" id="confirm" type="text" name="confirm" minlength="6" maxlength="18"/>
                   <div class="error-confirm">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -120,7 +120,7 @@
                 </div>
                 @else
                 <div class="content">
-                  <label for="sex-male">Male</label>
+                  <label for="sex-male">Female</label>
                 </div>
                 @endif
                 <div class="clear-fix"></div>
@@ -129,7 +129,7 @@
                 <div class="text"><span>
                      Phone (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="phone" type="text" value="{{$errors->has('phone') ? old('phone') ? $user->phone}}" name="phone"/>
+                  <input class="border--base padding--base" id="phone" type="text" value="{{$errors->has('phone') ? old('phone') : $user->phone}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$" required />
                   <div class="error-phone">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -144,7 +144,7 @@
                 <div class="text"><span>
                      Date of birth (<span class="required">*</span>):</span></div>
                 <div class="content date--wrap myDate"><i class="far fa-calendar-alt"></i>
-                  <input class="myDatePicker border--base padding--base" id="birthday" type="text" value="{{$errors->has('birthday') ? old('birthday') ? $user->birthday}}" name="birthday"/>
+                  <input class="myDatePicker border--base padding--base" id="birthday" type="text" value="{{$errors->has('birthday') ? old('birthday') : $user->birthday}}" name="birthday" required />
                   <div class="error-birthday">
                     @if(sizeof($errors) != 0)
                       @if($errors)
@@ -159,7 +159,7 @@
                 <div class="text"><span>
                      Address (<span class="required">*</span>):</span></div>
                 <div class="content">
-                  <input class="account-address border--base padding--base" id="address" type="text" name="address" value="{{$errors->has('address') ? old('address') ? $user->address}}" />
+                  <input class="account-address border--base padding--base" id="address" type="text" name="address" value="{{$errors->has('address') ? old('address') : $user->address}}" required maxlength="190" />
                   <div class="error-address">
                     @if(sizeof($errors) != 0)
                       @if($errors)

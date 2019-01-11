@@ -19,7 +19,7 @@ class CreateHousesTable extends Migration
             // $table->string('code'); //
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('address'); //
+            $table->text('address'); //
             $table->integer('number_bedroom'); // 
             $table->integer('number_bathroom'); //
             $table->double('area_gross_floor',8,2); //diện tích sử dụng được

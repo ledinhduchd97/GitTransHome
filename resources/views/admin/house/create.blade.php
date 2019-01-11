@@ -31,7 +31,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>House name :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text"  name="name" required value="{{old('name')}}" />
+                                        <input class="border--base padding--base" type="text"  name="name" required value="{{old('name')}}" required maxlength="100" />
                                         <div class="error-name">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -59,7 +59,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Note :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" name="note" value="{{old('note')}}" required/>
+                                        <input class="border--base padding--base" type="text" name="note" value="{{old('note')}}" maxlength="250" />
                                         <div class="error-note">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -87,7 +87,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Address :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('address')}}" name="address" required/>
+                                        <input class="border--base padding--base" type="text" value="{{old('address')}}" name="address" required maxlength="250" />
                                         <div class="error-address">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -101,7 +101,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Area :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('area')}}" name="area" required/>
+                                        <input class="border--base padding--base" type="text" value="{{old('area')}}" name="area" required maxlength="190" />
                                         <div class="error-area">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -118,7 +118,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Number_bedroom :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('number_bedroom')}}"
+                                        <input class="border--base padding--base" type="number" value="{{old('number_bedroom')}}"
                                                name="number_bedroom" required/>
                                         <div class="error-number_bedroom">
                                             @if(sizeof($errors) != 0)
@@ -133,7 +133,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Number_bathroom :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('number_bathroom')}}"
+                                        <input class="border--base padding--base" type="number" value="{{old('number_bathroom')}}"
                                                name="number_bathroom" required/>
                                         <div class="error-number_bathroom">
                                             @if(sizeof($errors) != 0)
@@ -148,8 +148,8 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Living Area :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('site_area')}}"
-                                               name="site_area" required/>
+                                        <input class="border--base padding--base" type="number" value="{{old('site_area')}}"
+                                               name="site_area" required />
                                         <div class="error-site_area">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)
@@ -163,7 +163,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Lot Size :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('area_gross_floor')}}"
+                                        <input class="border--base padding--base" type="number" value="{{old('area_gross_floor')}}"
                                                name="area_gross_floor" required/>
                                         <div class="error-area_gross_floor">
                                             @if(sizeof($errors) != 0)
@@ -178,7 +178,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Price :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" id="price" type="text" title="price is a number" pattern="^[0-9]+$" required value="{{old('price')}}"
+                                        <input class="border--base padding--base" id="price" type="number" title="price is a number"  required value="{{old('price')}}"
                                                name="price"/><span class="unit-text">Unit :</span>
                                         <select class="border--base padding--base" id="unit" name="unit">
                                             <!-- <option value="0">€</option> -->
@@ -270,7 +270,7 @@
                                     <div class="text"><span>Description :</span></div>
                                     <div class="content">
                                         <textarea class="border--base padding--base" id="desc" name="description"
-                                                  cols="30" rows="10" value="">{!!old('description')!!}</textarea>
+                                                  cols="30" rows="10" maxlength="250">{!!old('description')!!}</textarea>
                                         <div class="error-description">
                                         @if(sizeof($errors) != 0)
                                           @if($errors)
@@ -287,7 +287,7 @@
                                         <div class="text"><span>Brokerage Name :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value="{{old('brokerage')}}"
-                                                   name="brokerage" required/>
+                                                   name="brokerage" required maxlength="100" />
                                             <div class="error-brokerage">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -302,7 +302,7 @@
                                         <div class="text"><span>Agent :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value="{{old('agent')}}"
-                                                   name="agent" required/>
+                                                   name="agent" required maxlength="100" />
                                             <div class="error-agent">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -331,7 +331,7 @@
                                     <div class="edit-house--left__item">
                                         <div class="text"><span>MLS Number :</span></div>
                                         <div class="content">
-                                            <input class="border--base padding--base" type="text" value="{{old('mls')}}" name="mls" required/>
+                                            <input class="border--base padding--base" type="text" value="{{old('mls')}}" name="mls" required maxlength="25" />
                                             <div class="error-mls">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)
@@ -346,7 +346,7 @@
                                         <div class="text"><span>Zipcode :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text" value="{{old('zipcode')}}"
-                                                   name="zipcode" required pattern="^[0-9]+$" title="zipcode is a number" required/>
+                                                   name="zipcode" required pattern="^[0-9]+$" title="zipcode is a number" required maxlength="10" />
                                             <div class="error-zipcode">
                                                 @if(sizeof($errors) != 0)
                                                   @if($errors)

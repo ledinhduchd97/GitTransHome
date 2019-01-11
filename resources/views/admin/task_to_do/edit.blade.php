@@ -30,7 +30,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Title task :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="text" name="title" value="{{$errors->has('title') ? old('title') : ($tasktodo->title) }}"/>
+                  <input class="border--base padding--base" type="text" name="title" value="{{$errors->has('title') ? old('title') : ($tasktodo->title) }}" required maxlength="250" pattern="^[A-Za-z0-9 ]*$"/>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('title')}}</p>
@@ -42,12 +42,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
-                 <!--  <input type="" list="name" name="name" class="padding--base border--base">
-                  <datalist id="name">
-                    <option value="acbc"></option>
-                    <option value="acbc"></option>
-                  </datalist> -->
-                  <select class="padding--base border--base" id="customer_id" name="customer_id">
+                  <select class="padding--base border--base" id="customer_id" name="customer_id" required>
                     @if(isset($customers))
                       @if(old('customer_id'))
                         @foreach($customers as $customer)
@@ -72,29 +67,10 @@
                 </div>
                 <div class="clear-fix"></div>
               </div>
-              <!-- <div class="tasktodo-edit--item">
-                <div class="text"><span>Age :</span></div>
-                <div class="content">
-                  {{$tasktodo->age}}
-                </div>
-                <div class="clear-fix"></div>
-              </div> -->
-              <!-- <div class="tasktodo-edit--item">
-                <div class="text"><span>Update :</span></div>
-                <div class="content">
-                  <input class="border--base padding--base" value="{{$tasktodo->update}}" name="update"/>
-                  @if(sizeof($errors) != 0)
-                    @if($errors)
-                      <p style="color:red; font-size: 10px;">{{$errors->first('update')}}</p>
-                    @endif
-                  @endif
-                </div>
-                <div class="clear-fix"></div>
-              </div> -->
               <div class="tasktodo-edit--item">
                 <div class="text"><span>To do type :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="text" value="{{$errors->has('to_do_type') ? old('to_do_type') : ($tasktodo->to_do_type) }}" name="to_do_type"/>
+                  <input class="border--base padding--base" type="text" value="{{$errors->has('to_do_type') ? old('to_do_type') : ($tasktodo->to_do_type) }}" name="to_do_type" required pattern="^[A-Za-z0-9 ]*$" maxlength="250"/>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('to_do_type')}}</p>
@@ -106,7 +82,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Start task on :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="datetime-local" value="{{$errors->has('start_task') ? old('start_task') : ($tasktodo->start_task) }}" name="start_task"/>
+                  <input class="border--base padding--base" type="datetime-local" value="{{$errors->has('start_task') ? old('start_task') : ($tasktodo->start_task) }}" name="start_task" required/>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('start_task')}}</p>
@@ -130,7 +106,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Time :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="datetime-local" value="{{$errors->has('deadline') ? old('deadline') : ($tasktodo->deadline) }}" name="deadline"/>
+                  <input class="border--base padding--base" type="datetime-local" value="{{$errors->has('deadline') ? old('deadline') : ($tasktodo->deadline) }}" name="deadline" required/>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('deadline')}}</p>
@@ -142,7 +118,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Note :</span></div>
                 <div class="content">
-                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description" >{!!$errors->has('note') ? old('note') : ($tasktodo->note) !!}</textarea>
+                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description" required maxlength="250" >{!!$errors->has('note') ? old('note') : ($tasktodo->note) !!}</textarea>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('note')}}</p>
@@ -154,7 +130,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Ranking :</span></div>
                 <div class="content">
-                  <select class="padding--base border--base" id="tasktodo-edit--rank" name="ranking">
+                  <select class="padding--base border--base" id="tasktodo-edit--rank" name="ranking" required>
                     @if(old('ranking'))
                       <option value="0" {{ old('ranking') == 0?"selected":""}}>Low</option>
                       <option value="1" {{ old('ranking') == 1?"selected":""}}>High</option>
@@ -176,7 +152,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Status :</span></div>
                 <div class="content">
-                  <select class="padding--base border--base" id="tasktodo-edit--status" name="status">
+                  <select class="padding--base border--base" id="tasktodo-edit--status" name="status" required>
                     @if(old('status'))
                       <option value="0" {{ old('status') == 0?"selected":""}}>Waiting</option>
                       <option value="1" {{ old('status') == 1?"selected":""}}>Done</option>
@@ -196,7 +172,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Assigned to  :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" type="text" value="Tranhomes" name="assigned" value="{{$errors->has('assigned') ? old('assigned') : ($tasktodo->assigned) }}" />
+                  <input class="border--base padding--base" type="text" value="Tranhomes" name="assigned" value="{{$errors->has('assigned') ? old('assigned') : ($tasktodo->assigned) }}" required maxlength="190" />
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('assigned')}}</p>
