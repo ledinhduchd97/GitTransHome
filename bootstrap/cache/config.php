@@ -173,7 +173,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework/cache/data',
+        'path' => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -278,12 +278,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\app',
+        'root' => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\app/public',
+        'root' => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -316,7 +316,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\resources\\views/vendor/mail',
+        0 => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -396,7 +396,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework/sessions',
+    'files' => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -416,9 +416,9 @@
   array (
     'paths' => 
     array (
-      0 => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\resources\\views',
+      0 => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\resources\\views',
     ),
-    'compiled' => 'E:\\Web\\3F-Trainning\\TranhomeGit\\GitTransHome\\storage\\framework\\views',
+    'compiled' => 'E:\\Web\\3FGroup\\TranhomeGit\\GitTransHome\\storage\\framework\\views',
   ),
   'image' => 
   array (

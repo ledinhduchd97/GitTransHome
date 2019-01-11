@@ -272,7 +272,6 @@
                               <div class="col-8">
                                 <div class="modal-content">
                                   <div class="infor_patner__form text-center">
-                                    
                                     <div class="modal-header">
                                       <button type="button" class="close" data-dismiss="modal" >&times;</button>
                                       <h1 id="infor_patner__title">Partner Of Tranhomes</h1>

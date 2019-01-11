@@ -34,7 +34,7 @@
                                 <p class="text">Short description</p>
                                 <input class="content padding--base border--base" type="text"
                                        value="{{ $errors->has('short_description') ? old('short_description') : $aboutus->short_description }}" name="short_description"
-                                       placeholder="Short description" required="required" minlength="150"/>
+                                       placeholder="Short description" required="required" maxlength="150"/>
                                 @if($errors->has('short_description'))
                                     <p class="text-danger">{{ $errors->first('short_description') }}</p>
                                 @endif
