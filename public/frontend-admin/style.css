@@ -2322,3 +2322,7 @@ input[type="file"]{
   text-align: center;
   pointer-events: none;
 }
+/* 12/01 */
+.customer_edit .add-customer--left{
+  margin: 15px auto;
+}
