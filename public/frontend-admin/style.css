@@ -2334,3 +2334,6 @@ input[type="file"]{
 .add-customer--left__item{
   padding-left: 20px;
 }
+.content-wrap2{
+  min-height: calc(100vh - 74px);
+}
