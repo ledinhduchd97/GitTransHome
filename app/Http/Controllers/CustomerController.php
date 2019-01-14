@@ -148,13 +148,12 @@ class CustomerController extends Controller
                             ->orWhereBetween('deadline', array($from, $to));
         }
         
-        if (!empty($request->status)) {
+        if (isset($request->status)) {
             if($request->status == 0 || $request->status == 1) 
             {
                 $tasks = $tasks->where('customer_id', $id)->where('status', $request->status);
             }   
         }
-        // dd($tasks->get());
         $tasks = $tasks->paginate(10);
         $recycle = Customer::onlyTrashed()->count();
         $view = Customer::all()->count();

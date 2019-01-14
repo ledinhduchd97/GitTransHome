@@ -45,7 +45,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Age :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="number" name="age" value="{{ $errors->has('age') ? old('age') : $task->age }}" required="required" patter="^[0-9]*$"/>
+                                        <input class="border--base padding--base" type="number" name="age" value="{{ $errors->has('age') ? old('age') : $task->age }}" required="required" patter="^[0-9]*$" min="0" />
                                         @if($errors->has('age'))
                                             <p class="text-danger">{{ $errors->first('age') }}</p>
                                         @endif
@@ -55,7 +55,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Update :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="number" value="{{ $errors->has('update') ? old('update') : $task->update }}" name="update" required="required" patter="^[0-9]*$"/>
+                                        <input class="border--base padding--base" type="number" value="{{ $errors->has('update') ? old('update') : $task->update }}" name="update" required="required" patter="^[0-9]*$" min="0"/>
                                         @if($errors->has('update'))
                                             <p class="text-danger">{{ $errors->first('update') }}</p>
                                         @endif
@@ -113,7 +113,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Invest :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="number" name="invest" value="{{ $errors->has('invest') ? old('invest') : $task->invest }}" required="required"/>
+                                        <input class="border--base padding--base" type="number" name="invest" value="{{ $errors->has('invest') ? old('invest') : $task->invest }}" required="required" min="0"/>
                                         @if($errors->has('invest'))
                                             <p class="text-danger">{{ $errors->first('invest') }}</p>
                                         @endif
@@ -142,7 +142,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Contract :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="number" name="contract" value="{{ $errors->has('contract') ? old('contract') : $task->contract }}" required="required"/>
+                                        <input class="border--base padding--base" type="number" name="contract" value="{{ $errors->has('contract') ? old('contract') : $task->contract }}" required="required" min="0"/>
                                         @if($errors->has('contract'))
                                             <p class="text-danger">{{ $errors->first('contract') }}</p>
                                         @endif

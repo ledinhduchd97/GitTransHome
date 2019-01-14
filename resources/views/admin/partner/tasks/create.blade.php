@@ -60,7 +60,7 @@
                         <div class="text"><span>
                      Age (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="age" type="number" value="{{old('age')}}" name="age" pattern="^[0-9]*$"/>
+                            <input class="border--base padding--base" id="age" type="number" value="{{old('age')}}" name="age" pattern="^[0-9]*$" min="0"/>
                             <div class="error-email">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -75,7 +75,7 @@
                         <div class="text"><span>
                      Update (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="update" type="number" placeholder="" value="{{old('update')}}" name="update" pattern="^[0-9]*$"/>
+                            <input class="border--base padding--base" id="update" type="number" placeholder="" value="{{old('update')}}" name="update" pattern="^[0-9]*$" min="0"/>
                             <div class="error-username">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -155,7 +155,7 @@
                         <div class="text"><span>
                     Invest (<span class="required">*</span>):</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="invest" type="number" value="{{old('invest')}}" name="invest"/>
+                            <input class="border--base padding--base" id="invest" type="number" value="{{old('invest')}}" name="invest" min="0"/>
                             <div class="error-invest">
                                 @if(sizeof($errors) != 0)
                                     @if($errors)
@@ -190,7 +190,7 @@
                      Contract (<span class="required">*</span>):</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="contract" type="number" value="{{old('contract')}}"
-                                   name="contract"/>
+                                   name="contract" min="0"/>
                             
                             <div class="error-sex">
                                 @if(sizeof($errors) != 0)
