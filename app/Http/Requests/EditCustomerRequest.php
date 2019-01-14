@@ -27,7 +27,7 @@ class EditCustomerRequest extends FormRequest
             'first_name' => 'required|max:65|regex:/^[a-zA-Z ]+$/',
             'last_name' => 'required|max:65|regex:/^[a-zA-Z ]+$/',
             'birthday' => 'required',
-            'email' => 'required|regex:/^[\w.+\-]+@gmail\.com$/',
+            'email' => 'required',
             'phone' => 'required|min:10|max:15|regex:/^[0-9 \(\)-]+$/',
             'address' => 'required|max:255',
             'type' => 'max:255'
