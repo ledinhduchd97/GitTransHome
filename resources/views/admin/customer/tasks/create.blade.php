@@ -41,7 +41,7 @@
                     <input type="hidden" name="customer_id" value="{{ request()->customer_id }}">
                     <div class="edit-tk__content--row">
                         <div class="text"> <span>
-                     Title task (<span class="required">*</span>):</span></div>
+                     Title task :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="title" type="text" value="{{old('title')}}" name="title" required />
                             <div class="error-fullname">
@@ -88,7 +88,7 @@
                     </div> -->
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Type (<span class="required">*</span>):</span></div>
+                     Type :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="type" type="text" value="{{old('type')}}" name="type" required/>
                             <div class="error-username">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Date (<span class="required">*</span>):</span></div>
+                     Date :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="created_at" type="date" value="{{old('created_at')}}"
                                    name="created_at" required/>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Deadline (<span class="required">*</span>):</span></div>
+                     Deadline :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" name="deadline" value="{{old('deadline')}}" id="date" type="date" required/>
                             <div class="error-sex">
@@ -134,7 +134,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Ranking (<span class="required">*</span>):</span></div>
+                     Ranking :</span></div>
                         <div class="content">
                             <select class="account-position border--base padding--base" id="ranking" name="ranking" required>
                                 <option value="">--- Ranking ---</option>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Note (<span class="required">*</span>):</span></div>
+                     Note :</span></div>
                         <div class="content">
                             <textarea class="border--base padding--base" id="note" type="text" name="note" style="width: 100%;">{{old('note')}}</textarea>
                             <div class="error-username">
@@ -168,7 +168,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Status (<span class="required">*</span>):</span></div>
+                     Status :</span></div>
                         <div class="content">
                             <select class="account-position border--base padding--base" id="status" name="status" required>
                                 <option value="">--- Status ---</option>

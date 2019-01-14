@@ -2322,3 +2322,18 @@ input[type="file"]{
   text-align: center;
   pointer-events: none;
 }
+/* 12/01 */
+.customer_edit .add-customer--left{
+  margin: 15px auto;
+}
+/* 14/01 */
+.edit-tk__content--row{
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.add-customer--left__item{
+  padding-left: 20px;
+}
+.content-wrap2{
+  min-height: calc(100vh - 74px);
+}

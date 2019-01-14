@@ -41,7 +41,7 @@
                     <input type="hidden" name="partner_id" value="{{ request()->partner_id }}">
                     <div class="edit-tk__content--row">
                         <div class="text"> <span>
-                     Title task (<span class="required">*</span>):</span></div>
+                     Title task :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="title" type="text" value="{{old('title')}}" name="title"/>
                             <div class="error-fullname">
@@ -58,7 +58,7 @@
 
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Age (<span class="required">*</span>):</span></div>
+                     Age :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="age" type="number" value="{{old('age')}}" name="age" pattern="^[0-9]*$" min="0"/>
                             <div class="error-email">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Update (<span class="required">*</span>):</span></div>
+                     Update :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="update" type="number" placeholder="" value="{{old('update')}}" name="update" pattern="^[0-9]*$" min="0"/>
                             <div class="error-username">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     To do type (<span class="required">*</span>):</span></div>
+                     To do type :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="type" type="text" value="{{old('type')}}" name="type"/>
                             <div class="error-username">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Date (<span class="required">*</span>):</span></div>
+                     Date :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="created_at" type="date" value="{{old('created_at')}}"
                                    name="created_at"/>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Deadline (<span class="required">*</span>):</span></div>
+                     Deadline :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" name="deadline" id="deadline" type="date" value="{{old('deadline')}}">
                             <div class="error-username">
@@ -134,7 +134,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Ranking (<span class="required">*</span>):</span></div>
+                     Ranking :</span></div>
                         <div class="content">
                             <select class="account-position border--base padding--base" id="ranking" name="ranking">
                                 <option value="">--- Ranking ---</option>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                    Invest (<span class="required">*</span>):</span></div>
+                    Invest :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="invest" type="number" value="{{old('invest')}}" name="invest" min="0"/>
                             <div class="error-invest">
@@ -168,7 +168,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                    Status (<span class="required">*</span>):</span></div>
+                    Status :</span></div>
                         <div class="content">
                         <select class="account-position border--base padding--base" id="status" name="status">
                                 <option value="">--Status--</option>
@@ -187,7 +187,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Contract (<span class="required">*</span>):</span></div>
+                     Contract :</span></div>
                         <div class="content">
                             <input class="border--base padding--base" id="contract" type="number" value="{{old('contract')}}"
                                    name="contract" min="0"/>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="edit-tk__content--row">
                         <div class="text"><span>
-                     Note (<span class="required">*</span>):</span></div>
+                     Note :</span></div>
                         <div class="content">
                             <textarea class="border--base padding--base" id="note" type="text" value="" name="note" style="width: 100%; height: 150px;">{!!old('note')!!}</textarea>
                             <div class="error-sex">
