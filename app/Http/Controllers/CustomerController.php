@@ -39,8 +39,14 @@ class CustomerController extends Controller
         if($request->date_from && $request->date_to) {
             $from = date("Y-m-d", strtotime($request->date_from));
             $to = date("Y-m-d", strtotime($request->date_to));
-            $customers = $customers->whereBetween('created_at', array($from, $to));
-        }
+            $customers = $customers->whereDate('created_at', ">=" , $from)->whereDate('created_at', "<=" , $to);
+        }else if($request->date_from){
+            $from = date("Y-m-d", strtotime($request->date_from));
+            $customers = $customers->whereDate('created_at', ">=" ,$from);
+        }else if($request->date_to){
+            $to = date("Y-m-d", strtotime($request->date_to));
+            $customers = $customers->whereDate('created_at', "<=" ,$to);
+         }
 
         $customers = $customers->paginate(10);
         return view('admin.customer.index', compact('customers', 'recycle', 'view'));

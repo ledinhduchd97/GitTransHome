@@ -60,8 +60,15 @@ class Tasktodo extends Model
         });
     }
 
-    public function scopeWithStartAndDeadline($query, $from, $to) {
-        return Tasktodo::onlyTrashed()->where(function($query) use ($from, $to) {
+    public function scopeWithStartAndDeadline($query, $from, $to,$flag = true) {
+        if($flag)
+        {
+            return Tasktodo::onlyTrashed()->where(function($query) use ($from, $to) {
+                $query->whereBetween('start_task', array($from, $to));
+                $query->orWhereBetween('deadline', array($from, $to));
+            });
+        }
+        return Tasktodo::where(function($query) use ($from, $to) {
             $query->whereBetween('start_task', array($from, $to));
             $query->orWhereBetween('deadline', array($from, $to));
         });

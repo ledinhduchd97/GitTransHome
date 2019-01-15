@@ -21,8 +21,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // URL::forceScheme('https');
         Schema::defaultStringLength(191);
-        $notification = Tasktodo::where('status',0)->count();
-        $tasks = Tasktodo::where('status',0)->get();
+        $notification = Tasktodo::all()->count();
+        $tasks = Tasktodo::all();
         $notification_cus = CustomerTaskToDo::where('status',1)->count();
         $notification_par = PartnerTaskToDos::where('status',0)->count();
         $tasks_cus = CustomerTaskToDo::where('status',1)->get();

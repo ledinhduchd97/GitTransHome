@@ -53,11 +53,11 @@ class HouseController extends Controller
         }
         if ($start_day != NULL) 
         {
-            $houses = $houses->where('created_at','>', $start_day);
+            $houses = $houses->where('created_at','>=', $start_day);
         }
         if ($end_day != NULL) 
         {
-            $houses = $houses->where('created_at','<', $end_day);
+            $houses = $houses->where('created_at','<=', $end_day);
         }
         $houses = $houses->where('active_status',1)->orderBy('created_at', 'desc')->paginate(10);
         $houses->withPath("?name=$name&site_area=$site_area&area_gross_floor=$area_gross_floor&price=$price&status=$status&start_day=$start_day&end_day=$end_day");
@@ -98,11 +98,11 @@ class HouseController extends Controller
         }
         if ($start_day != NULL) 
         {
-            $houses = $houses->where('created_at','>', $start_day);
+            $houses = $houses->where('created_at','>=', $start_day);
         }
         if ($end_day != NULL) 
         {
-            $houses = $houses->where('created_at','<', $end_day);
+            $houses = $houses->where('created_at','<=', $end_day);
         }
         $houses = $houses->where('active_status',0)->orderBy('created_at', 'desc')->paginate(10);
         $houses->withPath("?name=$name&site_area=$site_area&area_gross_floor=$area_gross_floor&price=$price&status=$status&start_day=$start_day&end_day=$end_day");

@@ -30,7 +30,7 @@
                             <form id="house_infor" action="#">
                                 <div class="add-customer--left__title">
                                     <ul class="list-inline">
-                                        <li class="customer_detail__tablinks active" onclick="messageSearch(event,'detail')">Customer details</li>
+                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'detail')">Customer details</li>
                                         <li class="customer_detail__tablinks" onclick="messageSearch(event,'note')">Note</li>
                                         <li class="customer_detail__tablinks" onclick="messageSearch(event,'task')">Task to do</li>
                                     </ul>
@@ -161,7 +161,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="disable customer_detail__content" id="task" style="display: none;">
+                                    <div class="disable customer_detail__content" id="task" style="display: none">
                                         <div class="task_todo__top">
                                             <div class="tk-top tk-top-wrap">
                                                 <div class="tk-top__top">

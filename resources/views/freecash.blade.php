@@ -219,7 +219,7 @@
         required: true,
         minlength: 10,
         maxlength: 15,
-        regex: /^[0-9-+s()]*$/
+        regex: /^[0-9-+s() ]*$/
       } 
     },
     messages: {

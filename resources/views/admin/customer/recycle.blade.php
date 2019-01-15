@@ -149,7 +149,7 @@
                             </td>
                             <td>
                                 <!-- <p class="date">{{$customer->created_at}}</p> -->
-                                <input type="text" value="{{$customer->creaeted_at}}" readonly class="inputonly">
+                                <input type="text" value="{{$customer->created_at}}" readonly class="inputonly">
                             </td>
                             <td>
                                 <!-- <p class="type1">{{ $customer->type }}</p> -->

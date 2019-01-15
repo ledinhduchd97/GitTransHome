@@ -43,11 +43,11 @@ class PartnerController extends Controller
         }
         if($request->date_from != null)
         {
-            $partners = $partners->where('created_at','>',$request->date_from);
+            $partners = $partners->where('created_at','>=',$request->date_from);
         }
         if($request->date_to != null)
         {
-            $partners = $partners->where('created_at','<',$request->date_to);
+            $partners = $partners->where('created_at','<=',$request->date_to);
         }
 
         $partners = $partners->where('status_recycle',1)->orderBy('created_at', 'desc')->paginate(20);
@@ -74,11 +74,11 @@ class PartnerController extends Controller
         }
         if($request->date_from != null)
         {
-            $partners = $partners->where('created_at','>',$request->date_from);
+            $partners = $partners->where('created_at','>=',$request->date_from);
         }
         if($request->date_to != null)
         {
-            $partners = $partners->where('created_at','<',$request->date_to);
+            $partners = $partners->where('created_at','<=',$request->date_to);
         }
         $partners = $partners->where('status_recycle',0)->orderBy('created_at', 'desc')->paginate(20);
         $partners->withPath("?keyword=$key&status=$status&start_day=$start&end_day=$end");

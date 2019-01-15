@@ -16,6 +16,7 @@ class TasktodoController extends Controller
     {
         // dd(gettype($request->status));
         $tasks = Tasktodo::latest();
+        // dd($tasks->get());
         $recycle = Tasktodo::onlyTrashed()->count();
         $view = Tasktodo::all()->count();
         $key = $request->keyword;
@@ -35,9 +36,15 @@ class TasktodoController extends Controller
         if($date_from && $date_to) {
             $from = date("Y-m-d", strtotime($date_from));
             $to = date("Y-m-d", strtotime($date_to));
-            $tasks = $tasks->withStartAndDeadline($from, $to);
-        }
-        $tasks = $tasks->orderBy('start_task','asc')->paginate(10);
+            $tasks = $tasks->withStartAndDeadline($from, $to,false);
+        }else if($request->date_from){
+            $from = date("Y-m-d", strtotime($date_from));
+            $tasks = $tasks->whereDate('start_task', ">=" ,$from);
+        }else if($request->date_to){
+            $to = date("Y-m-d", strtotime($date_to));
+            $tasks = $tasks->whereDate('deadline', "<=" ,$to);
+         }
+        $tasks = $tasks->orderBy('start_task','desc')->paginate(10);
         
         $tasks->withPath("?keyword=$key&status=$sta&date_from=$date_from&date_to=$date_to");
         return view('admin.task_to_do.index', compact('tasks', 'recycle', 'view'));
