@@ -133,7 +133,7 @@
                 <div class="text"><span>
                      Phone :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="phone" required type="text" value="{{old('phone')}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$"/>
+                  <input class="border--base padding--base" id="phone" required type="text" value="{{old('phone')}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+() ]*$"/>
                   <div class="error-phone">
                     @if(sizeof($errors) != 0)
                       @if($errors)

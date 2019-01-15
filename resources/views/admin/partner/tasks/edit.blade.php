@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title','Edit')
+@section('title','Edit Task To Do')
 @section('css')
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
@@ -12,11 +12,11 @@
     <div class="customer_edit content-wrap content-wrap2" id="customer_edit">
         <div class="add-customer add-customer-wrap">
             <div class="add-customer__top">
-                <h2 class="add-customer__top--title">Edit Task</h2>
+                <h2 class="add-customer__top--title">Edit Task To Do</h2>
             </div>
 
             <div class="add-customer__main">
-                <div class="add-customer--left fleft">
+                <div class="add-customer--left">
                     <div class="add-customer--padding">
                         <div class="add-customer--left__content">
 
@@ -24,7 +24,7 @@
                                 {{ csrf_field() }}
                                 {{ method_field('PUT') }}
                                 <div class="add-customer--left__title">
-                                    <h3>Edit Task</h3>
+                                    <h3>Edit Task to do</h3>
                                 </div>
                                 <div class="message-adduser" style="text-align: center;">
                                     <p class="text-success">
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="edit-tk__content--row">
                                     <div class="text"><span>
-                                 Note (<span class="required">*</span>):</span></div>
+                                 Note :</span></div>
                                     <div class="content">
                                         <textarea class="border--base padding--base" id="note" type="text"  name="note" style="width: 100%; height: 150px;">{!! $errors->has('note') ? old('note') : $task->note !!}</textarea>
                                         <div class="error-sex">

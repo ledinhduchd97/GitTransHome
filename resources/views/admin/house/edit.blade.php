@@ -62,7 +62,7 @@
                                         <div class="text"><span>Phone :</span></div>
                                         <div class="content">
                                             <input class="border--base padding--base" type="text"
-                                                   value="{{$errors->has('phone') ? old('phone') : $house->phone}}" name="phone" required minlength="10" maxlength="15" pattern="^[0-9-+()]*$"/>
+                                                   value="{{$errors->has('phone') ? old('phone') : $house->phone}}" name="phone" required minlength="10" maxlength="15" pattern="^[0-9-+() ]*$"/>
                                             @if($errors->has('phone'))
                                                 <p class="text-danger">{{ $errors->first('phone') }}</p>
                                             @endif

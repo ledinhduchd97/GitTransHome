@@ -2337,3 +2337,6 @@ input[type="file"]{
 .content-wrap2{
   min-height: calc(100vh - 74px);
 }
+.view-detail__content--row .btn-delete{
+  cursor: pointer;
+}
