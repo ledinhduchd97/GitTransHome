@@ -129,7 +129,7 @@
                 <div class="text"><span>
                      Phone :</span></div>
                 <div class="content">
-                  <input class="border--base padding--base" id="phone" type="text" value="{{$errors->has('phone') ? old('phone') : $user->phone}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$" required />
+                  <input class="border--base padding--base" id="phone" type="text" value="{{$errors->has('phone') ? old('phone') : $user->phone}}" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+() ]*$" required />
                   <div class="error-phone">
                     @if(sizeof($errors) != 0)
                       @if($errors)

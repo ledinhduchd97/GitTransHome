@@ -113,7 +113,7 @@
                 <div class="form-group form--base set-up-form--item">
                     <label for="phone" class="control-label col-sm-2 text">Phone number</label>
                     <div class="col-sm-10 content">
-                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('phone') ? old('phone') : $setup->phone }}" id="phone" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+()]*$">
+                        <input type="text" class="form-control border--base padding--base" value="{{ $errors->first('phone') ? old('phone') : $setup->phone }}" id="phone" name="phone" minlength="10" maxlength="15" pattern="^[0-9-+() ]*$">
                         @if ($errors)
                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                         @endif

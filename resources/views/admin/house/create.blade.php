@@ -73,7 +73,7 @@
                                 <div class="edit-house--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="text" value="{{old('phone')}}" minlength="10" maxlength="15" pattern="^[0-9-+()]*$" name="phone" required/>
+                                        <input class="border--base padding--base" type="text" value="{{old('phone')}}" minlength="10" maxlength="15" pattern="^[0-9-+() ]*$" name="phone" required/>
                                         <div class="error-phone">
                                             @if(sizeof($errors) != 0)
                                               @if($errors)

@@ -67,7 +67,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Phone :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="phone" name="phone" required="required" value="{{old('phone')}}" minlength="10" maxlength="15" pattern="^[0-9-+()]*$"/>
+                                        <input class="border--base padding--base" type="phone" name="phone" required="required" value="{{old('phone')}}" minlength="10" maxlength="15" pattern="^[0-9-+() ]*$"/>
                                         @if($errors->has('phone'))
                                             <p class="text-danger">{{ $errors->first('phone') }}</p>
                                         @endif
