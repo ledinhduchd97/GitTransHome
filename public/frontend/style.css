@@ -2561,7 +2561,14 @@ ul.link li a {
     min-height: 500px;
   }
   .banner-item .banner-item__img > img {
-    /* min-height: 500px; */
+    min-height: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (width: 1920px){
+  .banner-item .banner-item__img > img {
+    min-height: 500px;
     height: 500px;
   }
 }
