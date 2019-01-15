@@ -2561,7 +2561,14 @@ ul.link li a {
     min-height: 500px;
   }
   .banner-item .banner-item__img > img {
-    /* min-height: 500px; */
+    min-height: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (width: 1920px){
+  .banner-item .banner-item__img > img {
+    min-height: 500px;
     height: 500px;
   }
 }
@@ -3834,12 +3841,15 @@ ul.link li a {
   }
   /* 15/01 */
   .infor-patner .close {
-    top: -62px;
+    top: -33px;
   }
   .sell__content .btn-getsell {
     width: 55%;
   }
   /* 15/01 */
+  #modal-partner-thank .modal-content .modal-header .close{
+    top:  -62px;
+  }
 
 }
 
@@ -4285,8 +4295,8 @@ ul.link li a {
   #modal-partner-thank .modal-content{
     padding: 45px 15px;
   }
-
-  .infor-patner .close{
-    top: -42px;
+  #modal-partner-thank .modal-content .modal-header .close{
+    top: -47px;
+    right: -15px;
   }
 }
