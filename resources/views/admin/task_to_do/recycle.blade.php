@@ -49,9 +49,10 @@
                             </div>
                             <div class="col2 fleft">
                                 <select class="tk-status padding--base border--base" id="tk-status" name="status">
-                                    <option value="">--- Status ---</option>
-                                    <option {{ request()->status == '0' ? 'selected' : '' }} value="0">Waiting</option>
-                                    <option {{ request()->status == '1' ? 'selected' : '' }} value="1">Done</option>
+                                    <option value="">--- To do Type ---</option>
+                                    <option {{ request()->status == '0' ? 'selected' : '' }} value="0">Appointment</option>
+                                    <option {{ request()->status == '1' ? 'selected' : '' }} value="1">Phone Call</option>
+                                    <option {{ request()->status == '2' ? 'selected' : '' }} value="2">Finding House</option>
                                 </select>
                             </div>
                             <div class="col-25 fleft">
@@ -101,7 +102,7 @@
                     <th>To do Type</th>
                     <th>Start task</th>
                     <th>Time</th>
-                    <th>Status</th>
+                    <th>To do Type</th>
                     <th>Options</th>
                 </tr>
                 @if(isset($tasks))

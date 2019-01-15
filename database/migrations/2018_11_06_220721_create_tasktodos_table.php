@@ -27,7 +27,7 @@ class CreateTasktodosTable extends Migration
             $table->dateTime('deadline');
             $table->text('note');
             $table->tinyInteger('ranking'); //Độ quan trọng của công việc
-            $table->tinyInteger('status'); //Trạng thái
+            $table->tinyInteger('status'); //Status -> To do type 2
             $table->string('assigned'); //tên nhà đầu tư
             $table->integer('customer_id')->unsigned()->index()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');

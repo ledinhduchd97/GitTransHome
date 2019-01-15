@@ -97,7 +97,7 @@
                         <div class="clear-fix"></div>
                     </div>
                     <div class="view-detail__content--row">
-                        <div class="text"><span>Status :</span></div>
+                        <div class="text"><span>To do Type :</span></div>
                         <div class="content"><span class="acc-address">{{$task->status}}</span></div>
                         <div class="clear-fix"></div>
                     </div>

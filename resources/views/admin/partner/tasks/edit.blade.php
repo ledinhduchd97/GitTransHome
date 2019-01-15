@@ -142,7 +142,7 @@
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Contract :</span></div>
                                     <div class="content">
-                                        <input class="border--base padding--base" type="number" name="contract" value="{{ $errors->has('contract') ? old('contract') : $task->contract }}" required="required" min="0"/>
+                                        <input class="border--base padding--base" type="text" name="contract" value="{{ $errors->has('contract') ? old('contract') : $task->contract }}" required="required" maxlength="191" />
                                         @if($errors->has('contract'))
                                             <p class="text-danger">{{ $errors->first('contract') }}</p>
                                         @endif

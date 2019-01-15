@@ -150,15 +150,17 @@
                 <div class="clear-fix"></div>
               </div>
               <div class="tasktodo-edit--item">
-                <div class="text"><span>Status :</span></div>
+                <div class="text"><span>To do Type :</span></div>
                 <div class="content">
                   <select class="padding--base border--base" id="tasktodo-edit--status" name="status" required>
                     @if(old('status'))
-                      <option value="0" {{ old('status') == 0?"selected":""}}>Waiting</option>
-                      <option value="1" {{ old('status') == 1?"selected":""}}>Done</option>
+                      <option value="0" {{ old('status') == 0?"selected":""}}>Appointment</option>
+                      <option value="1" {{ old('status') == 1?"selected":""}}>Phone Call</option>
+                      <option value="2" {{ old('status') == 2?"selected":""}}>Finding House</option>
                     @else
-                      <option value="0" {{$tasktodo->getValueStatus($tasktodo->status) == 0?"selected":""}}>Waiting</option>
-                      <option value="1" {{$tasktodo->getValueStatus($tasktodo->status) == 1?"selected":""}}>Done</option>
+                      <option value="0" {{$tasktodo->getValueStatus($tasktodo->status) == 0?"selected":""}}>Appointment</option>
+                      <option value="1" {{$tasktodo->getValueStatus($tasktodo->status) == 1?"selected":""}}>Phone Call</option>
+                      <option value="2" {{$tasktodo->getValueStatus($tasktodo->status) == 2?"selected":""}}>Finding House</option>
                     @endif
                   </select>
                   @if(sizeof($errors) != 0)

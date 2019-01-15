@@ -25,7 +25,7 @@ class TasktodoTableSeeder extends Seeder
                 'deadline' => (new Carbon())->addDays(mt_rand(11,31)),
                 'note' => 'Khách hàng khó tính',
                 'ranking' => 0,
-                'status' => 0,
+                'status' => 0, //Status -> To do type 2
                 'assigned' => 'Tranhomes',
                 'age' => '0',
                 // 'update' => '0',

@@ -114,7 +114,7 @@
               <div class="tasktodo-edit--item">
                 <div class="text"><span>Note :</span></div>
                 <div class="content">
-                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description" required maxlength="250">{{old('note')}}</textarea>
+                  <textarea id="editor" class="content padding--base border--base" name="note" cols="30" rows="6" placeholder="Short description"  maxlength="250">{{old('note')}}</textarea>
                   @if(sizeof($errors) != 0)
                     @if($errors)
                       <p style="color:red; font-size: 10px;">{{$errors->first('note')}}</p>
@@ -140,11 +140,12 @@
                 <div class="clear-fix"></div>
               </div>
               <div class="tasktodo-edit--item">
-                <div class="text"><span>Status :</span></div>
+                <div class="text"><span>To do Type :</span></div>
                 <div class="content">
                   <select class="padding--base border--base" id="tasktodo-add--status" name="status" required>
-                    <option {{ old('status')=='1' ? "selected" : ""}} value="1">Done</option>
-                    <option {{ old('status')=='0' ? "selected" : ""}} value="0">Waiting</option>
+                    <option {{ old('status')=='1' ? "selected" : ""}} value="1">Phone Call</option>
+                    <option {{ old('status')=='0' ? "selected" : ""}} value="0">Appointment</option>
+                    <option {{ old('status')=='2' ? "selected" : ""}} value="2">Finding House</option>
                   </select>
                   @if(sizeof($errors) != 0)
                     @if($errors)

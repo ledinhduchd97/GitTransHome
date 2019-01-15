@@ -189,8 +189,8 @@
                         <div class="text"><span>
                      Contract :</span></div>
                         <div class="content">
-                            <input class="border--base padding--base" id="contract" type="number" value="{{old('contract')}}"
-                                   name="contract" min="0"/>
+                            <input class="border--base padding--base" id="contract" type="text" value="{{old('contract')}}"
+                                   name="contract" maxlength="191" />
                             
                             <div class="error-sex">
                                 @if(sizeof($errors) != 0)

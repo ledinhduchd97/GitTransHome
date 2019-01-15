@@ -47,7 +47,7 @@ class PartnerTaskToDosController extends Controller
             'type' => 'required',
             'update' => 'required|numeric',
             'ranking' => 'required',
-            'contract' => 'numeric',
+            'contract' => 'max:191',
         ];
         $request->validate($rules);
         $this->task->create($request->all());

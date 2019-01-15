@@ -23,7 +23,7 @@ class CreatePartnerTaskToDosTable extends Migration
             $table->dateTime("deadline")->nullable();
             $table->integer("status")->nullable();
             $table->double("invest")->nullable();
-            $table->double("contract")->nullable();
+            $table->string("contract")->nullable();
             $table->integer("ranking")->nullable();
             $table->text("note");
             $table->timestamps();

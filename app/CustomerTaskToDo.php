@@ -34,6 +34,7 @@ class CustomerTaskToDo extends Model
             case 1: return "Waiting";
         }
     }
+    // 
     public function getDeadlineAttribute($value)
     {
         return date("m-d-Y", strtotime($value));
@@ -42,6 +43,7 @@ class CustomerTaskToDo extends Model
     {
         return date("m-d-Y", strtotime($value));
     }
+    // 
     public function deadline_day($value)
     {
         return date("Y-m-d", strtotime($value));
@@ -49,5 +51,10 @@ class CustomerTaskToDo extends Model
     public function created_at_day($value)
     {
         return date("Y-m-d", strtotime($value));
+    }
+    // 
+    public function unFormat($value)
+    {
+        return date("Y-m-d H:i:s", strtotime($value));
     }
 }

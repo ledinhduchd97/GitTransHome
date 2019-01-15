@@ -73,15 +73,17 @@ class Tasktodo extends Model
 
     public function getStatusAttribute($value) {
         switch($value) {
-            case 1: return 'Done';
-            case 0: return 'Waiting';
+            case 1: return 'Phone Call';
+            case 0: return 'Appointment';
+            case 2: return 'Finding House';
         }
     }
     public function getValueStatus($value)
     {
         switch($value) {
-            case 'Done': return 1;
-            case 'Waiting': return 0;
+            case 'Phone Call': return 1;
+            case 'Appointment': return 0;
+            case 'Finding House': return 2;
         }
     }
 
