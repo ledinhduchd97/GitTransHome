@@ -48,10 +48,12 @@ class PartnerTaskToDos extends Model
     }
     public function deadline_day($value)
     {
-        return date("Y-m-d", strtotime($value));
+        $date = date_create_from_format('m-d-Y', $value)->format("Y-m-d");
+        return $date;
     }
     public function created_at_day($value)
     {
-        return date("Y-m-d", strtotime($value));
+         $date = date_create_from_format('m-d-Y', $value)->format("Y-m-d");
+        return $date;
     }
 }

@@ -216,7 +216,7 @@ class TasktodoController extends Controller
         $date_from = $request->date_from;
         $date_to = $request->date_to;
         if($request->keyword) {
-            $tasks = $tasks->withTitleOrName($request->keyword);
+            $tasks = $tasks->withTitleOrName($request->keyword,true);
         }
 
         if(isset($request->status)) {

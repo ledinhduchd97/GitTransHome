@@ -52,6 +52,22 @@ class Customer extends Model
             });
         });
     }
+    public function scopeWithFullNameTrash($query, $name)
+    {
+        // Split each Name by Spaces
+        $names = explode(" ", $name);
+
+        return Customer::onlyTrashed()->where(function($query) use ($names) {
+            foreach($names as $name) {
+                $query->orWhere('first_name', 'like', '%' . $name . '%');
+            }
+            $query->orWhere(function($query) use ($names) {
+                foreach($names as $name) {
+                    $query->orWhere('last_name', 'like', '%' . $name . '%');
+                }
+            });
+        });
+    }
     public function customer_note()
     {
         return $this->hasMany("App\CustomerNote","customer_id");

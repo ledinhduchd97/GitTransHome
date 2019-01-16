@@ -215,7 +215,7 @@ class CustomerController extends Controller
         $recycle = Customer::onlyTrashed()->count();
         $view = Customer::all()->count();
         if($request->keyword) {
-            $customers = $customers->withFullName($request->keyword);
+            $customers = $customers->withFullNameTrash($request->keyword);
         }
 
         if($request->date_from && $request->date_to) {

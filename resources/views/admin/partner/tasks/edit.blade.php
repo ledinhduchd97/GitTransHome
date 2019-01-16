@@ -122,8 +122,7 @@
                                 </div>
                                 <div class="add-customer--left__item">
                                     <div class="text"><span>Status :</span></div>
-                                    <div class="content">
-                                        
+                                    <div class="content">                                
                                         <select class="border--base padding--base" name="status" id="status">
                                             @if(old('status'))
                                                 <option value="1" {{ old('status')=="1" ? "selected": ""}}>Done</option>
