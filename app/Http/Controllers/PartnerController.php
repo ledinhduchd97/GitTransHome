@@ -9,6 +9,7 @@ use Validator;
 use Response;
 use Auth;
 use App\PartnerNote;
+use App\PartnerTaskToDos;
 
 class PartnerController extends Controller
 {
@@ -36,7 +37,6 @@ class PartnerController extends Controller
         {
             $partners = $partners->where('fullname','like', '%'.$request->keyword.'%');
         }
-        // dd($partners);
         if($request->status != null)
         {
             $partners = $partners->where('status','like', '%'.$request->status.'%');
@@ -168,19 +168,30 @@ class PartnerController extends Controller
         $id = $partner;
         $partner = Partner::findOrFail($partner);
         $tasks = $partner->partner_task_to_dos();
+        $count = count(PartnerTaskToDos::where('partner_id',$id)->get());
+        $partners = $request->customer_search;
+        $date_from = $request->date_from;
+        $date_to = $request->date_to;
+        $status = $request->status;
+
         if($request->customer_search) {
             $tasks = $tasks->where('partner_id', $id)
-                            ->where('title', 'like', '%' . $request->customer_search . '%')
-                            ->orWhere('type', 'like', '%' . $request->customer_search . '%');
+                            ->where('title', 'like', '%' . $request->customer_search . '%');
         }
         if($request->date_from && $request->date_to) {
             $from = date("Y-m-d", strtotime($request->date_from));
             $to = date("Y-m-d", strtotime($request->date_to));
             $tasks = $tasks->where('partner_id', $id)
-                            ->whereBetween('created_at', array($from, $to))
-                            ->orWhereBetween('deadline', array($from, $to));
+                            ->whereDate('deadline',">=",$from)->whereDate('deadline',"<=",$to);
+        }elseif ($request->date_from) {
+            $from = date("Y-m-d", strtotime($request->date_from));
+            $tasks = $tasks->where('partner_id', $id)->whereDate('deadline',">=",$from);
         }
-        if(!empty($request->status))
+        elseif ($request->date_to) {
+            $to = date("Y-m-d", strtotime($request->date_to));
+            $tasks = $tasks->where('partner_id', $id)->whereDate('deadline',"<=",$to);
+        }
+        if(isset($request->status))
         {
             if($request->status == 0 || $request->status == 1) {
             $tasks = $tasks->where('partner_id', $id)->where('status', $request->status);
@@ -188,10 +199,10 @@ class PartnerController extends Controller
         }
         
         $tasks = $tasks->paginate(10);
-        // dd($partner->partner_note);
+        $tasks->withPath("?customer_search=$partners&status=$status&date_from=$date_from&date_to=$date_to");
         $view = count(Partner::where('status_recycle',1)->get());
         $recycle = count(Partner::where('status_recycle',0)->get());
-        return view('admin.partner.show', compact('partner', 'view', 'recycle', 'tasks'));
+        return view('admin.partner.show', compact('partner', 'view', 'recycle', 'tasks','count'));
     }
 
     /**

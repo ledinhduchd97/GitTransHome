@@ -23,7 +23,7 @@ class CustomerTaskToDoTableSeeder extends Seeder
                 // 'update' => rand(1,15),
                 'type' => $faker->realText(20),
                 'deadline' => $faker->dateTime(),
-                // 'status' => rand(0,1),
+                'status' => rand(0,1),
                 'ranking' => rand(0,1),
                 'note' => $faker->realText(40),
                 'created_at' => $faker->dateTime()

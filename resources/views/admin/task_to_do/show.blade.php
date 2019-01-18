@@ -45,22 +45,38 @@
                     </div>
                     <div class="view-detail__content--row">
                         <div class="text"><span>First Name :</span></div>
-                        <div class="content"><span class="acc-email">{{$task->customer->first_name}}</span></div>
+                        @if(isset($task->customer->first_name))
+                            <div class="content"><span class="acc-email">{{$task->customer->first_name}}</span></div>
+                        @else
+                            <div class="content"><span class="acc-email">-</span></div>
+                        @endif
                         <div class="clear-fix"></div>
                     </div>
                     <div class="view-detail__content--row">
                         <div class="text"><span>Last Name :</span></div>
-                        <div class="content"><span class="acc-email">{{$task->customer->last_name}}</span></div>
+                        @if(isset($task->customer->last_name))
+                            <div class="content"><span class="acc-email">{{$task->customer->last_name}}</span></div>
+                        @else
+                            <div class="content"><span class="acc-email">-</span></div>
+                        @endif
                         <div class="clear-fix"></div>
                     </div>
                     <div class="view-detail__content--row">
                         <div class="text"><span>Birthday :</span></div>
-                        <div class="content"><span class="acc-email">{{$task->customer->birthday}}</span></div>
+                        @if(isset($task->customer->last_name))
+                            <div class="content"><span class="acc-email">{{$task->customer->birthday}}</span></div>
+                        @else
+                            <div class="content"><span class="acc-email">-</span></div>
+                        @endif
                         <div class="clear-fix"></div>
                     </div>
                     <div class="view-detail__content--row">
                         <div class="text"><span>Client Type :</span></div>
-                        <div class="content"><span class="acc-email">{{$task->customer->type}}</span></div>
+                        @if(isset($task->customer->type))
+                            <div class="content"><span class="acc-email">{{$task->customer->type}}</span></div>
+                        @else
+                            <div class="content"><span class="acc-email">-</span></div>
+                        @endif
                         <div class="clear-fix"></div>
                     </div>
                     <div class="view-detail__content--row">

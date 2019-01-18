@@ -30,13 +30,14 @@
                             <form id="house_infor" action="#">
                                 <div class="add-customer--left__title">
                                     <ul class="list-inline">
-                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'detail')">Customer details</li>
-                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'note')">Note</li>
-                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'task')">Task to do</li>
+                                        <li class="customer_detail__tablinks btn-details active" onclick="messageSearch(event,'detail')">Customer details</li>
+                                        <li class="customer_detail__tablinks btn-note-customer" onclick="messageSearch(event,'note')">Note</li>
+                                        <li class="customer_detail__tablinks btn-tasktodo" onclick="messageSearch(event,'task')">Task to do</li>
                                     </ul>
                                 </div>
                                 <div class="customer_detail__contents">
                                     <div class="customer_detail__content" id="detail">
+                                        <p style="display: none;" id="customer-id-hidden">{{ $customer->id }}</p>
                                         <div class="add-customer--left__item">
                                             <div class="text"><span>First name :</span></div>
                                             <div class="content"><span>{{ $customer->first_name }}</span></div>
@@ -67,31 +68,11 @@
                                             <div class="content"><span>{{ $customer->address }}</span></div>
                                             <div class="clear-fix"></div>
                                         </div>
-                                        <!-- <div class="add-customer--left__item">
-                                            <div class="text"><span>Street address :</span></div>
-                                            <div class="content"><span>{{ $customer->address }}</span></div>
-                                            <div class="clear-fix"></div>
-                                        </div>
-                                        <div class="add-customer--left__item">
-                                            <div class="text"><span>City :</span></div>
-                                            <div class="content"><span>{{ $customer->address }}</span></div>
-                                            <div class="clear-fix"></div>
-                                        </div> -->
                                         <div class="add-customer--left__item">
                                             <div class="text"><span>Client Type :</span></div>
                                             <div class="content"><span class="type2">{{ $customer->type }}</span></div>
                                             <div class="clear-fix"></div>
                                         </div>
-                                        <!-- <div class="add-customer--left__item">
-                                            <div class="text"><span>Source :</span></div>
-                                            <div class="content"><span>{{ $customer->address }}</span></div>
-                                            <div class="clear-fix"></div>
-                                        </div> -->
-                                        <!-- <div class="add-customer--left__item">
-                                            <div class="text"><span>Note :</span></div>
-                                            <div class="content"><span>{{ $customer->note }}</span></div>
-                                            <div class="clear-fix"></div>
-                                        </div> -->
                                         <div class="add-customer--left__item text-center">
                                             <a class="btn--edit btn--primary padding--base" href="{{ route('admin.customers.edit', ['customer' => $customer->id]) }}">Edit</a>
                                             <a class="btn--primary padding--base btn--cancel" href="{{ route('admin.customers.index') }}">Cancel</a>
@@ -219,17 +200,14 @@
                                         </div>
                                         <div class="task_todo__content table--base">
                                             <div class="fright total">
-                                                <p>Total : <span>{{ $tasks->count() }} entries</span></p>
+                                                <p>Total : <span>{{ $count }} entries</span></p>
                                             </div>
                                             <table>
                                                 <tr>
                                                     <th>Title task</th>
-                                                    <!-- <th>Age</th>
-                                                    <th>Update</th> -->
                                                     <th>To do Type</th>
                                                     <th>Deadline</th>
                                                     <th>Ranking</th>
-                                                    <!-- <th>Status</th> -->
                                                     <th>Note</th>
                                                     <th>Status</th>
                                                     <th>Options</th>
@@ -237,33 +215,21 @@
                                                 @foreach($tasks as $task)
                                                 <tr>
                                                     <td>
-                                                        <!-- <p>{{$task->title}}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->title}}">
                                                     </td>
-                                                    <!-- <td>
-                                                        <p>{{ $task->age }}</p>
-                                                    </td>
                                                     <td>
-                                                        <p>{{ $task->update }}</p>
-                                                    </td> -->
-                                                    <td>
-                                                        <!-- <p>{{ $task->type }}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->type}}">
                                                     </td>
                                                     <td>
-                                                        <!-- <p>{{ $task->deadline }}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->deadline}}">
                                                     </td>
                                                     <td>
-                                                        <!-- <p>{{ $task->ranking}}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->ranking}}">
                                                     </td>
                                                     <td>
-                                                        <!-- <p>{{ $task->note}}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->note}}">
                                                     </td>
                                                     <td>
-                                                        <!-- <p>{{ $task->status}}</p> -->
                                                         <input type="text" class="inputonly" readonly value="{{$task->status}}">
                                                     </td>
                                                     <td>
@@ -276,11 +242,19 @@
                                                 @endforeach
                                             </table>
                                         </div>
-                                        <div class="customer_list__bottom table-bot" style="float: right; display:none">
+                                        <div class="danhsachtk__bottom table-bot">
+                                        <div class="fleft col-50">
+                                            <p class="text"><span>Showing </span><span
+                                                        class="from-row">{{(($tasks->currentPage() - 1 ) * $tasks->perPage())+1}} </span><span>to </span><span
+                                                        class="to-row">{{(($tasks->currentPage() - 1 ) * $tasks->perPage())+sizeof($tasks)}} </span><span>of </span><span
+                                                        class="title-row">{{$tasks->total()}} </span><span>entries</span></p>
+                                        </div>
+                                        <div class="fleft col-30" style="float: right;">
                                             <div class="paging text-right">
                                                 {{ $tasks->links('vendor.pagination.bootstrap-4', ['paginator' => $tasks]) }}
                                             </div>
-                                            <div class="clear-fix"></div>
+                                        </div>
+                                        <div class="clear-fix"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -334,11 +308,21 @@
         function getDataFromTheEditor() {
           return theEditor.getData();
         }
-         $.ajaxSetup({
-                headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
+        var url = window.location.href;
+        var count = url.split("?").length;
+        console.log(count);
+        if(count > 1)
+        {
+          $(".list-inline li").removeClass('active');
+          $(".btn-tasktodo").addClass('active');
+          $("#detail").css('display', 'none');
+          $("#task").css('display', 'block');
+        }
+        $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         // Xóa note
         $(".trash").click(function(event) {
             var data = $(this).attr('id_note');
@@ -372,9 +356,7 @@
             var keyword = $("#ct_search").val();
             var  start_day = $("#startDay_customer").val();
             var end_day = $("#endDay_customer").val();
-            var url = window.location.href;
-            param = url.split("/");
-            var id_param = param.slice(-1).pop();
+            var id_param = $("#customer-id-hidden").text();
             $.ajax({
                 url: '{{route('admin.customernote.search')}}',
                 type: 'POST',
@@ -391,7 +373,6 @@
                         data = JSON.parse(data);
                     }
                     $("#partner-notifi").html("");
-                    /*console.log(data);*/
                     $.each(data, function(index, val) {
                         $("#partner-notifi").append(`
                             <!-- item -->
@@ -408,16 +389,9 @@
         });
         // ajax thêm note 
         $(".add-note").click(function(event) {
-            // var text = $("#new-note").instances.contentDetails.getData();
-            // var text = getDataFromTheEditor();
-            // console.log(text);
             var data = getDataFromTheEditor();
-            var param = [];
-            var url = window.location.href;
-            param = url.split("/");
-            var id_param = param.slice(-1).pop();
+            var id_param = $("#customer-id-hidden").text();
             console.log(id_param);
-            console.log(data);
             $.ajax({
                 url: '{{route('admin.customernote.store')}}',
                 type: 'POST',
@@ -432,7 +406,6 @@
                         data = JSON.parse(data);
                     }
                     $("#partner-notifi").html("");
-                    /*console.log(data);*/
                     $.each(data, function(index, val) {
                         $("#partner-notifi").append(`
                             <!-- item -->

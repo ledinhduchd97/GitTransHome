@@ -64,13 +64,13 @@ class Tasktodo extends Model
         if($flag)
         {
             return Tasktodo::onlyTrashed()->where(function($query) use ($from, $to) {
-                $query->whereBetween('start_task', array($from, $to));
-                $query->orWhereBetween('deadline', array($from, $to));
+                $query->whereDate('start_task', ">=" ,$from);
+                $query->whereDate('deadline', "<=" ,$to);
             });
         }
         return Tasktodo::where(function($query) use ($from, $to) {
-            $query->whereBetween('start_task', array($from, $to));
-            $query->orWhereBetween('deadline', array($from, $to));
+            $query->whereDate('start_task', ">=" ,$from);
+            $query->whereDate('deadline', "<=" ,$to);
         });
     }
 
@@ -111,6 +111,6 @@ class Tasktodo extends Model
     }
     public function customer()
     {
-        return $this->belongsTo('App\Customer','customer_id');
+        return $this->belongsTo('App\Customer','customer_id')->withDefault();
     }
 }

@@ -26,7 +26,6 @@ class TasktodoController extends Controller
         if($request->keyword) {
             $tasks = $tasks->withTitleOrName($key,false);
         }
-        // dd($tasks);
         if(isset($request->status)) {
             // $tasks = $tasks->withStatus($sta);
             // dd($request);
@@ -36,7 +35,7 @@ class TasktodoController extends Controller
         if($date_from && $date_to) {
             $from = date("Y-m-d", strtotime($date_from));
             $to = date("Y-m-d", strtotime($date_to));
-            $tasks = $tasks->withStartAndDeadline($from, $to,false);
+            $tasks = $tasks->whereDate('start_task', ">=" ,$from)->whereDate('deadline', "<=" ,$to);
         }else if($request->date_from){
             $from = date("Y-m-d", strtotime($date_from));
             $tasks = $tasks->whereDate('start_task', ">=" ,$from);
@@ -216,18 +215,23 @@ class TasktodoController extends Controller
         $date_from = $request->date_from;
         $date_to = $request->date_to;
         if($request->keyword) {
-            $tasks = $tasks->withTitleOrName($request->keyword,true);
+            $tasks = $tasks->withTitleOrName($request->keyword);
         }
 
         if(isset($request->status)) {
             $tasks = $tasks->withStatus($request->status);
         }
-
-        if($request->date_from && $request->date_to) {
-            $from = date("Y-m-d", strtotime($request->date_from));
-            $to = date("Y-m-d", strtotime($request->date_to));
-            $tasks = $tasks->whereBetween('created_at', array($from, $to));
-        }
+        if($date_from && $date_to) {
+            $from = date("Y-m-d", strtotime($date_from));
+            $to = date("Y-m-d", strtotime($date_to));
+            $tasks = $tasks->onlyTrashed()->whereDate('start_task', ">=" ,$from)->whereDate('deadline', "<=" ,$to);
+        }else if($request->date_from){
+            $from = date("Y-m-d", strtotime($date_from));
+            $tasks = $tasks->onlyTrashed()->whereDate('start_task', ">=" ,$from);
+        }else if($request->date_to){
+            $to = date("Y-m-d", strtotime($date_to));
+            $tasks = $tasks->onlyTrashed()->whereDate('deadline', "<=" ,$to);
+         }
 
         $tasks = $tasks->orderBy('start_task','asc')->paginate(10);
         $tasks->withPath("?keyword=$key&status=$sta&date_from=$date_from&date_to=$date_to");

@@ -106,6 +106,9 @@
     @endif
     <!--.tk-top-wrap-->
         <div class="danhsachtk__table table--base">
+            <div class="fright total">
+                <p>Total : <span>{{ $recycle }} entries</span></p>
+            </div>
             <table>
                 <tr>
                     <th>ID</th>

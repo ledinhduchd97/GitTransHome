@@ -90,6 +90,11 @@
     @endif
     <!--.tk-top-wrap-->
         <div class="danhsachtk__table table--base">
+             <div class="fright total">
+                <p>Total : 
+                    <span>{{$recycle}} entries</span>
+                </p>
+            </div>
             <table>
                 <tr>
                     <th>ID</th>
@@ -119,18 +124,6 @@
                                 <!-- <p class="name">{{ $task->title }}</p> -->
                                 <input type="text" value="{{ $task->title}}" readonly class="inputonly">
                             </td>            
-                            <!-- <td>
-                                <p>{{ $task->customer->first_name }}</p>
-                            </td>
-                            <td>
-                                <p>{{ $task->customer->last_name }}</p>
-                            </td>
-                            <td>
-                                <p>{{ $task->customer->birthday }}</p>
-                            </td>
-                            <td>
-                                <p>{{ $task->customer->type }}</p>
-                            </td> -->
                             <td>
                                 @if(isset($task->customer->first_name))
                                     <!-- <p>{{ $task->customer->first_name }}</p> -->
@@ -148,7 +141,7 @@
                                 @endif
                             </td>
                             <td>
-                                @if(isset($task->customer->birthday))
+                                @if(isset($task->customer->first_name))
                                     <!-- <p>{{ $task->customer->birthday }}</p> -->
                                     <input type="text" value="{{ $task->customer->birthday}}" readonly class="inputonly">
                                 @else
@@ -157,8 +150,6 @@
                             </td>
                             <td>
                                 @if(isset($task->customer->type))
-                                    <!-- <p class="type">{{ $task->customer->type }}</p> -->
-                                    <!-- <p class="type">{{ $task->customer->type }}</p> -->
                                     <input type="text" value="{{ $task->customer->type}}" readonly class="inputonly">
                                 @else
                                     <p>-</p>

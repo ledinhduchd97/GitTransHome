@@ -43,6 +43,7 @@
                 <div class="text"><span>Customer Name :</span></div>
                 <div class="content">
                   <select class="padding--base border--base" id="customer_id" name="customer_id" required>
+                  @if(isset($tasktodo->customer->first_name))
                     @if(isset($customers))
                       @if(old('customer_id'))
                         @foreach($customers as $customer)
@@ -57,6 +58,18 @@
                         @endforeach
                       @endif
                     @endif
+                  @else
+                    @if(old('customer_id'))
+                        @foreach($customers as $customer)
+                            <option value="{{$customer->id}}" {{$customer->id == old('customer_id') ? 'selected' : ''}}>{{$customer->first_name}} {{$customer->last_name}}</option>
+                        @endforeach
+                    @else
+                        <option value="">---Select customer---</option>
+                        @foreach($customers as $customer)
+                            <option value="{{$customer->id}}">{{$customer->first_name}} {{$customer->last_name}}</option>
+                        @endforeach
+                    @endif
+                  @endif
                   </select>
                   <!-- <input class="border--base padding--base" type="text" value="" name="customer_name"/> -->
                   @if(sizeof($errors) != 0)

@@ -30,13 +30,14 @@
                             <form id="house_infor" action="#">
                                 <div class="add-customer--left__title">
                                     <ul class="list-inline">
-                                        <li class="customer_detail__tablinks active" onclick="messageSearch(event,'detail')">Partner details</li>
-                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'note')">Note</li>
-                                        <li class="customer_detail__tablinks" onclick="messageSearch(event,'task')">Task to do</li>
+                                        <li class="customer_detail__tablinks btn-details active" onclick="messageSearch(event,'detail')">Partner details</li>
+                                        <li class="customer_detail__tablinks btn-note-partner" onclick="messageSearch(event,'note')">Note</li>
+                                        <li class="customer_detail__tablinks btn-tasktodo" onclick="messageSearch(event,'task')">Task to do</li>
                                     </ul>
                                 </div>
                                 <div class="customer_detail__contents">
                                     <div class="customer_detail__content" id="detail">
+                                        <p style="display: none;" id="partner-id-hidden">{{ $partner->id }}</p>
                                         <div class="add-customer--left__item">
                                             <div class="text"><span>Full name :</span></div>
                                             <div class="content"><span>{{ $partner->fullname }}</span></div>
@@ -207,7 +208,7 @@
                                         </div>
                                         <div class="task_todo__content table--base">
                                             <div class="fright total">
-                                                <p>Total : <span>{{ $tasks->count() }} entries</span></p>
+                                                <p>Total : <span>{{ $count }} entries</span></p>
                                             </div>
                                             <table>
                                                 <tr>
@@ -260,9 +261,17 @@
                                                 @endforeach
                                             </table>
                                         </div>
-                                        <div class="customer_list__bottom table-bot" style="float: right; display:none">
-                                            <div class="paging text-right">
-                                                {{ $tasks->links('vendor.pagination.bootstrap-4', ['paginator' => $tasks]) }}
+                                        <div class="danhsachtk__bottom table-bot">
+                                            <div class="fleft col-50">
+                                                <p class="text"><span>Showing </span><span
+                                                            class="from-row">{{(($tasks->currentPage() - 1 ) * $tasks->perPage())+1}} </span><span>to </span><span
+                                                            class="to-row">{{(($tasks->currentPage() - 1 ) * $tasks->perPage())+sizeof($tasks)}} </span><span>of </span><span
+                                                            class="title-row">{{$tasks->total()}} </span><span>entries</span></p>
+                                            </div>
+                                            <div class="fleft col-30" style="float: right;">
+                                                <div class="paging text-right">
+                                                    {{ $tasks->links('vendor.pagination.bootstrap-4', ['paginator' => $tasks]) }}
+                                                </div>
                                             </div>
                                             <div class="clear-fix"></div>
                                         </div>
@@ -318,6 +327,16 @@
         function getDataFromTheEditor() {
           return theEditor.getData();
         }
+        var url = window.location.href;
+        var count = url.split("?").length;
+        console.log(count);
+        if(count > 1)
+        {
+          $(".list-inline li").removeClass('active');
+          $(".btn-tasktodo").addClass('active');
+          $("#detail").css('display', 'none');
+          $("#task").css('display', 'block');
+        }
         $.ajaxSetup({
                 headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -356,9 +375,7 @@
             var keyword = $("#partner_search").val();
             var  start_day = $("#startDay_partner").val();
             var end_day = $("#endDay_partner").val();
-            var url = window.location.href;
-            param = url.split("/");
-            var id_param = param.slice(-1).pop();
+            var id_param = $("#partner-id-hidden").text();
             $.ajax({
                 url: '{{route('admin.partnernote.search')}}',
                 type: 'POST',
@@ -395,11 +412,7 @@
             // var data = $("#new-note").val();
             var data = getDataFromTheEditor();
             var param = [];
-            var url = window.location.href;
-            param = url.split("/");
-            var id_param = param.slice(-1).pop();
-            console.log(id_param);
-            console.log(data);
+            var id_param = $("#partner-id-hidden").text();;
             $.ajax({
                 url: '{{route('admin.partnernote.store')}}',
                 type: 'POST',

@@ -81,7 +81,7 @@
         </div>
         <div class="partner-list__main">
           <div class="fright total">
-            <p>Total : <span>{{$view}} entries</span></p>
+            <p>Total : <span>{{$recycle}} entries</span></p>
           </div>
           <div class="table--base partner-list__table">
             <table>

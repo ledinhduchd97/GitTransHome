@@ -161,8 +161,8 @@
                                 @endif
                             </td>
                             <td>
-                                @if(isset($task->customer->birthday))
-                                    <!-- <p>{{ $task->customer->birthday }}</p> -->
+                                @if(isset($task->customer->first_name))
+                                    <!-- <p>{{ $task->customer }}</p> -->
                                     <input type="text" class="inputonly" readonly value="{{$task->customer->birthday}}">
                                 @else
                                     <p>-</p>

@@ -9,6 +9,7 @@ use Response;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\CustomerNote;
+use App\CustomerTaskToDo;
 use DB;
 
 class CustomerController extends Controller
@@ -31,11 +32,12 @@ class CustomerController extends Controller
         $customers = Customer::byLatest();
         $recycle = Customer::onlyTrashed()->count();
         $view = Customer::all()->count();
-
+        $keyword = $request->keyword;
+        $date_from = $request->date_from;
+        $date_to = $request->date_to;
         if($request->keyword) {
             $customers = $customers->withFullName($request->keyword);
         }
-
         if($request->date_from && $request->date_to) {
             $from = date("Y-m-d", strtotime($request->date_from));
             $to = date("Y-m-d", strtotime($request->date_to));
@@ -49,6 +51,7 @@ class CustomerController extends Controller
          }
 
         $customers = $customers->paginate(10);
+        $customers->withPath("?keyword=$keyword&date_from=$date_from&date_to=$date_to");
         return view('admin.customer.index', compact('customers', 'recycle', 'view'));
     }
 
@@ -141,30 +144,42 @@ class CustomerController extends Controller
         $id = $customer;
         $customer = Customer::findOrFail($customer);
         $tasks = $customer->customer_task_to_dos();
+        $count = count(CustomerTaskToDo::where('customer_id',$id)->get());
+        $customers = $request->customer_search;
+        $date_from = $request->date_from;
+        $date_to = $request->date_to;
+        $status = $request->status;
+
         if($request->customer_search) {
             $tasks = $tasks->where('customer_id', $id)
-                            ->where('title', 'like', '%' . $request->customer_search . '%')
-                            ->orWhere('type', 'like', '%' . $request->customer_search . '%');
+                            ->where('title', 'like', '%' . $request->customer_search . '%');
         }
         if($request->date_from && $request->date_to) {
             $from = date("Y-m-d", strtotime($request->date_from));
             $to = date("Y-m-d", strtotime($request->date_to));
-            $tasks = $tasks->where('customer_id', $id)
-                            ->whereBetween('created_at', array($from, $to))
-                            ->orWhereBetween('deadline', array($from, $to));
+            $tasks = $tasks->where('customer_id', $id)->whereDate('deadline',">=",$from)->whereDate('deadline',"<=",$to);
+        }
+        elseif ($request->date_from) {
+            $from = date("Y-m-d", strtotime($request->date_from));
+            $tasks = $tasks->where('customer_id', $id)->whereDate('deadline',">=",$from);
+        }
+        elseif($request->date_to)
+        {
+            $to = date("Y-m-d", strtotime($request->date_to));
+            $tasks = $tasks->where('customer_id', $id)->whereDate('deadline',"<=",$to);
         }
         
         if (isset($request->status)) {
             if($request->status == 0 || $request->status == 1) 
             {
-                $tasks = $tasks->where('customer_id', $id)->where('status', $request->status);
+                $tasks = $tasks->where('customer_id', $id)->where('status',$request->status);
             }
-            // dd($tasks->get());
         }
         $tasks = $tasks->paginate(10);
+        $tasks->withPath("?customer_search=$customers&status=$status&date_from=$date_from&date_to=$date_to");
         $recycle = Customer::onlyTrashed()->count();
         $view = Customer::all()->count();
-        return view('admin.customer.show', compact('customer', 'recycle', 'view', 'tasks'));
+        return view('admin.customer.show', compact('customer', 'recycle', 'view', 'tasks','count'));
     }
 
     /**
@@ -214,6 +229,9 @@ class CustomerController extends Controller
         $customers = Customer::onlyTrashed()->byLatest();
         $recycle = Customer::onlyTrashed()->count();
         $view = Customer::all()->count();
+        $keyword = $request->keyword;
+        $date_from = $request->date_from;
+        $date_to = $request->date_to;
         if($request->keyword) {
             $customers = $customers->withFullNameTrash($request->keyword);
         }
@@ -221,16 +239,27 @@ class CustomerController extends Controller
         if($request->date_from && $request->date_to) {
             $from = date("Y-m-d", strtotime($request->date_from));
             $to = date("Y-m-d", strtotime($request->date_to));
-            $customers = $customers->whereBetween('created_at', array($from, $to));
-        }
+            $customers = $customers->whereDate('created_at', ">=" , $from)->whereDate('created_at', "<=" , $to);
+        }else if($request->date_from){
+            $from = date("Y-m-d", strtotime($request->date_from));
+            $customers = $customers->whereDate('created_at', ">=" ,$from);
+        }else if($request->date_to){
+            $to = date("Y-m-d", strtotime($request->date_to));
+            $customers = $customers->whereDate('created_at', "<=" ,$to);
+         }
+
         $customers = $customers->paginate(10);
+        $customers->withPath("?keyword=$keyword&date_from=$date_from&date_to=$date_to");
         return view('admin.customer.recycle', compact('customers', 'recycle', 'view'));
     }
 
     public function putRestore($id)
     {
         $customer = Customer::withTrashed()->findOrFail($id);
+        $customer->tasktodo()->restore();
         $customer->restore();
+        // dd($customer->tasktodo()->get());
+        
         session(['success' => 'Successfully restore record']);
         return back();
     }
@@ -238,6 +267,7 @@ class CustomerController extends Controller
     public function deletePermanently($id)
     {
         $customer = Customer::withTrashed()->findOrFail($id);
+        $customer->tasktodo()->forceDelete();
         $customer->forceDelete();
         session(['success' => 'Successfully permanently delete record']);
         return back();
