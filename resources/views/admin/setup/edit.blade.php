@@ -38,7 +38,7 @@
                     Set up overview
                 </h3>
                 <div class="form-group form--base set-up-form--item">
-                    <label class="control-label col-sm-2 text" for="website_name">Website name:</label>    
+                    <label class="control-label col-sm-2 text" for="website_name">Website name</label>    
                     <div class="col-sm-10 content">
                         <input type="text" class="form-control border--base padding--base" id="website_name" value="{{ $errors->first('website_name') ? old('website_name') : $setup->website_name }}" name="website_name" required maxlength="25">
                         @if ($errors)
@@ -48,7 +48,7 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item">
-                    <label class="control-label col-sm-2 text" for="description">Description:</label>
+                    <label class="control-label col-sm-2 text" for="description">Description</label>
                     <div class="col-sm-10 content">
                         <textarea class="form-control" name="description" required maxlength="250">{{ $errors->first('description') ? old('description') : $setup->description }}</textarea>
                         @if ($errors)
@@ -58,7 +58,7 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item">
-                    <label class="control-label col-sm-2 text" for="image">Logo header:</label>
+                    <label class="control-label col-sm-2 text" for="image">Logo header</label>
                     <div class="col-sm-10 content">
                         <div class="position-relative images">
                             <img src="{{ asset($setup->logo_header) }}" alt="">
@@ -73,7 +73,7 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item">
-                    <label class="control-label col-sm-2 text" for="image">Logo footer:</label>
+                    <label class="control-label col-sm-2 text" for="image">Logo footer</label>
                     <div class="col-sm-10 content">
                         <div class="position-relative images">
                             <img src="{{ asset($setup->logo_footer) }}" alt="">
@@ -88,7 +88,7 @@
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group form--base set-up-form--item">
-                    <label class="control-label col-sm-2 text">Thank you:</label>
+                    <label class="control-label col-sm-2 text">Thank you</label>
                     <div class="col-sm-10 content">
                         <textarea name="thank_you" id="news" cols="30" rows="10">{{$errors->first('thank_you') ? old('thank_you') : $setup->thank_you}}</textarea>
                         @if ($errors)
