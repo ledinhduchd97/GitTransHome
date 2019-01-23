@@ -389,7 +389,9 @@
                 dataType: 'json',
                 data:{ patner_fullname : _fullname, patner_email : _email , patner_phone : _phone },
                 success: function(data){
-                    // console.log(data.responseJSON.message);
+                    $("#patner_fullname").val('');
+                    $("#patner_email").val('');
+                    $("#patner_phone").val('');
                 },
               });
         if ($('#form-infor_patner').valid() == true) {// here you check if validation returned true or false

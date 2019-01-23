@@ -273,6 +273,10 @@
           dataType: 'json',
           data:data,
           success: function(data){
+              $("#how_we__search").val('');
+              $("#first_name").val('');
+              $("#email").val('');
+              $("#phone").val('');
           },
         });
         if ($('#form__infor').valid() == true) {// here you check if validation returned true or false
