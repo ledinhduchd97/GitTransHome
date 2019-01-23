@@ -1924,6 +1924,10 @@ ul.link li a {
   padding-top: 145px;
 }
 
+.free-cash__how-we-buy{
+  margin-top: 35px;
+}
+
 .free-cash__how-we-buy .modal-body {
   padding: 0;
   padding-top: 15px;
@@ -2254,6 +2258,7 @@ ul.link li a {
   text-align: left;
   width: 100%;
   font-weight: 700;
+  font-family: 'poppins', sans-serif;
 }
 
 .free-cash .modal_thanks .modal-content {
