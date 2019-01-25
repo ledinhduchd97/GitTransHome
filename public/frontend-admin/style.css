@@ -2340,3 +2340,7 @@ input[type="file"]{
 .view-detail__content--row .btn-delete{
   cursor: pointer;
 }
+/* 24/01 */
+a:hover{
+  color: #fff !important;
+}

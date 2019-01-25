@@ -284,7 +284,7 @@
                     <form id="delete-form" action="" method="POST">
                         {{ csrf_field() }}
                         {{ method_field("DELETE") }}
-                        <button type="submit" class="btn btn-primary">Sure</button>
+                        <button type="submit" class="btn btn-primary btn--yes">Sure</button>
                     </form>
                 </div>
             </div>

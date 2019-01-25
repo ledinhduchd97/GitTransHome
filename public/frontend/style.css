@@ -1314,6 +1314,7 @@ ul.link li a {
   position: relative;
   z-index: 9;
   height: 100%;
+  width: 100%;
 }
 
 .sell {
